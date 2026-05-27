@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HSK3 Đề Thi 1 - Chinh Phục 128 Từ Vựng Cốt Lõi</title>
+    <title>HSK4 Đề Thi 1 - Chinh Phục 137 Từ Vựng Cốt Lõi</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter & Noto Sans SC for clean characters -->
+    <!-- Google Fonts: Inter & Noto Sans SC for crisp look -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <!-- Confetti effects for victory achievements -->
+    <!-- Confetti effects for celebrating achievements -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     
     <style>
         body {
             font-family: 'Inter', 'Noto Sans SC', sans-serif;
-            background: radial-gradient(circle at top right, #090d16, #020408);
+            background: radial-gradient(circle at top right, #050b14, #010204);
             color: #f1f5f9;
             min-height: 100vh;
         }
@@ -41,24 +41,24 @@
             height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #090d16;
+            background: #050b14;
         }
         ::-webkit-scrollbar-thumb {
             background: #1e293b;
             border-radius: 9999px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #10b981;
+            background: #0ea5e9;
         }
 
         /* Neon glow filters for standard Chinese typography */
         .hanzi-glow {
-            text-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
+            text-shadow: 0 0 20px rgba(14, 165, 233, 0.35);
         }
 
         /* Glassmorphism containers with blur backdrops */
         .glass-panel {
-            background: rgba(15, 23, 42, 0.55);
+            background: rgba(15, 23, 42, 0.65);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -66,8 +66,8 @@
 
         /* Keyframe animation for positive feedback */
         @keyframes pulse-success {
-            0%, 100% { transform: scale(1); border-color: rgba(16, 185, 129, 0.4); }
-            50% { transform: scale(1.02); border-color: rgba(16, 185, 129, 1); }
+            0%, 100% { transform: scale(1); border-color: rgba(14, 165, 233, 0.4); }
+            50% { transform: scale(1.02); border-color: rgba(14, 165, 233, 1); }
         }
         .correct-pulse {
             animation: pulse-success 0.4s ease-in-out 1;
@@ -81,14 +81,14 @@
         <!-- Premium App Header -->
         <header class="flex flex-col lg:flex-row justify-between items-center mb-8 gap-6 border-b border-slate-800 pb-8">
             <div class="flex items-center gap-4">
-                <div class="p-3 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl shadow-lg text-emerald-400">
+                <div class="p-3 bg-sky-500/10 border border-sky-500/20 rounded-2xl shadow-lg text-sky-400">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
                     </svg>
                 </div>
                 <div>
-                    <h1 class="text-2xl md:text-3xl font-black tracking-tight bg-gradient-to-r from-emerald-400 via-teal-300 to-indigo-400 bg-clip-text text-transparent">HSK3 Đề Thi 1</h1>
-                    <p class="text-xs md:text-sm text-slate-400 font-medium">Luyện tập & Chinh phục toàn diện 128 từ vựng và câu dịch cốt lõi</p>
+                    <h1 class="text-2xl md:text-3xl font-black tracking-tight bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">HSK4 Đề Thi 1</h1>
+                    <p class="text-xs md:text-sm text-slate-400 font-medium">Luyện tập & Chinh phục toàn diện 137 từ vựng và câu dịch cốt lõi HSK4</p>
                 </div>
             </div>
 
@@ -99,12 +99,12 @@
                     <span id="stat-streak" class="font-bold text-slate-100">1 Ngày</span>
                 </div>
                 <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2">
-                    <span class="text-emerald-400">🏆 Tích lũy:</span>
+                    <span class="text-sky-400">🏆 Tích lũy:</span>
                     <span id="stat-xp" class="font-bold text-slate-100">0 XP</span>
                 </div>
                 <div class="glass-panel px-4 py-2 rounded-xl flex items-center gap-2">
                     <span class="text-indigo-400">⭐ Đã nhớ:</span>
-                    <span id="stat-mastered" class="font-bold text-slate-100">0/128</span>
+                    <span id="stat-mastered" class="font-bold text-slate-100">0/137</span>
                 </div>
             </div>
         </header>
@@ -113,8 +113,8 @@
         <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
         <!-- Navigation Tab Grid Layout -->
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-2 p-1 bg-slate-950 border border-slate-800 rounded-2xl mb-8">
-            <button onclick="switchTab('flashcards')" id="tab-flashcards" class="tab-btn active px-4 py-3.5 rounded-xl font-bold text-xs md:text-sm transition-all flex flex-col md:flex-row items-center justify-center gap-2 text-emerald-400 bg-emerald-500/10 border border-emerald-500/25">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-2 p-1 bg-slate-950 border border-slate-900 rounded-2xl mb-8">
+            <button onclick="switchTab('flashcards')" id="tab-flashcards" class="tab-btn active px-4 py-3.5 rounded-xl font-bold text-xs md:text-sm transition-all flex flex-col md:flex-row items-center justify-center gap-2 text-sky-400 bg-sky-500/10 border border-sky-500/25">
                 <span>📇</span> Thẻ Ghi Nhớ
             </button>
             <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-4 py-3.5 rounded-xl font-bold text-xs md:text-sm transition-all flex flex-col md:flex-row items-center justify-center gap-2 text-slate-400 hover:text-slate-100 hover:bg-slate-900">
@@ -127,7 +127,7 @@
                 <span>📝</span> Thử Thách Dịch
             </button>
             <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn col-span-2 md:col-span-1 px-4 py-3.5 rounded-xl font-bold text-xs md:text-sm transition-all flex flex-col md:flex-row items-center justify-center gap-2 text-slate-400 hover:text-slate-100 hover:bg-slate-900">
-                <span>📖</span> Từ Điển (128)
+                <span>📖</span> Từ Điển (137)
             </button>
         </div>
 
@@ -136,7 +136,7 @@
             <div class="max-w-xl mx-auto">
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-xs text-slate-400 font-medium">Bấm vào bất cứ điểm nào trên thẻ để lật ngược</span>
-                    <span id="flashcard-progress-text" class="text-xs font-bold text-emerald-400">1 / 128</span>
+                    <span id="flashcard-progress-text" class="text-xs font-bold text-sky-400">1 / 137</span>
                 </div>
                 
                 <!-- Card Container 3D Presentation -->
@@ -147,12 +147,12 @@
                         <div class="backface-hidden absolute inset-0 glass-panel rounded-3xl border border-slate-700/50 flex flex-col justify-between p-8 bg-slate-950/60 shadow-2xl">
                             <div class="flex justify-between items-start">
                                 <span class="text-[10px] tracking-widest px-2.5 py-1 bg-slate-800 text-slate-400 rounded-full font-bold uppercase">MẶT CHỮ HÁN</span>
-                                <button onclick="event.stopPropagation(); playCurrentWordAudio();" class="p-2.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 rounded-xl border border-emerald-500/20 transition-all text-sm font-semibold" title="Phát âm">
+                                <button onclick="event.stopPropagation(); playCurrentWordAudio();" class="p-2.5 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 rounded-xl border border-sky-500/20 transition-all text-sm font-semibold" title="Phát âm">
                                     🔊 Nghe
                                 </button>
                             </div>
                             <div class="text-center">
-                                <h2 id="flashcard-hanzi" class="text-5xl md:text-6xl font-black tracking-widest text-slate-100 font-sans hanzi-glow">外面</h2>
+                                <h2 id="flashcard-hanzi" class="text-5xl md:text-6xl font-black tracking-widest text-slate-100 font-sans hanzi-glow">掌握</h2>
                             </div>
                             <div class="text-center text-xs text-slate-500 font-medium">
                                 Chạm để xem Pinyin và nghĩa Việt
@@ -160,16 +160,16 @@
                         </div>
                         
                         <!-- Back View (Pinyin & Vietnamese Translation) -->
-                        <div class="backface-hidden rotate-y-180 absolute inset-0 glass-panel rounded-3xl border border-emerald-500/25 bg-slate-950/80 flex flex-col justify-between p-8 shadow-2xl">
+                        <div class="backface-hidden rotate-y-180 absolute inset-0 glass-panel rounded-3xl border border-sky-500/25 bg-slate-950/80 flex flex-col justify-between p-8 shadow-2xl">
                             <div class="flex justify-between items-start">
-                                <span class="text-[10px] tracking-widest px-2.5 py-1 bg-emerald-500/10 text-emerald-400 rounded-full font-bold uppercase">Ý NGHĨA PHÁT ÂM</span>
+                                <span class="text-[10px] tracking-widest px-2.5 py-1 bg-sky-500/10 text-sky-400 rounded-full font-bold uppercase">Ý NGHĨA PHÁT ÂM</span>
                                 <button onclick="event.stopPropagation(); playCurrentWordAudio();" class="p-2.5 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 rounded-xl border border-indigo-500/20 transition-all text-sm font-semibold">
                                     🔊 Nghe
                                 </button>
                             </div>
                             <div class="text-center space-y-4">
-                                <div id="flashcard-pinyin" class="text-2xl md:text-3xl font-extrabold text-emerald-400 tracking-wide font-sans">wàimiàn</div>
-                                <div id="flashcard-vietnamese" class="text-xl md:text-2xl font-black text-slate-100">Bên ngoài</div>
+                                <div id="flashcard-pinyin" class="text-2xl md:text-3xl font-extrabold text-sky-400 tracking-wide font-sans">zhǎngwō</div>
+                                <div id="flashcard-vietnamese" class="text-xl md:text-2xl font-black text-slate-100">Nắm vững, làm chủ</div>
                             </div>
                             <div class="text-center text-xs text-slate-500 font-medium">
                                 Nhấp lần nữa để lật lại mặt chữ Hán
@@ -184,16 +184,16 @@
                     <button onclick="flashcardAction(false)" class="flex-1 py-4 px-6 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-2xl border border-slate-800 transition-all shadow-lg active:scale-95 text-xs md:text-sm">
                         ❌ Chưa thuộc
                     </button>
-                    <button onclick="flashcardAction(true)" class="flex-1 py-4 px-6 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-emerald-500/10 active:scale-95 text-xs md:text-sm">
+                    <button onclick="flashcardAction(true)" class="flex-1 py-4 px-6 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-slate-950 font-black rounded-2xl transition-all shadow-lg shadow-sky-500/10 active:scale-95 text-xs md:text-sm">
                         ✓ Đã thuộc (+10 XP)
                     </button>
                 </div>
 
                 <!-- Custom Configurations -->
-                <div class="mt-6 flex flex-col sm:flex-row justify-between items-center bg-slate-950 p-4 rounded-2xl border border-slate-800/80 gap-3">
+                <div class="mt-6 flex flex-col sm:flex-row justify-between items-center bg-slate-950 p-4 rounded-2xl border border-slate-900/80 gap-3">
                     <div class="flex items-center gap-2">
                         <span class="text-xs text-slate-400">Tốc độ âm thanh:</span>
-                        <select id="audio-rate-select" class="bg-slate-900 text-xs rounded-lg px-2 py-1.5 text-slate-200 border border-slate-800 focus:outline-none focus:ring-1 focus:ring-emerald-500">
+                        <select id="audio-rate-select" class="bg-slate-900 text-xs rounded-lg px-2 py-1.5 text-slate-200 border border-slate-800 focus:outline-none focus:ring-1 focus:ring-sky-500">
                             <option value="1">Tự nhiên (1.0x)</option>
                             <option value="0.75">Chậm rãi (0.75x)</option>
                             <option value="0.5">Rất chậm (0.5x)</option>
@@ -210,16 +210,16 @@
         <div id="content-quiz" class="tab-content hidden">
             <div class="max-w-2xl mx-auto glass-panel p-6 md:p-8 rounded-3xl border border-slate-800">
                 <div class="flex justify-between items-center mb-6">
-                    <span class="text-[10px] tracking-widest text-emerald-400 font-bold uppercase">ĐẤU TRƯỜNG TRẮC NGHIỆM</span>
+                    <span class="text-[10px] tracking-widest text-sky-400 font-bold uppercase">ĐẤU TRƯỜNG TRẮC NGHIỆM</span>
                     <span id="quiz-streak-counter" class="text-xs px-3 py-1 bg-yellow-500/10 text-yellow-400 rounded-full font-extrabold border border-yellow-500/20">🔥 Chuỗi: 0</span>
                 </div>
 
                 <!-- Word Challenge Area -->
-                <div class="text-center py-8 mb-8 bg-slate-950 rounded-2xl border border-slate-800/80 relative">
+                <div class="text-center py-8 mb-8 bg-slate-950 rounded-2xl border border-slate-900/80 relative">
                     <span class="text-[10px] text-slate-500 absolute top-3 left-1/2 -translate-x-1/2 font-bold tracking-wider">CHỌN NGHĨA PHÙ HỢP CỦA CHỮ HÁN SAU:</span>
                     <h3 id="quiz-question-word" class="text-5xl md:text-6xl font-black tracking-wide text-white font-sans mt-3"></h3>
                     <div class="mt-4 flex justify-center">
-                        <button onclick="playQuizWordAudio()" class="text-xs text-emerald-400 bg-emerald-500/10 px-4 py-1.5 rounded-full border border-emerald-500/20 hover:bg-emerald-500/20 transition-all font-bold flex items-center gap-1">
+                        <button onclick="playQuizWordAudio()" class="text-xs text-sky-400 bg-sky-500/10 px-4 py-1.5 rounded-full border border-sky-500/20 hover:bg-sky-500/20 transition-all font-bold flex items-center gap-1">
                             📢 Phát Âm Câu Hỏi
                         </button>
                     </div>
@@ -245,11 +245,11 @@
             <div class="max-w-xl mx-auto glass-panel p-6 md:p-8 rounded-3xl border border-slate-800">
                 <div class="flex justify-between items-center mb-6">
                     <span class="text-[10px] tracking-widest text-indigo-400 font-bold uppercase">LUYỆN TẬP CHÍNH TẢ CHỮ HÁN</span>
-                    <span id="dictation-correct-count" class="text-xs text-emerald-400 font-extrabold">Đã viết đúng: 0/128</span>
+                    <span id="dictation-correct-count" class="text-xs text-sky-400 font-extrabold">Đã viết đúng: 0/137</span>
                 </div>
 
-                <div class="text-center py-10 bg-slate-950 rounded-3xl border border-slate-800/80 mb-6 flex flex-col items-center justify-center">
-                    <button onclick="playDictationAudio()" class="w-20 h-20 bg-emerald-500/10 hover:bg-emerald-500/20 hover:scale-105 active:scale-95 text-emerald-400 rounded-full flex items-center justify-center border-2 border-emerald-500/20 shadow-xl transition-all cursor-pointer">
+                <div class="text-center py-10 bg-slate-950 rounded-3xl border border-slate-900/80 mb-6 flex flex-col items-center justify-center">
+                    <button onclick="playDictationAudio()" class="w-20 h-20 bg-sky-500/10 hover:bg-sky-500/20 hover:scale-105 active:scale-95 text-sky-400 rounded-full flex items-center justify-center border-2 border-sky-500/20 shadow-xl transition-all cursor-pointer">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
                         </svg>
@@ -271,7 +271,7 @@
                 <div class="space-y-4">
                     <div>
                         <label for="dictation-input" class="block text-xs font-bold text-slate-400 mb-2">Nhập chữ Hán của từ vựng bạn vừa nghe:</label>
-                        <input type="text" id="dictation-input" autocomplete="off" placeholder="Nhập Hán tự tại đây..." class="w-full text-center text-3xl font-bold tracking-wide bg-slate-950 border border-slate-800 rounded-2xl py-4 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all placeholder:text-slate-700 text-slate-100">
+                        <input type="text" id="dictation-input" autocomplete="off" placeholder="Nhập Hán tự tại đây..." class="w-full text-center text-3xl font-bold tracking-wide bg-slate-950 border border-slate-900 rounded-2xl py-4 focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all placeholder:text-slate-700 text-slate-100">
                     </div>
 
                     <!-- Actions -->
@@ -279,7 +279,7 @@
                         <button onclick="showDictationHint()" class="flex-1 py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs md:text-sm border border-slate-800 transition-all">
                             💡 Xem Gợi Ý
                         </button>
-                        <button onclick="checkDictationAnswer()" class="flex-1 py-3 px-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-xs md:text-sm transition-all shadow-lg shadow-emerald-500/10">
+                        <button onclick="checkDictationAnswer()" class="flex-1 py-3 px-4 bg-sky-500 hover:bg-sky-400 text-slate-950 font-black rounded-xl text-xs md:text-sm transition-all shadow-lg shadow-sky-500/10">
                             🔍 Kiểm Tra (+20 XP)
                         </button>
                     </div>
@@ -301,7 +301,7 @@
                 <!-- Left: Interactive List -->
                 <div class="lg:col-span-4 bg-slate-950 rounded-3xl p-5 border border-slate-800/80 flex flex-col h-[550px]">
                     <h3 class="font-extrabold text-sm text-slate-200 mb-4 flex items-center gap-2">
-                        <span>📝</span> 20 Thử Thách Dịch HSK3
+                        <span>📝</span> 20 Thử Thách Dịch HSK4
                     </h3>
                     
                     <div class="overflow-y-auto space-y-2 flex-1 pr-2" id="translation-list">
@@ -313,7 +313,7 @@
                 <div class="lg:col-span-8 glass-panel p-6 md:p-8 rounded-3xl border border-slate-800 flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-6">
-                            <span class="text-[10px] tracking-widest px-2.5 py-1 bg-indigo-500/10 text-indigo-400 rounded-full font-bold border border-indigo-500/25 uppercase">BÀI TẬP DỊCH THUẬT HSK3</span>
+                            <span class="text-[10px] tracking-widest px-2.5 py-1 bg-indigo-500/10 text-indigo-400 rounded-full font-bold border border-indigo-500/25 uppercase">BÀI TẬP DỊCH THUẬT HSK4</span>
                             <span class="text-xs text-slate-400 font-bold">Câu số <span id="current-translation-idx">1</span> / 20</span>
                         </div>
 
@@ -336,14 +336,14 @@
                         <!-- Typing Editor -->
                         <div class="space-y-3">
                             <label for="translation-input" class="block text-xs font-bold text-slate-400">Bản dịch tiếng Trung chữ Hán của bạn:</label>
-                            <textarea id="translation-input" rows="3" placeholder="Gõ Hán tự tiếng Trung tương ứng..." class="w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-slate-100 placeholder:text-slate-700 focus:ring-2 focus:ring-emerald-500 focus:border-transparent outline-none transition-all text-lg font-medium"></textarea>
+                            <textarea id="translation-input" rows="3" placeholder="Gõ Hán tự tiếng Trung tương ứng..." class="w-full bg-slate-950 border border-slate-800 rounded-2xl p-4 text-slate-100 placeholder:text-slate-700 focus:ring-2 focus:ring-sky-500 focus:border-transparent outline-none transition-all text-lg font-medium"></textarea>
                         </div>
                     </div>
 
                     <!-- Analysis and Comparisons -->
                     <div id="translation-comparison-box" class="hidden mt-6 bg-slate-950 rounded-2xl p-5 border border-slate-800/80 space-y-4">
                         <div class="border-b border-slate-800 pb-3">
-                            <h4 class="text-[10px] tracking-wider font-extrabold uppercase text-emerald-400 mb-2">ĐÁNH GIÁ CHẤT LƯỢNG BẢN DỊCH</h4>
+                            <h4 class="text-[10px] tracking-wider font-extrabold uppercase text-sky-400 mb-2">ĐÁNH GIÁ CHẤT LƯỢNG BẢN DỊCH</h4>
                             <div class="grid grid-cols-2 gap-2 text-xs">
                                 <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">Độ tương thích: <span id="trans-accuracy-rate" class="font-extrabold text-white">0%</span></div>
                                 <div class="bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">Từ vựng cốt lõi: <span id="trans-keyword-status" class="font-extrabold text-white">0/0</span></div>
@@ -352,7 +352,7 @@
                         
                         <div>
                             <span class="text-xs text-slate-400 block mb-1">Đáp án mẫu tiêu chuẩn:</span>
-                            <p id="translation-standard" class="text-lg font-black text-emerald-400 font-sans tracking-wide"></p>
+                            <p id="translation-standard" class="text-lg font-black text-sky-400 font-sans tracking-wide"></p>
                             <p id="translation-standard-py" class="text-xs text-indigo-400 font-semibold font-sans mt-1 italic"></p>
                         </div>
 
@@ -366,7 +366,7 @@
                         <button onclick="revealTranslationAnswer()" class="px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-slate-300 font-bold rounded-xl text-xs md:text-sm transition-all">
                             🔑 Xem Đáp Án Mẫu
                         </button>
-                        <button onclick="evaluateTranslation()" class="px-6 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-slate-950 font-black rounded-xl text-xs md:text-sm transition-all shadow-lg shadow-emerald-500/10">
+                        <button onclick="evaluateTranslation()" class="px-6 py-3.5 bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-slate-950 font-black rounded-xl text-xs md:text-sm transition-all shadow-lg shadow-sky-500/10">
                             ✓ Kiểm Tra Bản Dịch (+30 XP)
                         </button>
                     </div>
@@ -382,12 +382,12 @@
                 <!-- Search and Interactive Tools -->
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
                     <div>
-                        <h3 class="text-lg font-extrabold text-slate-200">Sổ Tay Học Tập Toàn Bộ 128 Từ HSK3</h3>
+                        <h3 class="text-lg font-extrabold text-slate-200">Sổ Tay Học Tập Toàn Bộ 137 Từ HSK4</h3>
                         <p class="text-xs text-slate-400">Xem, nghe phát âm và tự do kiểm tra độ ghi nhớ các từ vựng</p>
                     </div>
                     <div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
-                        <input type="text" id="vocab-search" oninput="filterVocabList()" placeholder="Tìm kiếm chữ Hán, Pinyin hoặc nghĩa..." class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:ring-1 focus:ring-emerald-500 w-full sm:w-64 font-medium">
-                        <select id="vocab-filter-mastery" onchange="filterVocabList()" class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-300 focus:outline-none focus:ring-1 focus:ring-emerald-500">
+                        <input type="text" id="vocab-search" oninput="filterVocabList()" placeholder="Tìm kiếm chữ Hán, Pinyin hoặc nghĩa..." class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:ring-1 focus:ring-sky-500 w-full sm:w-64 font-medium">
+                        <select id="vocab-filter-mastery" onchange="filterVocabList()" class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-slate-300 focus:outline-none focus:ring-1 focus:ring-sky-500">
                             <option value="all">Tất cả từ vựng</option>
                             <option value="unlearned">Từ chưa thuộc</option>
                             <option value="mastered">Từ đã thuộc</option>
@@ -405,288 +405,298 @@
     </div>
 
     <script>
-        // Full database of 128 Chinese vocabulary words requested by user
+        // Standard HSK4 Vocabulary Database constructed from user input (137 unique cleaned words)
         const VOCAB_DATABASE = [
-            { hz: "外面", py: "wàimiàn", vi: "Bên ngoài" },
-            { hz: "跑", py: "pǎo", vi: "Chạy" },
-            { hz: "饿", py: "è", vi: "Đói" },
-            { hz: "以前", py: "yǐqián", vi: "Trước đây, trước kia" },
-            { hz: "德国", py: "déguó", vi: "Nước Đức" },
-            { hz: "想念", py: "xiǎngniàn", vi: "Nhớ, mong mỏi" },
-            { hz: "寄", py: "jì", vi: "Gửi" },
-            { hz: "旅行", py: "lǚxíng", vi: "Du lịch" },
-            { hz: "注意", py: "zhùyì", vi: "Chú ý" },
-            { hz: "交通", py: "jiāotōng", vi: "Giao thông" },
-            { hz: "安全", py: "ānquán", vi: "An toàn" },
-            { hz: "马路", py: "mǎlù", vi: "Đường lộ, đường cái" },
-            { hz: "人行横道", py: "rénxínghéngdào", vi: "Vạch kẻ đường cho người đi bộ" },
-            { hz: "脸色", py: "li&amp;ǎnsè", vi: "Sắc mặt, vẻ mặt" }, // normalized
-            { hz: "刚从", py: "gāng cóng", vi: "Vừa mới từ..." },
-            { hz: "开药", py: "kāiyào", vi: "Kê đơn thuốc, bốc thuốc" },
-            { hz: "受", py: "shòu", vi: "Nhận, chịu đựng, được..." },
-            { hz: "欢迎", py: "huānyíng", vi: "Chào mừng, hoan nghênh" },
-            { hz: "要是", py: "yàoshi", vi: "Nếu như" },
-            { hz: "借给", py: "jiègěi", vi: "Cho mượn, cho vay" },
-            { hz: "习惯", py: "xíguàn", vi: "Thói quen, quen với" },
-            { hz: "打太极拳", py: "dǎ tàijíquán", vi: "Tập thái cực quyền" },
-            { hz: "太太", py: "tàitai", vi: "Bà xã, phu nhân" },
-            { hz: "上周", py: "shàngzhōu", vi: "Tuần trước" },
-            { hz: "聚会", py: "jùhuì", vi: "Tụ họp, họp mặt" },
-            { hz: "同学聚会", py: "tóngxué jùhuì", vi: "Họp lớp, họp bạn học" },
-            { hz: "经济", py: "jīngjì", vi: "Kinh tế" },
-            { hz: "代表团", py: "dàibiǎotuán", vi: "Đoàn đại biểu" },
-            { hz: "带孩子", py: "dài háizi", vi: "Dắt trẻ em, trông con" },
-            { hz: "春节", py: "chūnjié", vi: "Tết Nguyên Đán" },
-            { hz: "重要", py: "zhòngyào", vi: "Quan trọng" },
-            { hz: "传统", py: "chuántǒng", vi: "Truyền thống" },
-            { hz: "节日", py: "jiérì", vi: "Ngày lễ, ngày hội" },
-            { hz: "贴", py: "tiē", vi: "Dán" },
-            { hz: "春联", py: "chūnlián", vi: "Câu đối Tết" },
-            { hz: "包饺子", py: "bāo jiǎozi", vi: "Gói sủi cảo" },
-            { hz: "放鞭炮", py: "fàng biānpào", vi: "Đốt pháo" },
-            { hz: "旁边", py: "pángbiān", vi: "Bên cạnh" },
-            { hz: "联欢会", py: "liánhuānhuì", vi: "Buổi liên hoan" },
-            { hz: "长得", py: "zhǎngde", vi: "Trông như thế nào, lớn lên" },
-            { hz: "建设", py: "jiànshè", vi: "Xây dựng" },
-            { hz: "沿着", py: "yánzhe", vi: "Dọc theo, men theo" },
-            { hz: "沿着这条路", py: "yánzhe zhè tiáo lù", vi: "Dọc theo con đường này" },
-            { hz: "路口", py: "lùkǒu", vi: "Ngã tư, ngã rẽ, giao lộ" },
-            { hz: "右拐", py: "yòuguǎi", vi: "Rẽ phải" },
-            { hz: "去年", py: "qùnián", vi: "Năm ngoái" },
-            { hz: "原来", py: "yuánlái", vi: "Vốn dĩ, hóa ra" },
-            { hz: "延长", py: "yáncháng", vi: "Kéo dài" },
-            { hz: "想法", py: "xiǎngfǎ", vi: "Ý kiến, suy nghĩ, cách nghĩ" },
-            { hz: "变", py: "biàn", vi: "Thay đổi, biến đổi, trở nên" },
-            { hz: "沈阳", py: "shěnyáng", vi: "Thẩm Dương" },
-            { hz: "机场", py: "jīchǎng", vi: "Sân bay" },
-            { hz: "接朋友", py: "jiē péngyou", vi: "Đón bạn" },
-            { hz: "送朋友", py: "sòng péngyou", vi: "Tiễn bạn" },
-            { hz: "寒假", py: "hánjià", vi: "Nghỉ đông" },
-            { hz: "暑假", py: "shǔjià", vi: "Nghỉ hè" },
-            { hz: "待", py: "dāi", vi: "Ở lại, lưu lại" },
-            { hz: "在家里待两个月", py: "zài jiālǐ dāi liǎng gè yuè", vi: "Ở nhà hai tháng" },
-            { hz: "开学", py: "kāixué", vi: "Khai giảng, nhập học" },
-            { hz: "迟到", py: "chídào", vi: "Đến muộn, trễ" },
-            { hz: "看错表", py: "kàn cuò biǎo", vi: "Nhìn nhầm đồng hồ" },
-            { hz: "表", py: "biǎo", vi: "Đồng hồ" },
-            { hz: "辅导", py: "fǔdǎo", vi: "Phụ đạo, gia sư, hướng dẫn" },
-            { hz: "中文系", py: "zhōngwénxì", vi: "Khoa tiếng Trung" },
-            { hz: "研究生", py: "yánjiūshēng", vi: "Nghiên cứu sinh, học viên cao học" },
-            { hz: "列车", py: "lièchē", vi: "Tàu hoả, đoàn tàu" },
-            { hz: "到达", py: "dàodá", vi: "Đến nơi, cập bến" },
-            { hz: "必须", py: "bìxū", vi: "Phải, nhất định phải" },
-            { hz: "提前", py: "tíqián", vi: "Trước thời hạn, sớm hơn" },
-            { hz: "满意", py: "mǎnyì", vi: "Hài lòng, vừa ý" },
-            { hz: "坚持", py: "jiānchí", vi: "Kiên trì, giữ vững" },
-            { hz: "散步", py: "sànbù", vi: "Đi dạo, tản bộ" },
-            { hz: "邻居", py: "línjū", vi: "Hàng xóm" },
-            { hz: "健康", py: "jiànkāng", vi: "Khỏe mạnh, sức khỏe" },
-            { hz: "带药", py: "dài yào", vi: "Mang theo thuốc" },
-            { hz: "雪景", py: "xuějǐng", vi: "Cảnh tuyết" },
-            { hz: "漂亮", py: "piàoliang", vi: "Xinh đẹp" },
-            { hz: "照相机", py: "zhàoxiàngjī", vi: "Máy ảnh, máy chụp hình" },
-            { hz: "旅游鞋", py: "lǚyóuxié", vi: "Giày du lịch, giày dã ngoại" },
-            { hz: "搬家", py: "bānjiā", vi: "Chuyển nhà" },
-            { hz: "校外", py: "xiàowài", vi: "Ngoài trường học" },
+            { hz: "掌握", py: "zhǎngwō", vi: "Nắm vững, làm chủ" },
+            { hz: "原谅", py: "yuánliàng", vi: "Tha thứ, bỏ qua" },
+            { hz: "密码", py: "mìmǎ", vi: "Mật mã, mật khẩu" },
+            { hz: "演出", py: "yǎnchū", vi: "Biểu diễn, trình diễn" },
+            { hz: "赶", py: "gǎn", vi: "Đuổi theo, vội vã, kịp thời" },
+            { hz: "联系", py: "liánxì", vi: "Liên hệ, liên lạc" },
+            { hz: "实在", py: "shízài", vi: "Thực sự, chân thực" },
+            { hz: "总结", py: "zǒngjié", vi: "Tổng kết, kết luận" },
+            { hz: "赶时间", py: "gǎn shíjiān", vi: "Gấp gáp thời gian, vội" },
+            { hz: "弹钢琴", py: "tán gāngqín", vi: "Đánh đàn piano, dương cầm" },
+            { hz: "放暑假", py: "fàng shǔjià", vi: "Nghỉ hè" },
+            { hz: "理想", py: "lǐxiǎng", vi: "Lý tưởng, mong ước" },
+            { hz: "积极", py: "jījí", vi: "Tích cực, hăng hái" },
+            { hz: "获得", py: "huòdé", vi: "Giành được, nhận được" },
+            { hz: "堵车", py: "dǔchē", vi: "Tắc đường, kẹt xe" },
+            { hz: "导游", py: "dǎoyóu", vi: "Hướng dẫn viên du lịch" },
+            { hz: "梦想", py: "mèngxiǎng", vi: "Mơ ước, ước mơ" },
+            { hz: "到处", py: "dàochù", vi: "Mọi nơi, khắp nơi" },
+            { hz: "竟然", py: "jìngrán", vi: "Ngờ đâu, lại, bất ngờ" },
+            { hz: "一下子", py: "yíxiàzi", vi: "Một lát, bỗng chốc" },
+            { hz: "变", py: "biàn", vi: "Thay đổi, biến đổi" },
+            { hz: "暖和", py: "nuǎnhuo", vi: "Ấm áp, dễ chịu" },
+            { hz: "其实", py: "qíshí", vi: "Thực ra, thực chất" },
+            { hz: "发脾气", py: "fā píqi", vi: "Nổi giận, cáu kỉnh" },
             { hz: "平时", py: "píngshí", vi: "Ngày thường, bình thường" },
-            { hz: "打车", py: "dǎchē", vi: "Bắt taxi, đi taxi" },
-            { hz: "邮局", py: "yóujú", vi: "Bưu điện" },
-            { hz: "左拐", py: "zuǒguǎi", vi: "Rẽ trái" },
-            { hz: "拐弯儿", py: "guǎiwānr", vi: "Rẽ, ngoặt cua" },
-            { hz: "下车", py: "xiàchē", vi: "Xuống xe" },
-            { hz: "正门", py: "zhèngmén", vi: "Cổng chính" },
-            { hz: "可不", py: "kěbù", vi: "Đúng thế, chính xác" },
-            { hz: "差一刻六点", py: "chà yí kè liù diǎn", vi: "Kém mười lăm phút sáu giờ (5h45)" },
-            { hz: "一首歌", py: "yì shǒu gē", vi: "Một bài hát" },
-            { hz: "法文", py: "fǎwen", vi: "Tiếng Pháp" },
-            { hz: "世界上", py: "shìjiè shàng", vi: "Trên thế giới" },
-            { hz: "辛苦", py: "xīnkǔ", vi: "Vất vả, cực khổ" },
-            { hz: "周末", py: "zhōumò", vi: "Cuối tuần" },
-            { hz: "愉快", py: "yúkuài", vi: "Vui vẻ, dễ chịu" },
-            { hz: "什么地方", py: "shénme dìfang", vi: "Nơi nào, chỗ nào" },
-            { hz: "开始", py: "kāishǐ", vi: "Bắt đầu" },
-            { hz: "头疼", py: "tóuténg", vi: "Đau đầu" },
-            { hz: "嗓子疼", py: "sǎngzi téng", vi: "Đau họng, đau cổ họng" },
-            { hz: "发烧", py: "fāshāo", vi: "Sốt, phát sốt" },
-            { hz: "雪碧", py: "xuěbì", vi: "Nước ngọt vị chanh (Sprite)" },
-            { hz: "可乐", py: "kělè", vi: "Nước ngọt cola" },
-            { hz: "绿茶", py: "lǜchá", vi: "Trà xanh" },
-            { hz: "飞机晚点了", py: "fēijī wǎndiǎn le", vi: "Máy bay trễ giờ rồi" },
-            { hz: "担心", py: "dānxīn", vi: "Lo lắng, băn khoăn" },
-            { hz: "起飞", py: "qǐfēi", vi: "Cất cánh" },
-            { hz: "放心", py: "fàngxīn", vi: "Yên tâm, an tâm" },
-            { hz: "咱儿子", py: "zán érzi", vi: "Con trai chúng ta" },
-            { hz: "放假", py: "fàngjià", vi: "Nghỉ lễ, được nghỉ" },
-            { hz: "麻烦", py: "máfan", vi: "Làm phiền, phiền hà" },
-            { hz: "送行", py: "sòngxíng", vi: "Tiễn chân, tiễn biệt" },
-            { hz: "国庆节", py: "guóqìngjié", vi: "Ngày quốc khánh" },
-            { hz: "逛逛", py: "guàngguang", vi: "Đi dạo chơi, dạo quanh" },
-            { hz: "世博园", py: "shìbóyuán", vi: "Công viên Triển lãm Expo" },
-            { hz: "菊花", py: "júhuā", vi: "Hoa cúc" },
-            { hz: "说定", py: "shuōdìng", vi: "Thống nhất, giao ước xong" },
-            { hz: "京剧", py: "jīngjù", vi: "Kinh kịch" },
-            { hz: "端午节", py: "duānwǔjié", vi: "Tết Đoan Ngọ" },
-            { hz: "粽子", py: "zòngzi", vi: "Bánh ú, bánh chưng Trung Quốc" },
-            { hz: "拿手菜", py: "náshǒucài", vi: "Món tủ, món sở trường" },
-            { hz: "精彩", py: "jīngcǎi", vi: "Đặc sắc, tuyệt vời" },
-            { hz: "尤其", py: "yóuqí", vi: "Đặc biệt là, nhất là" },
-            { hz: "西游记", py: "xīyóujì", vi: "Tây Du Ký" },
-            { hz: "地道", py: "dìdao", vi: "Chính tông, thuần khiết, đích thực" },
-            { hz: "校长", py: "xiàozhǎng", vi: "Hiệu trưởng" },
-            { hz: "奇怪", py: "qíguài", vi: "Lạ lùng, kỳ quái" },
-            { hz: "踢足球", py: "tī zúqiú", vi: "Đá bóng" }
+            { hz: "祝贺", py: "zhùhè", vi: "Chúc mừng, mừng" },
+            { hz: "终于", py: "zhōngyú", vi: "Cuối cùng, rốt cuộc" },
+            { hz: "博士", py: "bóshì", vi: "Tiến sĩ" },
+            { hz: "并且", py: "bìngqiě", vi: "Đồng thời, vả lại, và" },
+            { hz: "表示", py: "biǎoshì", vi: "Biểu thị, bày tỏ" },
+            { hz: "经验", py: "jīngyàn", vi: "Kinh nghiệm" },
+            { hz: "经历", py: "jīnglì", vi: "Trải qua, trải nghiệm" },
+            { hz: "举办", py: "jǔbàn", vi: "Tổ chức, tiến hành" },
+            { hz: "周围", py: "zhōuwéi", vi: "Xung quanh" },
+            { hz: "到底", py: "dàodǐ", vi: "Đến cùng, rốt cuộc" },
+            { hz: "真正", py: "zhēnzhèng", vi: "Chân chính, đích thực" },
+            { hz: "巧克力", py: "qiǎokèlì", vi: "Sô-cô-la" },
+            { hz: "欢迎", py: "huānyíng", vi: "Chào đón, hoan nghênh" },
+            { hz: "热量", py: "rèliàng", vi: "Nhiệt lượng, calo" },
+            { hz: "即使", py: "jíshǐ", vi: "Cho dù, ngay cả" },
+            { hz: "相同", py: "xiāngtóng", vi: "Giống nhau, tương đồng" },
+            { hz: "标准", py: "biāozhǔn", vi: "Tiêu chuẩn, chuẩn" },
+            { hz: "饼干", py: "bǐnggān", vi: "Bánh quy" },
+            { hz: "正餐", py: "zhèngcān", vi: "Bữa ăn chính" },
+            { hz: "科学", py: "kēxué", vi: "Khoa học" },
+            { hz: "营养", py: "yíngyǎng", vi: "Dinh dưỡng" },
+            { hz: "不良", py: "bùliáng", vi: "Không tốt, kém, xấu" },
+            { hz: "长期", py: "chángqī", vi: "Thời gian dài, dài hạn" },
+            { hz: "下去", py: "xiàqù", vi: "Tiếp tục đi xuống" },
+            { hz: "造成", py: "zàochéng", vi: "Gây ra, tạo thành" },
+            { hz: "减肥", py: "jiǎnféi", vi: "Giảm cân, giảm béo" },
+            { hz: "四川", py: "Sìchuān", vi: "Tứ Xuyên" },
+            { hz: "儿童", py: "értóng", vi: "Trẻ em, nhi đồng" },
+            { hz: "礼貌", py: "lǐmào", vi: "Lịch sự, lễ phép" },
+            { hz: "童年", py: "tóngnián", vi: "Tuổi thơ, thời thơ ấu" },
+            { hz: "产生", py: "chǎnshēng", vi: "Nảy sinh, xuất hiện" },
+            { hz: "耐心", py: "nàixīn", vi: "Kiên nhẫn, nhẫn nại" },
+            { hz: "宠物", py: "chǒngwù", vi: "Thú cưng, vật nuôi" },
+            { hz: "人类", py: "rénlèi", vi: "Nhân loại, loài người" },
+            { hz: "责任", py: "zérèn", vi: "Trách nhiệm" },
+            { hz: "阳光", py: "yángguāng", vi: "Ánh nắng, rực rỡ, tích cực" },
+            { hz: "笑声", py: "xiàoshēng", vi: "Tiếng cười" },
+            { hz: "死亡", py: "sǐwáng", vi: "Tử vong, cái chết" },
+            { hz: "尊重", py: "zūnzhòng", vi: "Tôn trọng, kính trọng" },
+            { hz: "启发", py: "qǐfā", vi: "Khơi gợi, truyền cảm hứng" },
+            { hz: "因此", py: "yīncǐ", vi: "Vì thế, do đó" },
+            { hz: "养成", py: "yǎngchéng", vi: "Nuôi dưỡng, hình thành (thói quen)" },
+            { hz: "隔壁", py: "gébì", vi: "Sát vách, nhà bên cạnh" },
+            { hz: "打印", py: "dǎyìn", vi: "In ấn, in ra" },
+            { hz: "打印机", py: "dǎyìnjī", vi: "Máy in" },
+            { hz: "复印", py: "fùyìn", vi: "Photocopy, sao chụp" },
+            { hz: "复印机", py: "fùyìnjī", vi: "Máy photocopy" },
+            { hz: "复印件", py: "fùyìnjiàn", vi: "Bản sao chụp, bản photocopy" },
+            { hz: "节约", py: "jiéyuē", vi: "Tiết kiệm" },
+            { hz: "诚实", py: "chéngshí", vi: "Trung thực, thành thật" },
+            { hz: "却", py: "què", vi: "Nhưng, lại" },
+            { hz: "需要", py: "xūyào", vi: "Cần, nhu cầu" },
+            { hz: "积累", py: "jīlěi", vi: "Tích lũy" },
+            { hz: "大量", py: "dàliàng", vi: "Số lượng lớn, nhiều" },
+            { hz: "硕士", py: "shuòshì", vi: "Thạc sĩ" },
+            { hz: "翻译", py: "fānyì", vi: "Phiên dịch, dịch thuật" },
+            { hz: "广播", py: "guǎngbō", vi: "Phát thanh, truyền hình" },
+            { hz: "也许", py: "yěxǔ", vi: "Có lẽ, có thể" },
+            { hz: "确实", py: "quèshí", vi: "Quả thực, thực sự" },
+            { hz: "正确", py: "zhèngquè", vi: "Chính xác, đúng đắn" },
+            { hz: "判断", py: "pànduàn", vi: "Phán đoán, đánh giá" },
+            { hz: "考虑", py: "kǎolǜ", vi: "Cân nhắc, suy nghĩ" },
+            { hz: "接受", py: "jiēshòu", vi: "Chấp nhận, tiếp nhận" },
+            { hz: "建议", py: "jiànyì", vi: "Kiến nghị, khuyên bảo" },
+            { hz: "后悔", py: "hòuhuǐ", vi: "Hối hận" },
+            { hz: "粗心", py: "cūxīn", vi: "Cẩu thả, sơ ý" },
+            { hz: "要静下心来", py: "yào jìng xià xīn lái", vi: "Cần tĩnh tâm lại" },
+            { hz: "仔细", py: "zǐxì", vi: "Tỉ mỉ, cẩn thận" },
+            { hz: "整理", py: "zhěnglǐ", vi: "Sắp xếp, chỉnh lý" },
+            { hz: "付款", py: "fùkuǎn", vi: "Thanh toán, trả tiền" },
+            { hz: "现金", py: "xiànjīn", vi: "Tiền mặt" },
+            { hz: "方便", py: "fāngbiàn", vi: "Thuận tiện, tiện lợi" },
+            { hz: "被", py: "bèi", vi: "Bị, được" },
+            { hz: "所接受", py: "suǒ jiēshòu", vi: "Được chấp nhận" },
+            { hz: "省钱", py: "shěng qián", vi: "Tiết kiệm tiền" },
+            { hz: "幽默", py: "yōumò", vi: "Hài hước" },
+            { hz: "甚至", py: "shènzhì", vi: "Thậm chí" },
+            { hz: "禁止", py: "jìnzhǐ", vi: "Nghiêm cấm, cấm" },
+            { hz: "引起", py: "yǐnqǐ", vi: "Gây ra, dẫn đến" },
+            { hz: "道歉", py: "dàoqiàn", vi: "Xin lỗi" },
+            { hz: "走入", py: "zǒurù", vi: "Bước vào, đi vào" },
+            { hz: "过程", py: "guòchéng", vi: "Quá trình" },
+            { hz: "烦恼", py: "fánnǎo", vi: "Phiền não, lo lắng" },
+            { hz: "失望", py: "shīwàng", vi: "Thất vọng" },
+            { hz: "勇敢", py: "yǒnggǎn", vi: "Dũng cảm" },
+            { hz: "珍惜", py: "zhēnxī", vi: "Trân trọng, quý trọng" },
+            { hz: "艺术", py: "yìshù", vi: "Nghệ thuật" },
+            { hz: "养", py: "yǎng", vi: "Nuôi nấng, nuôi dưỡng" },
+            { hz: "有害", py: "yǒuhài", vi: "Có hại" },
+            { hz: "有益", py: "yǒuyì", vi: "Có ích, có lợi" },
+            { hz: "镜子", py: "jìngzi", vi: "Cái gương" },
+            { hz: "出差", py: "chūchāi", vi: "Đi công tác" },
+            { hz: "家具", py: "jiājù", vi: "Đồ nội thất, gia cụ" },
+            { hz: "发传真", py: "fā chuánzhēn", vi: "Gửi fax" },
+            { hz: "应聘", py: "yìngpìn", vi: "Ứng tuyển, xin việc" },
+            { hz: "郊区", py: "jiāoqū", vi: "Ngoại ô" },
+            { hz: "熟悉", py: "shúxī", vi: "Quen thuộc, hiểu rõ" },
+            { hz: "伤心", py: "shāngxīn", vi: "Đau lòng, buồn bã" },
+            { hz: "看起来", py: "kàn qǐlái", vi: "Trông có vẻ, xem ra" },
+            { hz: "尽快", py: "jǐnkuài", vi: "Nhanh nhất có thể, sớm nhất" },
+            { hz: "礼拜天", py: "lǐbàitiān", vi: "Chủ nhật" },
+            { hz: "理发店", py: "lǐfàdiàn", vi: "Tiệm cắt tóc" },
+            { hz: "弄头发", py: "nòng tóufa", vi: "Làm tóc" },
+            { hz: "服务", py: "fúwù", vi: "Phục vụ, dịch vụ" },
+            { hz: "鲜牛奶", py: "xiān niúnǎi", vi: "Sữa tươi" },
+            { hz: "果汁", py: "guǒzhī", vi: "Nước hoa quả, nước ép" },
+            { hz: "了不起", py: "liǎobùqǐ", vi: "Phi thường, xuất sắc" },
+            { hz: "教授", py: "jiàoshòu", vi: "Giáo sư" },
+            { hz: "研究", py: "yánjiū", vi: "Nghiên cứu" },
+            { hz: "尽管", py: "jǐnguǎn", vi: "Cho dù, cứ việc" },
+            { hz: "幸运", py: "xìngyùn", vi: "May mắn" },
+            { hz: "病得很厉害", py: "bìng de hěn lìhai", vi: "Bị bệnh rất nặng" }
         ];
 
-        // 20 High-Quality HSK3 Translation Exercises matching user's words
+        // 20 Premium HSK4 Vietnamese-to-Chinese Translation Exercises using unique supplied vocab.
         const TRANSLATION_DATABASE = [
             {
-                vi: "Tôi vốn dĩ thích phong cảnh bên ngoài, nhưng bây giờ lại muốn nghỉ ngơi ở nhà.",
-                hz: "我原来喜欢外面的风景，但是现在却想在家里休息。",
-                py: "Wǒ yuánlái xǐhuān wàimiàn de fēngjǐng, dànshì xiànzài què xiǎng zài jiālǐ xiūxi.",
-                keywords: ["原来", "外面", "想"],
-                note: "Từ '原来' (Vốn dĩ, hóa ra) đứng làm trạng ngữ đầu câu. Trạng từ phủ định chuyển ngoặt '却' (nhưng lại) đứng sau chủ ngữ."
+                vi: "Để nắm vững ngoại ngữ này, bạn cần tích lũy một lượng lớn từ vựng hàng ngày.",
+                hz: "为了掌握这门外语，你需要每天积累大量的词汇。",
+                py: "Wèile zhǎngwō zhè mén wàiyǔ, nǐ xūyào měitiān jīlěi dàliàng de cíhuì.",
+                keywords: ["掌握", "积累", "大量"],
+                note: "Sử dụng cấu trúc chỉ mục đích '为了' (Để). Trạng ngữ tần suất '每天' đi trước động từ chính '积累'."
             },
             {
-                vi: "Trước đây, khi đi du lịch nước Đức, tôi luôn chú ý đến an toàn giao thông.",
-                hz: "以前去德国旅行的时候，我总是注意交通安全。",
-                py: "Yǐqián qù Déguó lǚxíng de shíhou, wǒ zǒngshì zhùyì jiāotōng ānquán.",
-                keywords: ["以前", "德国", "旅行", "交通", "安全"],
-                note: "Sử dụng cụm từ '...的时候' chỉ thời điểm. '交通安全' đứng làm cụm danh từ bổ nghĩa làm tân ngữ của '注意'."
+                vi: "Mặc dù anh ấy bận đi công tác, nhưng rốt cuộc anh ấy cũng đồng ý đi xem biểu diễn.",
+                hz: "尽管 he 忙着出差，但他到底还是同意去看看演出了。",
+                hz: "尽管他忙着出差，但他到底还是同意去看看演出了。",
+                py: "Jǐnguǎn tā mángzhe chūchāi, dàn tā dàodǐ háishì tóngyì qù kànkan yǎnchū le.",
+                keywords: ["尽管", "出差", "到底", "演出"],
+                note: "'尽管...但...' thể hiện sự chuyển ngoặt lớn. Cụm '到底还是' biểu thị kết quả cuối cùng vẫn như mong đợi."
             },
             {
-                vi: "Khi qua đường, bạn nhất định phải đi trên vạch kẻ đường cho người đi bộ.",
-                hz: "过马路的时候，你必须走人行横道。",
-                py: "Guò mǎlù de shíhou, nǐ bìxū zǒu rénxínghéngdào.",
-                keywords: ["马路", "必须", "人行横道"],
-                note: "'必须' là động từ năng nguyện bổ trợ biểu thị ý nghĩa bắt buộc phải thực hiện, đi trước động từ '走'."
+                vi: "Khi gặp tắc xe trên đường ra sân bay, cô ấy vội vã thời gian đến mức quên cả mang máy ảnh.",
+                hz: "在去机场的路上遇到堵车时，她太赶时间了，甚至连照相机都忘了带。",
+                py: "Zài qù jīchǎng de lùshàng yùdào dǔchē shí, tā tài gǎn shíjiān le, shènzhì lián zhàoxiàngjī dōu wàng le dài.",
+                keywords: ["堵车", "赶时间", "甚至", "照相机"],
+                note: "Cấu trúc nhấn mạnh cường độ '甚至连...都...' (thậm chí ngay cả... cũng)."
             },
             {
-                vi: "Sắc mặt của anh ấy không tốt lắm, bác sĩ vừa mới kê đơn thuốc cho anh ấy xong.",
-                hz: "他的脸色不太好，医生刚给他开了药。",
-                py: "Tā de liǎnsè bú tài hǎo, yīshēng gāng gěi tā kāi le yào.",
-                keywords: ["脸色", "刚", "开药"],
-                note: "'脸色' (Sắc mặt). Phó từ '刚' (vừa mới) đứng trước giới từ '给' để thực hiện hoạt động."
+                vi: "Thầy hiệu trưởng hy vọng học viên thạc sĩ có thể kiên trì rèn luyện thói quen tốt.",
+                hz: "校长希望硕士生们能够坚持养成好习惯。",
+                py: "Xiàozhǎng xīwàng shuòshìshēng men nénggòu jiānchí yǎngchéng hǎo xíguàn.",
+                keywords: ["校长", "硕士", "坚持", "养成"],
+                note: "'养成' là động từ kết hợp cực mạnh với danh từ '习惯' (hình thành thói quen tốt)."
             },
             {
-                vi: "Món ăn sở trường của cô ấy rất được hoan nghênh tại buổi họp lớp.",
-                hz: "她的拿手菜在同学聚会上很受欢迎。",
-                py: "Tā de náshǒucài zài tóngxué jùhuì shàng hěn shòu huānyíng.",
-                keywords: ["拿手菜", "同学聚会", "受", "欢迎"],
-                note: "Cấu trúc bị động hoặc nhận định '受欢迎' (được hoan nghênh). Cụm giới từ '在...上' biểu thị không gian ngữ cảnh."
+                vi: "Thực ra, nếu bạn dũng cảm đối mặt với thất bại, bạn sẽ đạt được kinh nghiệm thực tế quý giá.",
+                hz: "其实，如果你勇敢面对失败，你就会获得宝贵的实际经验。",
+                py: "Qíshí, rúguǒ nǐ yǒnggǎn miànduì shībài, nǐ jiù huì huòdé bǎoguì de shíjì jīngyàn.",
+                keywords: ["其实", "勇敢", "获得", "经验"],
+                note: "'其实' (Thực ra) đặt ở đầu vế câu để chuyển ý tiếp cận bản chất."
             },
             {
-                vi: "Nếu như bạn đồng ý cho tôi mượn máy ảnh, cuối tuần tôi sẽ chụp phong cảnh tuyết rơi.",
-                hz: "要是你愿意把照相机借给我，周末我就去拍雪景。",
-                py: "Y&amp;agrave;oshi nǐ yu&amp;agrave;ny&amp;igrave; bǎ zh&amp;agrave;oxi&amp;agrave;ngjī ji&amp;egrave; gěi wǒ, zhōum&amp;ograve; wǒ ji&amp;ugrave; q&amp;ugrave; pāi xuějǐng.", // normalized values
-                keywords: ["要是", "借给", "照相机", "雪景"],
-                note: "Liên từ '要是...就...' thể hiện giả thuyết. Động từ '借给' (cho mượn) mang hai tân ngữ."
+                vi: "Ngờ đâu chiếc máy in sát vách bị hỏng, chúng tôi đành phải đi photocopy.",
+                hz: "竟然隔壁的打印机坏了，我们不得不去复印。",
+                py: "Jìngrán gébì de dǎyìnjī huài le, wǒmen bùdébù qù fùyìn.",
+                keywords: ["竟然", "隔壁", "打印机", "复印"],
+                note: "'竟然' mang sắc thái bất ngờ, ngạc nhiên lớn. '不得不' là phủ định kép ý chỉ bắt buộc."
             },
             {
-                vi: "Tuần trước, ông hiệu trưởng đã kiên trì đi bộ dọc theo con đường này.",
-                hz: "上周，校长坚持沿着这条路散步。",
-                py: "Shàngzhōu, xiàozhǎng jiānchí yánzhe zhè tiáo lù sànbù.",
-                keywords: ["上周", "校长", "坚持", "沿着", "散步"],
-                note: "'沿着这条路' (Dọc theo con đường này) đóng vai trò làm trạng ngữ chỉ phương hướng đứng trước động từ chính '散步'."
+                vi: "Chúng ta cần có trách nhiệm và sự kiên nhẫn khi nuôi một con thú cưng mới.",
+                hz: "我们养一只新宠物的时候，需要有责任心和耐心。",
+                py: "Wǒmen yǎng yì zhī xīn chǒngwù de shíhou, xūyào yǒu zérènxīn hé nàixīn.",
+                keywords: ["养", "宠物", "责任", "耐心"],
+                note: "'养' nghĩa là nuôi dưỡng động vật, thực vật. Cần ghép danh từ '责任' thành cụm '责任心' để biểu đạt đầy đủ."
             },
             {
-                vi: "Tết Đoan Ngọ là một ngày lễ truyền thống quan trọng, mọi người đều ăn bánh ú.",
-                hz: "端午节是一个重要的传统节日，大家都吃粽子。",
-                py: "Duānwǔjié shì yígè zhòngyào de chuántǒng jiérì, dàjiā dōu chī zòngzi.",
-                keywords: ["端午节", "重要", "传统", "节日", "粽子"],
-                note: "Định ngữ đa tầng '重要的传统' miêu tả đặc tính của ngày lễ '节日'."
+                vi: "Nghe đài phát thanh giúp chúng ta quen thuộc hơn với cuộc sống hàng ngày ở đây.",
+                hz: "听广播能让我们对平时的生活更加熟悉。",
+                py: "Tīng guǎngbō néng ràng wǒmen duì píngshí de shēnghuó gèngjiā shúxī.",
+                keywords: ["广播", "平时", "熟悉"],
+                note: "Giới từ '对' dẫn dắt đối tượng được tác động hoặc cảm nhận ('对...熟悉')."
             },
             {
-                vi: "Trông cô ấy rất xinh đẹp, nhất là khi biểu diễn Kinh kịch tại buổi liên hoan.",
-                hz: "她长得很漂亮，尤其是在联欢会上演京剧的时候。",
-                py: "Tā zhǎng de hěn piàoliang, yóuqí shì zài liánhuānhuì shàng yǎn jīngjù de shíhou.",
-                keywords: ["长得", "漂亮", "尤其", "联欢会", "京剧"],
-                note: "Bổ ngữ chỉ mức độ '长得' (Trông như thế nào) kết hợp với phó từ nhấn mạnh '尤其' (nhất là/đặc biệt)."
+                vi: "Mệt mỏi kéo dài có hại cho sức khỏe, bạn cần tĩnh tâm lại để sắp xếp suy nghĩ.",
+                hz: "长期疲劳对健康有害，你需要静下心来整理想法。",
+                py: "Chángqī píláo duì jiànkāng yǒuhài, nǐ xūyào jìng xià xīn lái zhěnglǐ xiǎngfǎ.",
+                keywords: ["长期", "有害", "要静下心来", "整理"],
+                note: "Cấu trúc bổ ngữ xu hướng '静下心来' chỉ trạng thái tâm hồn chuyển dịch từ náo động sang yên lặng hoàn toàn."
             },
             {
-                vi: "Gần đến ngã tư thì rẽ phải, đi thêm một lát sẽ thấy bưu điện.",
-                hz: "快到路口往右拐，再走一下儿就能看到邮局。",
-                py: "Kuài dào lùkǒu wǎng yòu guǎi, zài zǒu yíxiàr jiù néng kàndào yóujú.",
-                keywords: ["路口", "右拐", "邮局"],
-                note: "'往右拐' (Rẽ về phía bên phải). Cấu trúc '再...就...' biểu thị tuần tự kế tiếp."
+                vi: "Ý kiến khuyên bảo của giáo sư đã khơi gợi cho tôi rất nhiều bài học quý giá.",
+                hz: "教授的建议给我带来了很大的启发。",
+                py: "Jiàoshòu de jiànyì gěi wǒ dài lái le hěn dà de qǐfā.",
+                keywords: ["建议", "教授", "启发"],
+                note: "'启发' dùng làm danh từ tân ngữ của cụm động từ mang lại '带来启发'."
             },
             {
-                vi: "Tôi bận dắt con cả ngày, vốn dĩ không có thời gian tản bộ với hàng xóm.",
-                hz: "我整天都在带孩子，原来根本没有时间跟邻居散步。",
-                py: "Wǒ zhěngtiān dōu zài dài háizi, yuánlái gēnběn méiyǒu shíjiān gēn línjū sànbù.",
-                keywords: ["带孩子", "原来", "邻居", "散步"],
-                note: "'带孩子' (Trông con/dắt con). Cụm giới từ '跟邻居' (với hàng xóm) đứng trước động từ '散步' để bổ trợ nghĩa."
+                vi: "Được nhận vào ứng tuyển ở ngoại ô khiến anh ấy vô cùng may mắn và vui vẻ.",
+                hz: "能在郊区应聘成功让他感到非常幸运和愉快。",
+                py: "Néng zài jiāoqū yìngpìn chénggōng ràng tā gǎndào fēicháng xìngyùn hé yúkuài.",
+                keywords: ["郊区", "应聘", "幸运", "愉快"],
+                note: "'应聘成功' là ứng tuyển thành công. Động từ kiêm ngữ '让' chỉ tác nhân kích hoạt cảm xúc."
             },
             {
-                vi: "Vì Tết Nguyên Đán sắp đến rồi nên kỳ nghỉ đông không thể kéo dài thêm.",
-                hz: "因为春节就要到了，所以寒假不能再延长了。",
-                py: "Yīnwèi Chūnjié jiùyào dào le, suǒyǐ hánjià bùnéng zài yáncháng le.",
-                keywords: ["春节", "寒假", "延长"],
-                note: "Sử dụng cấu trúc nhân quả chuẩn mực '因为...所以...'. '延长' biểu thị kéo dài thời hạn."
+                vi: "Anh ấy hối hận vì thói cẩu thả trong lúc thanh toán hóa đơn bằng tiền mặt.",
+                hz: "他后悔在用现金付款时太粗心了。",
+                py: "Tā hòuhuǐ zài yòng xiànjīn fùkuǎn shí tài cūxīn le.",
+                keywords: ["后悔", "现金", "付款", "粗心"],
+                note: "Trạng ngữ chỉ thời gian '在...时' (trong lúc...) chứa cụm giới từ '用现金'."
             },
             {
-                vi: "Con trai của chúng ta bình thường thích đá bóng, sức khỏe rất tốt.",
-                hz: "咱儿子平时喜欢踢足球，身体非常健康。",
-                py: "Zán érzi píngshí xǐhuān tī zúqiú, shēntǐ fēicháng jiànkāng.",
-                keywords: ["咱儿子", "平时", "踢足球", "健康"],
-                note: "'咱儿子' là cách gọi con trai thân mật của hai vợ chồng miền Bắc Trung Quốc. '平时' (Ngày thường/bình thường)."
+                vi: "Ngày thường anh ấy rất hài hước, mang đến nhiều tiếng cười cho mọi người xung quanh.",
+                hz: "他平时很幽默，给周围的人带来了很多笑声。",
+                py: "Tā píngshí hěn yōumò, gěi zhōuwéi de rén dài lái le hěn duō xiàoshēng.",
+                keywords: ["平时", "幽默", "周围", "笑声"],
+                note: "Giới từ '给' dùng để hướng hành động mang tiếng cười tới những người xung quanh '周围的人'."
             },
             {
-                vi: "Thật là kỳ lạ, tôi vừa mới bắt taxi xuống xe ở bưu điện đã cảm thấy đau đầu.",
-                hz: "真奇怪，我刚打车在邮局下车，就觉得头疼。",
-                py: "Zhēn qíguài, wǒ gāng dǎchē zài yóujú xiàchē, jiù juéde tóuténg.",
-                keywords: ["奇怪", "打车", "下车", "头疼"],
-                note: "'奇怪' đứng độc lập để bày tỏ cảm xúc. Thao tác '打车' (đi taxi) được tiếp diễn bằng '下车'."
+                vi: "Tiêu chuẩn dinh dưỡng của trẻ em ngày nay đã được nâng cao rất nhiều.",
+                hz: "现在的儿童营养标准已经提高了很多。",
+                py: "Xiànzài de értóng yíngyǎng biāozhǔn yǐjīng tígāo le hěn duō.",
+                keywords: ["儿童", "营养", "标准"],
+                note: "Cụm danh từ đa tầng đóng vai trò làm chủ ngữ chính '儿童营养标准' (tiêu chuẩn dinh dưỡng trẻ em)."
             },
             {
-                vi: "Bạn chớ lo lắng, đoàn tàu đến muộn rồi nhưng rốt cuộc cũng đã đến nơi.",
-                hz: "你别担心，列车晚点了，但到底还是到达了。",
-                py: "Nǐ bié dānxīn, lièchē wǎndiǎn le, dàn dàodǐ háishì dàodá le.",
-                keywords: ["担心", "列车", "到底", "到达"],
-                note: "'到底还是' nghĩa là cuối cùng thì vẫn cứ là, thể hiện kết quả đạt được sau một quá trình bất trắc."
+                vi: "Bạn hãy tha thứ cho tôi, tôi thực lòng không muốn gây ra phiền não này.",
+                hz: "请原谅我，我实在不想造成这个烦恼。",
+                py: "Qǐng yuánliàng wǒ, wǒ shízài bù xiǎng zàochéng zhège fánnǎo.",
+                keywords: ["原谅", "实在", "造成", "烦恼"],
+                note: "'实在' biểu thị thái độ chân thành của người nói đứng trước động từ năng nguyện phủ định '不想'."
             },
             {
-                vi: "Hóa ra anh ấy nhìn nhầm đồng hồ nên mới đi học muộn vào ngày khai giảng.",
-                hz: "原来他看错表了，所以开学第一天就迟到了。",
-                py: "Yuánlái tā kàn cuò biǎo le, suǒyǐ kāixué dì-yī tiān jiù chídào le.",
-                keywords: ["原来", "看错", "表", "迟到"],
-                note: "'看错' (Nhìn nhầm) là bổ ngữ kết quả của hành động nhìn. '迟到' đi kèm phó từ '就' biểu đạt việc xảy ra nhanh/sớm theo phán đoán chủ quan."
+                vi: "Để tiết kiệm tiền, cô ấy chỉ ăn bánh quy thay vì bữa ăn chính.",
+                hz: "为了省钱，她只吃饼干而不吃正餐。",
+                py: "Wèile shěng qián, tā zhǐ chī bǐnggān ér bù chī zhèngcān.",
+                keywords: ["省钱", "饼干", "正餐"],
+                note: "Liên từ chuyển tiếp '而' kết nối hai vế trái ngược biểu thị ý nghĩa phản bác."
             },
             {
-                vi: "Nghiên cứu sinh khoa tiếng Trung này thật vất vả, nhưng cách nghĩ của anh ấy rất tích cực.",
-                hz: "这个中文系的研究生真辛苦，但是/可是他的想法非常积极。",
-                py: "Zhège zhōngwénxì de yánjiūshēng zhēn xīnkǔ, dànshì tā de xiǎngfǎ fēicháng jījí.",
-                keywords: ["中文系", "研究生", "辛苦", "想法", "积极"],
-                note: "'中文系的研究生' là cụm định ngữ chỉ đối tượng nghiên cứu sinh. '积极' (Tích cực) đóng vai trò tính từ miêu tả chủ thể."
+                vi: "Cho dù là nghệ thuật đích thực cũng cần thời gian tích lũy lâu dài để thấu hiểu.",
+                hz: "即使是真正的艺术，也需要长期的积累才能理解。",
+                py: "Jíshǐ shì zhēnzhèng de yìshù, yě xūyào chángqī de jīlěi cáinéng lǐjiě.",
+                keywords: ["即使", "真正", "长期", "积累"],
+                note: "Mẫu câu giả thuyết nhượng bộ '即使...也...' kết hợp với điều kiện cần '才能'."
             },
             {
-                vi: "Sân bay Thẩm Dương lúc nào cũng có rất nhiều người đến đón bạn và tiễn bạn.",
-                hz: "沈阳机场总是特别多人接朋友和送朋友。",
-                py: "Shěnyáng jīchǎng zǒngshì tèbié duō rén jiē péngyou hé sòng péngyou.",
-                keywords: ["沈阳", "机场", "接朋友", "送朋友"],
-                note: "Mẫu câu tồn tại / kiêm ngữ '特别多人' thực hiện liên tiếp hai hoạt động '接' (đón) và '送' (tiễn)."
+                vi: "Việc phán đoán chính xác đôi khi bị ảnh hưởng bởi môi trường xung quanh.",
+                hz: "正确的判断有时会受到周围环境的影响。",
+                py: "Zhèngquè de pànduàn yǒushí huì shòudào zhōuwéi huánjìng de yǐngxiǎng.",
+                keywords: ["正确", "判断", "周围"],
+                note: "Cấu trúc bị động '受到...的影响' (chịu ảnh hưởng bởi điều gì)."
             },
             {
-                vi: "Cuối tuần vui vẻ! Chúng ta đi dạo chơi Công viên Triển lãm và ngắm hoa cúc nhé.",
-                hz: "周末愉快！我们去逛逛世博园，看看菊花吧。",
-                py: "Zhōumò yúkuài! Wǒmen qù guàngguang shìbóyuán, kànkan júhuā ba.",
-                keywords: ["周末", "愉快", "逛逛", "世博园", "菊花"],
-                note: "'周末愉快' là câu chúc xã giao cuối tuần. Động từ lặp trùng '逛逛', '看看' giúp làm giảm nhẹ sắc thái, tăng phần tự nhiên."
+                vi: "Cho dù bị bệnh rất nặng, anh ấy vẫn tích cực đối mặt và trân trọng từng ngày.",
+                hz: "尽管病得很厉害，但他依然积极面对，珍惜每一天。",
+                py: "Jǐnguǎn bìng de hěn lìhai, dàn tā yīrán jījí miànduì, zhēnxī měi yì tiān.",
+                keywords: ["病得很厉害", "积极", "珍惜"],
+                note: "Trạng ngữ bổ trợ trạng thái '病得很厉害' bổ nghĩa trực tiếp cho trạng thái của chủ thể."
             },
             {
-                vi: "Tiếng Trung của nghiên cứu sinh người Đức này rất chính tông, khiến giáo viên vô cùng hài lòng.",
-                hz: "这个德国研究生的中文说得很地道，让老师非常满意。",
-                py: "Zhège Déguó yánjiūshēng de Zhōngwén shuō de hěn dìdao, ràng lǎoshī fēicháng mǎnyì.",
-                keywords: ["德国", "研究生", "地道", "满意"],
-                note: "Động từ sai khiến '让' (khiến cho/cho phép) biểu thị tác động. '地道' (Chính tông/chuẩn xứ) dùng để miêu tả ngôn ngữ ngữ điệu."
+                vi: "Chúng ta cần tiết kiệm giấy khi in ấn tài liệu trong văn phòng.",
+                hz: "我们在办公室打印文件时需要节约纸张。",
+                py: "Wǒmen zài bàngōngshì dǎyìn wénjiàn shí xūyào jiéyuē zhǐzhāng.",
+                keywords: ["打印", "节约"],
+                note: "'节约' đi với tân ngữ '纸张' để diễn tả ý nghĩa tiết kiệm tài nguyên."
             }
         ];
 
-        // Core State
+        // Main application state management
         let state = {
             currentTab: 'flashcards',
             streak: 1,
             xp: 0,
-            masteredWords: [], // Array of mastered database indexes
+            masteredWords: [], // Array of indices of mastered words
             flashcardDeck: [...VOCAB_DATABASE],
             currentFlashIndex: 0,
             currentQuizWord: null,
@@ -697,13 +707,13 @@
             isFlipped: false
         };
 
-        // Window load trigger
+        // Window load setup
         window.onload = function() {
             loadUserData();
             initApp();
         };
 
-        // Initialize core setups
+        // Core system initialization
         function initApp() {
             renderFlashcard();
             renderVocabList();
@@ -714,9 +724,9 @@
             updateStatsUI();
         }
 
-        // Load local storage details
+        // Recover metrics from local storage
         function loadUserData() {
-            const savedData = localStorage.getItem('hsk3_dethi1_data');
+            const savedData = localStorage.getItem('hsk4_dethi1_data');
             if (savedData) {
                 try {
                     const parsed = JSON.parse(savedData);
@@ -724,26 +734,26 @@
                     state.xp = parsed.xp || 0;
                     state.masteredWords = parsed.masteredWords || [];
                 } catch(e) {
-                    console.error("Lỗi khi tải dữ liệu người dùng", e);
+                    console.error("Lỗi khi khôi phục dữ liệu", e);
                 }
             }
         }
 
-        // Save states back to disk
+        // Save progress details safely
         function saveUserData() {
             const dataToSave = {
                 streak: state.streak,
                 xp: state.xp,
                 masteredWords: state.masteredWords
             };
-            localStorage.setItem('hsk3_dethi1_data', JSON.stringify(dataToSave));
+            localStorage.setItem('hsk4_dethi1_data', JSON.stringify(dataToSave));
             updateStatsUI();
         }
 
         function updateStatsUI() {
             document.getElementById('stat-streak').innerText = `${state.streak} Ngày`;
             document.getElementById('stat-xp').innerText = `${state.xp} XP`;
-            document.getElementById('stat-mastered').innerText = `${state.masteredWords.length}/128`;
+            document.getElementById('stat-mastered').innerText = `${state.masteredWords.length}/137`;
         }
 
         function awardXP(amount, message) {
@@ -752,16 +762,15 @@
             showToast(`🎉 +${amount} XP: ${message}`, 'success');
         }
 
-        // Sleek Custom Toast Notifications
         function showToast(message, type = 'info') {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
             toast.className = `p-4 rounded-xl shadow-lg border text-sm font-bold transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto flex items-center gap-3`;
             
             if (type === 'success') {
-                toast.className += ' bg-emerald-950/90 border-emerald-500/30 text-emerald-400';
+                toast.className += ' bg-sky-950/90 border-sky-500/30 text-sky-400';
             } else if (type === 'error') {
-                toast.className += ' bg-rose-950/90 border-rose-500/30 text-rose-400';
+                toast.className += ' bg-rose-950/90 border-rose-500/30 text-rose-450';
             } else {
                 toast.className += ' bg-slate-900/95 border-slate-750 text-slate-200';
             }
@@ -785,18 +794,18 @@
             }, 3000);
         }
 
-        // Tab Switching Engine
+        // Tab routing switcher
         function switchTab(tabId) {
             state.currentTab = tabId;
             
             document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active', 'text-emerald-400', 'bg-emerald-500/10', 'border', 'border-emerald-500/25');
+                btn.classList.remove('active', 'text-sky-400', 'bg-sky-500/10', 'border', 'border-sky-500/25');
                 btn.classList.add('text-slate-400', 'hover:text-slate-100', 'hover:bg-slate-900');
             });
 
             const activeBtn = document.getElementById(`tab-${tabId}`);
             activeBtn.classList.remove('text-slate-400', 'hover:text-slate-100', 'hover:bg-slate-900');
-            activeBtn.classList.add('active', 'text-emerald-400', 'bg-emerald-500/10', 'border', 'border-emerald-500/25');
+            activeBtn.classList.add('active', 'text-sky-400', 'bg-sky-500/10', 'border', 'border-sky-500/25');
 
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.add('hidden');
@@ -808,10 +817,10 @@
             }
         }
 
-        // Web Speech API Pronunciation Driver
+        // Speech Engine API
         function playSpeech(text, rate = 1) {
             if (!('speechSynthesis' in window)) {
-                showToast("Trình duyệt không hỗ trợ tổng hợp giọng nói!", "error");
+                showToast("Hệ thống phát âm không hỗ trợ trên trình duyệt này!", "error");
                 return;
             }
             window.speechSynthesis.cancel();
@@ -819,7 +828,6 @@
             utterance.lang = 'zh-CN';
             utterance.rate = rate;
             
-            // Priority selection for high-quality voices
             const voices = window.speechSynthesis.getVoices();
             const preferredVoice = voices.find(v => v.lang.includes('zh-CN') || v.lang.includes('zh'));
             if (preferredVoice) {
@@ -828,7 +836,6 @@
             window.speechSynthesis.speak(utterance);
         }
 
-        // Flashcards Engine
         function renderFlashcard() {
             if (state.flashcardDeck.length === 0) {
                 state.flashcardDeck = [...VOCAB_DATABASE];
@@ -869,9 +876,9 @@
             if (mastered) {
                 if (!state.masteredWords.includes(wordIdxInDb)) {
                     state.masteredWords.push(wordIdxInDb);
-                    awardXP(10, `Đã ghi nhớ từ "${currentWord.hz}"`);
+                    awardXP(10, `Ghi nhớ thành công từ "${currentWord.hz}"`);
                 } else {
-                    showToast(`Tiếp tục ôn tập vững vàng: ${currentWord.hz}`, 'info');
+                    showToast(`Ôn tập vững vàng: ${currentWord.hz}`, 'info');
                 }
                 confetti({
                     particleCount: 25,
@@ -879,22 +886,21 @@
                     origin: { y: 0.8 }
                 });
             } else {
-                showToast(`Sẽ ưu tiên hỏi lại từ "${currentWord.hz}" sau`, 'info');
+                showToast(`Đã thêm từ "${currentWord.hz}" vào danh mục cần luyện thêm`, 'info');
             }
 
             state.currentFlashIndex = (state.currentFlashIndex + 1) % state.flashcardDeck.length;
             renderFlashcard();
-            renderVocabList(); // Refresh dictionary visual representations
+            renderVocabList(); // refresh vocabulary table
         }
 
         function resetFlashcards() {
             state.currentFlashIndex = 0;
             state.flashcardDeck = [...VOCAB_DATABASE];
             renderFlashcard();
-            showToast("Bộ thẻ đã được thiết lập lại từ đầu!", "info");
+            showToast("Bảng từ đã được đặt lại từ vựng ban đầu!", "info");
         }
 
-        // Quiz Arena Logic
         function generateQuizQuestion() {
             const randomIdx = Math.floor(Math.random() * VOCAB_DATABASE.length);
             state.currentQuizWord = VOCAB_DATABASE[randomIdx];
@@ -902,7 +908,7 @@
             document.getElementById('quiz-question-word').innerText = state.currentQuizWord.hz;
             document.getElementById('quiz-next-btn').classList.add('hidden');
 
-            // Find distractors
+            // Find 3 alternative options
             let choices = [state.currentQuizWord];
             while (choices.length < 4) {
                 const distractor = VOCAB_DATABASE[Math.floor(Math.random() * VOCAB_DATABASE.length)];
@@ -911,7 +917,7 @@
                 }
             }
 
-            // Shuffle array
+            // Randomize position
             choices.sort(() => Math.random() - 0.5);
 
             const container = document.getElementById('quiz-options-container');
@@ -948,14 +954,14 @@
             const isCorrect = (answerHanzi === state.currentQuizWord.hz);
 
             if (isCorrect) {
-                selectedBtn.className += " border-emerald-500 bg-emerald-500/10 correct-pulse";
+                selectedBtn.className += " border-sky-500 bg-sky-500/10 correct-pulse";
                 state.quizStreak++;
                 document.getElementById('quiz-streak-counter').innerText = `🔥 Chuỗi: ${state.quizStreak}`;
-                awardXP(15, `Chọn chính xác nghĩa từ "${state.currentQuizWord.hz}"`);
+                awardXP(15, `Hoàn thành trắc nghiệm từ "${state.currentQuizWord.hz}"`);
                 
                 if (state.quizStreak % 5 === 0) {
                     confetti({ particleCount: 40, spread: 60 });
-                    showToast(`🔥 Chuỗi siêu việt! Bạn đã trả lời đúng liên tiếp ${state.quizStreak} câu!`, 'success');
+                    showToast(`🔥 Quá đỉnh! Bạn đã đạt chuỗi liên tục ${state.quizStreak} câu trả lời đúng!`, 'success');
                 }
             } else {
                 selectedBtn.className += " border-rose-500 bg-rose-500/10";
@@ -964,10 +970,10 @@
                 
                 for (let btn of buttons) {
                     if (btn.innerHTML.includes(state.currentQuizWord.vi)) {
-                        btn.className += " border-emerald-500 bg-emerald-500/5";
+                        btn.className += " border-sky-500 bg-sky-500/5";
                     }
                 }
-                showToast(`Chưa chính xác! Nghĩa đúng là: ${state.currentQuizWord.hz} (${state.currentQuizWord.vi})`, 'error');
+                showToast(`Sai rồi! Nghĩa chính xác là: ${state.currentQuizWord.hz} (${state.currentQuizWord.vi})`, 'error');
             }
 
             playSpeech(state.currentQuizWord.hz, 1.0);
@@ -978,7 +984,6 @@
             generateQuizQuestion();
         }
 
-        // Dictation Engine
         function getNewDictationWord() {
             const randomIdx = Math.floor(Math.random() * VOCAB_DATABASE.length);
             state.currentDictationWord = VOCAB_DATABASE[randomIdx];
@@ -1017,30 +1022,29 @@
             fb.classList.remove('hidden');
 
             if (userVal === correctVal) {
-                fb.className = "p-4 rounded-2xl border bg-emerald-950/80 border-emerald-500/30 text-emerald-400 text-center font-bold";
+                fb.className = "p-4 rounded-2xl border bg-sky-950/80 border-sky-500/30 text-sky-400 text-center font-bold";
                 fb.innerHTML = `✓ Hoàn hảo! Bạn viết rất chính xác: <span class="text-xl font-black font-sans text-white">${correctVal}</span> (${state.currentDictationWord.vi})`;
                 
                 state.dictationSuccessCount++;
-                document.getElementById('dictation-correct-count').innerText = `Đã viết đúng: ${state.dictationSuccessCount}/128`;
+                document.getElementById('dictation-correct-count').innerText = `Đã viết đúng: ${state.dictationSuccessCount}/137`;
                 
-                awardXP(20, `Gõ chính xác từ "${correctVal}"`);
+                awardXP(20, `Gõ chính xác chính tả "${correctVal}"`);
                 
                 setTimeout(() => {
                     getNewDictationWord();
                 }, 2200);
             } else {
                 fb.className = "p-4 rounded-2xl border bg-rose-950/80 border-rose-500/30 text-rose-400 text-center font-bold";
-                fb.innerHTML = `✗ Chưa đúng! Bạn viết là "${userVal}". Hãy suy nghĩ hoặc nhấn xem gợi ý!`;
-                showToast("Sai ký tự chữ Hán, vui lòng thử lại!", "error");
+                fb.innerHTML = `✗ Chưa chính xác! Từ bạn đã viết là "${userVal}". Hãy tiếp tục đoán hoặc sử dụng gợi ý!`;
+                showToast("Nhập sai ký tự tiếng Trung, thử lại nhé!", "error");
             }
         }
 
         function skipDictation() {
             getNewDictationWord();
-            showToast("Đã bỏ qua từ vựng vừa rồi", "info");
+            showToast("Bỏ qua từ vựng vừa rồi", "info");
         }
 
-        // Translation Workshop Engine
         function renderTranslationList() {
             const listContainer = document.getElementById('translation-list');
             listContainer.innerHTML = '';
@@ -1052,14 +1056,14 @@
                 btn.className = `w-full text-left p-3.5 rounded-xl border transition-all flex justify-between items-center text-xs md:text-sm font-bold group duration-200`;
                 
                 if (index === state.currentTranslationIndex) {
-                    btn.className += " border-emerald-500/40 bg-emerald-500/10 text-emerald-300";
+                    btn.className += " border-sky-500/40 bg-sky-500/10 text-sky-300";
                 } else {
                     btn.className += " border-slate-900 bg-slate-950/40 text-slate-400 hover:text-slate-100 hover:border-slate-800";
                 }
 
                 btn.innerHTML = `
                     <div class="flex items-center gap-2">
-                        <span class="text-xs text-slate-500 group-hover:text-emerald-400">#${index + 1}</span>
+                        <span class="text-xs text-slate-500 group-hover:text-sky-400">#${index + 1}</span>
                         <p class="line-clamp-1">${item.vi}</p>
                     </div>
                     <span class="text-slate-600 group-hover:text-indigo-400">➔</span>
@@ -1077,7 +1081,7 @@
             state.currentTranslationIndex = index;
             const newSelected = document.getElementById(`trans-btn-${index}`);
             if (newSelected) {
-                newSelected.className = "w-full text-left p-3.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 transition-all flex justify-between items-center text-xs md:text-sm font-bold group duration-200";
+                newSelected.className = "w-full text-left p-3.5 rounded-xl border border-sky-500/40 bg-sky-500/10 text-sky-300 transition-all flex justify-between items-center text-xs md:text-sm font-bold group duration-200";
             }
 
             const item = TRANSLATION_DATABASE[index];
@@ -1103,16 +1107,16 @@
             const userRaw = document.getElementById('translation-input').value.trim();
             
             if (!userRaw) {
-                showToast("Bạn chưa nhập bản dịch tiếng Trung!", "error");
+                showToast("Vui lòng nhập bản dịch tiếng Trung của bạn trước!", "error");
                 return;
             }
 
-            // Normalization helper
+            // Standardize string comparison
             const cleanStr = (str) => str.replace(/[\s\p{P}]/gu, '');
             const userClean = cleanStr(userRaw);
             const stdClean = cleanStr(item.hz);
 
-            // Similarity score calculator
+            // Simple match percentage generator
             let matches = 0;
             const uniqueStdChars = new Set(stdClean);
             let userChars = new Set(userClean);
@@ -1125,7 +1129,7 @@
 
             const matchPercent = stdClean.length > 0 ? Math.round((matches / uniqueStdChars.size) * 100) : 0;
 
-            // Check keyword inclusion
+            // Analyze target keywords
             let presentCount = 0;
             item.keywords.forEach(kw => {
                 if (userClean.includes(cleanStr(kw))) {
@@ -1133,7 +1137,7 @@
                 }
             });
 
-            document.getElementById('trans-accuracy-rate').innerText = `${matchPercent}% tương đồng`;
+            document.getElementById('trans-accuracy-rate').innerText = `${matchPercent}% chính xác`;
             document.getElementById('trans-keyword-status').innerText = `${presentCount} / ${item.keywords.length}`;
             
             document.getElementById('translation-standard').innerText = item.hz;
@@ -1143,7 +1147,7 @@
             document.getElementById('translation-comparison-box').classList.remove('hidden');
 
             if (matchPercent > 70 && presentCount === item.keywords.length) {
-                awardXP(30, `Hoàn thành xuất sắc thử thách dịch câu #${state.currentTranslationIndex + 1}`);
+                awardXP(30, `Hoàn thành xuất sắc dịch thuật câu #${state.currentTranslationIndex + 1}`);
                 confetti({
                     particleCount: 30,
                     angle: 60,
@@ -1151,9 +1155,9 @@
                     origin: { x: 0 }
                 });
             } else if (matchPercent > 40) {
-                awardXP(15, `Dịch đúng đại ý chính câu #${state.currentTranslationIndex + 1}`);
+                awardXP(15, `Dịch đúng ý nghĩa câu #${state.currentTranslationIndex + 1}`);
             } else {
-                showToast("Độ tương thích chưa cao. Cùng tham khảo giải thích đáp án mẫu nhé!", "info");
+                showToast("Độ tương đồng chưa cao. Hãy học thêm qua phần phân tích đáp án!", "info");
             }
 
             playSpeech(item.hz, 0.9);
@@ -1162,7 +1166,7 @@
         function revealTranslationAnswer() {
             const item = TRANSLATION_DATABASE[state.currentTranslationIndex];
             
-            document.getElementById('trans-accuracy-rate').innerText = "Tự do tham khảo";
+            document.getElementById('trans-accuracy-rate').innerText = "Xem đáp án chuẩn";
             document.getElementById('trans-keyword-status').innerText = `${item.keywords.length} / ${item.keywords.length}`;
             document.getElementById('translation-standard').innerText = item.hz;
             document.getElementById('translation-standard-py').innerText = `Pinyin: ${item.py}`;
@@ -1172,7 +1176,6 @@
             playSpeech(item.hz, 0.9);
         }
 
-        // Vocabulary Book Helper
         function renderVocabList() {
             const grid = document.getElementById('vocab-grid');
             grid.innerHTML = '';
@@ -1194,7 +1197,7 @@
                 const card = document.createElement('div');
                 card.className = `p-4 rounded-2xl border transition-all duration-200 hover:-translate-y-1 ${
                     isMastered 
-                    ? 'bg-emerald-950/20 border-emerald-500/20 shadow-lg' 
+                    ? 'bg-sky-950/20 border-sky-500/20 shadow-lg' 
                     : 'bg-slate-950 border-slate-800 hover:border-slate-700'
                 }`;
 
@@ -1202,7 +1205,7 @@
                     <div class="flex justify-between items-start mb-2">
                         <span class="text-[9px] px-2 py-0.5 rounded-md font-bold uppercase ${
                             isMastered 
-                            ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/25' 
+                            ? 'bg-sky-500/10 text-sky-400 border border-sky-500/25' 
                             : 'bg-slate-900 text-slate-500'
                         }">
                             ${isMastered ? 'Đã thuộc' : 'Chưa thuộc'}
@@ -1223,7 +1226,7 @@
             if (grid.children.length === 0) {
                 grid.innerHTML = `
                     <div class="col-span-full text-center py-10 text-slate-600 font-medium">
-                        Không tìm thấy từ vựng nào khớp với kết quả tìm kiếm...
+                        Không có từ vựng nào phù hợp điều kiện tìm kiếm...
                     </div>
                 `;
             }
