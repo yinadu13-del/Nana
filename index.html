@@ -204,19 +204,19 @@
             </button>
             <button onclick="switchExam(2)" id="exam-tab-2" class="exam-tab-btn px-4 py-4 rounded-2xl font-bold text-xs md:text-sm transition-all duration-300 flex flex-col items-center justify-center gap-1.5 text-slate-600 bg-amber-50/30 hover:bg-amber-100/40">
                 <span class="text-lg opacity-60">🌸</span> HSK4 Đề Thi 2
-                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Sẵn Sàng</span>
+                <span class="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Đang cập nhật</span>
             </button>
             <button onclick="switchExam(3)" id="exam-tab-3" class="exam-tab-btn px-4 py-4 rounded-2xl font-bold text-xs md:text-sm transition-all duration-300 flex flex-col items-center justify-center gap-1.5 text-slate-600 bg-amber-50/30 hover:bg-amber-100/40">
                 <span class="text-lg opacity-60">🌸</span> HSK4 Đề Thi 3
-                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Sẵn Sàng</span>
+                <span class="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Đang cập nhật</span>
             </button>
             <button onclick="switchExam(4)" id="exam-tab-4" class="exam-tab-btn px-4 py-4 rounded-2xl font-bold text-xs md:text-sm transition-all duration-300 flex flex-col items-center justify-center gap-1.5 text-slate-600 bg-amber-50/30 hover:bg-amber-100/40">
                 <span class="text-lg opacity-60">🌸</span> HSK4 Đề Thi 4
-                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Sẵn Sàng</span>
+                <span class="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Đang cập nhật</span>
             </button>
             <button onclick="switchExam(5)" id="exam-tab-5" class="exam-tab-btn col-span-2 md:col-span-1 px-4 py-4 rounded-2xl font-bold text-xs md:text-sm transition-all duration-300 flex flex-col items-center justify-center gap-1.5 text-slate-600 bg-amber-50/30 hover:bg-amber-100/40">
                 <span class="text-lg opacity-60">🌸</span> HSK4 Đề Thi 5
-                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Sẵn Sàng</span>
+                <span class="text-[9px] font-bold text-slate-450 uppercase tracking-wider">Đang cập nhật</span>
             </button>
         </div>
     </div>
@@ -238,7 +238,7 @@
                     </svg>
                 </div>
                 <div>
-                    <h2 id="active-exam-title" class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-800">HSK4 Đề Thi 1: Ôn Tập 137 Từ Vựng Cốt Lõi</h2>
+                    <h2 id="active-exam-title" class="text-xl md:text-2xl font-extrabold tracking-tight text-slate-800">HSK4 Đề Thi 1: Ôn Tập 181 Từ Vựng Cốt Lõi</h2>
                     <p class="text-xs text-slate-500 font-semibold mt-0.5">Lớp học cô Nana Mandarin — Rèn luyện phản xạ ngôn ngữ thực tế</p>
                 </div>
             </div>
@@ -251,11 +251,11 @@
                 </div>
                 <div class="bg-pink-50 border border-pink-100 px-4 py-2.5 rounded-2xl flex items-center gap-2 shadow-sm flex-1 sm:flex-initial justify-center">
                     <span class="text-pink-500 font-black">🏆 Tích lũy:</span>
-                    <span id="stat-xp" class="font-black text-slate-800">0 XP</span>
+                    <span id="stat-xp" class="font-black text-slate-800 font-sans">0 XP</span>
                 </div>
                 <div class="bg-yellow-50 border border-yellow-100 px-4 py-2.5 rounded-2xl flex items-center gap-2 shadow-sm flex-1 sm:flex-initial justify-center">
-                    <span class="text-amber-600 font-black">⭐ Đã nhớ:</span>
-                    <span id="stat-mastered" class="font-black text-slate-800">0 / 137</span>
+                    <span class="text-amber-600 font-black font-sans">⭐ Đã nhớ:</span>
+                    <span id="stat-mastered" class="font-black text-slate-800">0 / 181</span>
                 </div>
             </div>
         </div>
@@ -263,7 +263,7 @@
         <!-- Toast System Container inside interactive wrapper -->
         <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
-        <!-- Internal Sub-Navigation Tabs (Same layout as original app but beautifully styled in bright white-yellow-pink daisy aesthetic) -->
+        <!-- Internal Sub-Navigation Tabs -->
         <div class="grid grid-cols-2 md:grid-cols-5 gap-2 p-1 bg-amber-50/50 border border-amber-200/30 rounded-2xl mb-8">
             <button onclick="switchTab('flashcards')" id="tab-flashcards" class="tab-btn active px-4 py-3.5 rounded-xl font-black text-xs md:text-sm transition-all flex flex-col md:flex-row items-center justify-center gap-2 text-pink-600 bg-white border border-pink-200 shadow-sm">
                 <span>📇</span> Thẻ Ghi Nhớ
@@ -278,20 +278,44 @@
                 <span>📝</span> Thử Thách Dịch
             </button>
             <button onclick="switchTab('vocab')" id="tab-vocab" class="tab-btn col-span-2 md:col-span-1 px-4 py-3.5 rounded-xl font-bold text-xs md:text-sm transition-all flex flex-col md:flex-row items-center justify-center gap-2 text-slate-600 hover:text-pink-600 hover:bg-white/60">
-                <span>📖</span> Từ Điển <span id="tab-vocab-count-indicator">(137)</span>
+                <span>📖</span> Từ Điển <span id="tab-vocab-count-indicator">(181)</span>
             </button>
         </div>
 
         <!-- Tab 1: FLASHCARDS INTERFACE -->
         <div id="content-flashcards" class="tab-content block">
-            <div class="max-w-xl mx-auto">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-xs text-slate-500 font-bold">Bấm vào bất cứ điểm nào trên thẻ để lật ngược</span>
-                    <span id="flashcard-progress-text" class="text-xs font-black text-pink-600">1 / 137</span>
+            <!-- Active view with data -->
+            <div id="flashcards-active-view" class="max-w-xl mx-auto">
+                <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-3 bg-white/50 p-2 rounded-2xl border border-amber-150 shadow-sm">
+                    <!-- Select Study Mode -->
+                    <div class="flex items-center gap-1.5 bg-amber-50 p-1 rounded-xl border border-amber-200 w-full sm:w-auto">
+                        <button onclick="setFlashcardMode('all')" id="mode-all-btn" class="px-3.5 py-1.5 rounded-lg text-xs font-black transition-all bg-amber-400 text-slate-900 shadow-sm flex-1 sm:flex-initial text-center">
+                            🌼 Tất cả (<span id="flash-count-all">181</span>)
+                        </button>
+                        <button onclick="setFlashcardMode('selected')" id="mode-selected-btn" class="px-3.5 py-1.5 rounded-lg text-xs font-black transition-all text-slate-600 hover:bg-amber-100/40 flex-1 sm:flex-initial text-center">
+                            ⭐ Đã chọn (<span id="flash-count-selected">0</span>)
+                        </button>
+                    </div>
+                    <div class="flex justify-between items-center w-full sm:w-auto gap-4 px-2">
+                        <span class="text-[10px] text-slate-400 font-extrabold uppercase tracking-wider">Chạm để lật mặt</span>
+                        <span id="flashcard-progress-text" class="text-xs font-black text-pink-600 font-sans">1 / 181</span>
+                    </div>
+                </div>
+
+                <!-- Custom Selected Deck Empty State -->
+                <div id="selected-empty-state" class="hidden p-8 py-12 bg-white/95 border-2 border-dashed border-pink-300 rounded-3xl shadow-sm text-center space-y-4 animate-fade-in">
+                    <span class="text-6xl block float-daisy">⭐</span>
+                    <h4 class="text-xl font-black text-slate-800 font-serif-china">Danh Sách Học Trống Rỗng</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed max-w-sm mx-auto font-semibold">
+                        Bạn chưa chọn từ vựng nào từ sổ tay để học riêng! Hãy chuyển qua tab <b class="text-pink-600">Từ Điển</b>, bấm biểu tượng <b class="text-amber-500">⭐ Chọn học</b> ở các từ mong muốn học để bắt đầu luyện tập riêng biệt.
+                    </p>
+                    <button onclick="switchTab('vocab')" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-amber-400 hover:opacity-95 text-white rounded-xl text-xs font-bold shadow-md transition-all active:scale-95">
+                        Đi đến Từ Điển để chọn từ ngay ➔
+                    </button>
                 </div>
                 
                 <!-- Card Container 3D Presentation -->
-                <div class="perspective-1000 w-full aspect-[4/3] cursor-pointer relative" onclick="flipFlashcard()">
+                <div id="flashcard-card-wrapper" class="perspective-1000 w-full aspect-[4/3] cursor-pointer relative" onclick="flipFlashcard()">
                     <div id="flashcard-inner" class="preserve-3d w-full h-full relative duration-500">
                         
                         <!-- Front View (Hanzi) -->
@@ -331,7 +355,7 @@
                 </div>
 
                 <!-- Control Buttons for Memorization Progress -->
-                <div class="flex justify-between gap-4 mt-8">
+                <div id="flashcards-control-buttons" class="flex justify-between gap-4 mt-8">
                     <button onclick="flashcardAction(false)" class="flex-1 py-4 px-6 bg-slate-100 hover:bg-slate-200 text-slate-700 font-black rounded-2xl border border-slate-300 shadow transition-all active:scale-95 text-xs md:text-sm">
                         ❌ Chưa thuộc
                     </button>
@@ -355,11 +379,18 @@
                     </button>
                 </div>
             </div>
+            
+            <!-- Updating Placeholder View -->
+            <div id="flashcards-updating-view" class="hidden max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 px-6 bg-white/90 border border-amber-200 rounded-3xl shadow-md">
+                <span class="text-6xl mb-4 animate-bounce">🌼</span>
+                <h3 class="text-xl font-extrabold text-slate-800">Đề Thi Đang Cập Nhật</h3>
+                <p id="flashcards-updating-text" class="text-xs text-slate-500 mt-3 max-w-sm font-semibold leading-relaxed">Cô Nana đang tích cực chuẩn bị bộ từ vựng mới cùng audio chuẩn giọng đọc. Bạn vui lòng quay lại sau hoặc thử ôn tập Đề Thi 1 nhé!</p>
+            </div>
         </div>
 
         <!-- Tab 2: QUIZ ARENA INTERFACE -->
         <div id="content-quiz" class="tab-content hidden">
-            <div class="max-w-2xl mx-auto bg-white p-6 md:p-8 rounded-3xl border border-amber-200 shadow-md">
+            <div id="quiz-active-view" class="max-w-2xl mx-auto bg-white p-6 md:p-8 rounded-3xl border border-amber-200 shadow-md">
                 <div class="flex justify-between items-center mb-6">
                     <span class="text-[10px] tracking-widest text-pink-500 font-extrabold uppercase">ĐẤU TRƯỜNG TRẮC NGHIỆM</span>
                     <span id="quiz-streak-counter" class="text-xs px-3 py-1 bg-amber-100 text-amber-700 rounded-full font-extrabold border border-amber-300">🔥 Chuỗi: 0</span>
@@ -389,14 +420,21 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Updating Placeholder View -->
+            <div id="quiz-updating-view" class="hidden max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 px-6 bg-white/90 border border-amber-200 rounded-3xl shadow-md">
+                <span class="text-6xl mb-4 animate-bounce">🌸</span>
+                <h3 class="text-xl font-extrabold text-slate-800">Trắc Nghiệm Đang Cập Nhật</h3>
+                <p class="text-xs text-slate-500 mt-3 max-w-sm font-semibold leading-relaxed">Đấu trường trắc nghiệm phản xạ của đề thi này sắp sửa ra mắt. Chúc bạn học tiếng Trung cô Nana thật vui vẻ!</p>
+            </div>
         </div>
 
         <!-- Tab 3: DICTATION INTERFACE -->
         <div id="content-dictation" class="tab-content hidden">
-            <div class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-3xl border border-amber-200 shadow-md">
+            <div id="dictation-active-view" class="max-w-xl mx-auto bg-white p-6 md:p-8 rounded-3xl border border-amber-200 shadow-md">
                 <div class="flex justify-between items-center mb-6">
                     <span class="text-[10px] tracking-widest text-pink-500 font-extrabold uppercase">LUYỆN TẬP CHÍNH TẢ CHỮ HÁN</span>
-                    <span id="dictation-correct-count" class="text-xs text-amber-600 font-extrabold">Đã viết đúng: 0/137</span>
+                    <span id="dictation-correct-count" class="text-xs text-amber-600 font-extrabold font-sans">Đã viết đúng: 0/181</span>
                 </div>
 
                 <div class="text-center py-10 bg-amber-50/30 rounded-3xl border border-amber-100 mb-6 flex flex-col items-center justify-center">
@@ -443,16 +481,23 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Updating Placeholder View -->
+            <div id="dictation-updating-view" class="hidden max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 px-6 bg-white/90 border border-amber-200 rounded-3xl shadow-md">
+                <span class="text-6xl mb-4 animate-bounce">✍️</span>
+                <h3 class="text-xl font-extrabold text-slate-800">Nghe & Gõ Đang Cập Nhật</h3>
+                <p class="text-xs text-slate-500 mt-3 max-w-sm font-semibold leading-relaxed">Hệ thống âm đọc kiểm tra chính tả đang được tích hợp dữ liệu mới. Học viên hãy quay lại sau nhé!</p>
+            </div>
         </div>
 
         <!-- Tab 4: TRANSLATION CHALLENGE INTERFACE -->
         <div id="content-translation" class="tab-content hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <div id="translation-active-view" class="grid grid-cols-1 lg:grid-cols-12 gap-6">
                 
                 <!-- Left: Interactive List -->
                 <div class="lg:col-span-4 bg-white rounded-3xl p-5 border border-amber-200 shadow-md flex flex-col h-[550px]">
                     <h3 class="font-extrabold text-sm text-slate-800 mb-4 flex items-center gap-2">
-                        <span>📝</span> <span id="translation-list-header-text">20 Thử Thách Dịch HSK4</span>
+                        <span>📝</span> <span id="translation-list-header-text" class="font-sans">30 Thử Thách Dịch HSK4</span>
                     </h3>
                     
                     <div class="overflow-y-auto space-y-2 flex-1 pr-2" id="translation-list">
@@ -465,7 +510,7 @@
                     <div>
                         <div class="flex justify-between items-start mb-6">
                             <span class="text-[10px] tracking-widest px-3 py-1 bg-pink-100 text-pink-700 rounded-full font-bold border border-pink-200 uppercase">BÀI TẬP DỊCH THUẬT NÂNG CAO</span>
-                            <span class="text-xs text-slate-500 font-bold">Câu số <span id="current-translation-idx">1</span> / <span id="current-translation-max">20</span></span>
+                            <span class="text-xs text-slate-500 font-bold font-sans">Câu số <span id="current-translation-idx">1</span> / <span id="current-translation-max">30</span></span>
                         </div>
 
                         <!-- Vietnamese prompt layout -->
@@ -496,8 +541,8 @@
                         <div class="border-b border-amber-200 pb-3">
                             <h4 class="text-[10px] tracking-wider font-extrabold uppercase text-pink-600 mb-2">ĐÁNH GIÁ CHẤT LƯỢNG BẢN DỊCH</h4>
                             <div class="grid grid-cols-2 gap-2 text-xs">
-                                <div class="bg-white p-2.5 rounded-lg border border-amber-200">Độ tương thích: <span id="trans-accuracy-rate" class="font-extrabold text-slate-800">0%</span></div>
-                                <div class="bg-white p-2.5 rounded-lg border border-amber-200">Từ vựng cốt lõi: <span id="trans-keyword-status" class="font-extrabold text-slate-800">0/0</span></div>
+                                <div class="bg-white p-2.5 rounded-lg border border-amber-200 font-bold">Độ tương thích: <span id="trans-accuracy-rate" class="font-extrabold text-slate-800 font-sans">0%</span></div>
+                                <div class="bg-white p-2.5 rounded-lg border border-amber-200 font-bold">Từ vựng cốt lõi: <span id="trans-keyword-status" class="font-extrabold text-slate-800 font-sans">0/0</span></div>
                             </div>
                         </div>
                         
@@ -524,21 +569,37 @@
 
                 </div>
             </div>
+
+            <!-- Updating Placeholder View -->
+            <div id="translation-updating-view" class="hidden max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 px-6 bg-white/90 border border-amber-200 rounded-3xl shadow-md">
+                <span class="text-6xl mb-4 animate-bounce">📝</span>
+                <h3 class="text-xl font-extrabold text-slate-800">Thử Thách Dịch Đang Cập Nhật</h3>
+                <p class="text-xs text-slate-500 mt-3 max-w-sm font-semibold leading-relaxed">Hệ thống bài tập biên dịch Việt - Trung bám sát đề thi này đang được xử lý kỹ thuật. Xin cảm ơn học viên!</p>
+            </div>
         </div>
 
         <!-- Tab 5: VOCAB DICTIONARY EXPLORER -->
         <div id="content-vocab" class="tab-content hidden">
-            <div class="bg-white p-6 md:p-8 rounded-3xl border border-amber-200 shadow-md">
+            <div id="vocab-active-view" class="bg-white p-6 md:p-8 rounded-3xl border border-amber-200 shadow-md">
                 
                 <!-- Search and Interactive Tools -->
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-6">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-4 mb-6 pb-4 border-b border-slate-100">
                     <div>
                         <h3 class="text-lg font-extrabold text-slate-800">Sổ Tay Học Tập Đầy Đủ</h3>
-                        <p class="text-xs text-slate-500 font-bold">Xem, nghe phát âm và tự do quản lý độ ghi nhớ từ vựng</p>
+                        <p class="text-xs text-slate-500 font-bold">Nhấn ⭐ để gom từ vào nhóm Flashcards riêng biệt</p>
                     </div>
-                    <div class="w-full md:w-auto flex flex-col sm:flex-row gap-2">
-                        <input type="text" id="vocab-search" oninput="filterVocabList()" placeholder="Tìm kiếm chữ Hán, Pinyin hoặc nghĩa..." class="bg-amber-50/30 border border-amber-200 rounded-xl px-4 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-500 w-full sm:w-64 font-medium">
-                        <select id="vocab-filter-mastery" onchange="filterVocabList()" class="bg-amber-50/30 border border-amber-200 rounded-xl px-4 py-2.5 text-sm text-slate-700 font-bold focus:outline-none focus:ring-1 focus:ring-pink-500">
+                    <div class="w-full lg:w-auto flex flex-col sm:flex-row gap-3 items-center">
+                        <!-- Custom Study Deck Actions -->
+                        <div class="flex items-center gap-2 bg-pink-50 p-1.5 rounded-xl border border-pink-200 w-full sm:w-auto justify-between sm:justify-start">
+                            <span id="selected-vocab-count-indicator" class="text-xs bg-white text-pink-600 px-3 py-1 rounded-lg font-black shadow-xs transition-all font-sans">
+                                Đã chọn: 0 từ
+                            </span>
+                            <button onclick="switchTab('flashcards'); setFlashcardMode('selected');" class="text-xs bg-pink-500 hover:bg-pink-600 text-white px-3.5 py-1.5 rounded-lg font-black shadow-sm transition-all hover:scale-[1.02] flex items-center gap-1">
+                                🚀 Học Ngay ➔
+                            </button>
+                        </div>
+                        <input type="text" id="vocab-search" oninput="filterVocabList()" placeholder="Tìm kiếm chữ Hán, Pinyin hoặc nghĩa..." class="bg-amber-50/30 border border-amber-200 rounded-xl px-4 py-2 text-sm text-slate-800 focus:outline-none focus:ring-1 focus:ring-pink-500 w-full sm:w-56 font-medium">
+                        <select id="vocab-filter-mastery" onchange="filterVocabList()" class="bg-amber-50/30 border border-amber-200 rounded-xl px-4 py-2 text-sm text-slate-755 font-bold focus:outline-none focus:ring-1 focus:ring-pink-500 w-full sm:w-auto">
                             <option value="all">Tất cả từ vựng</option>
                             <option value="unlearned">Từ chưa thuộc</option>
                             <option value="mastered">Từ đã thuộc</option>
@@ -551,12 +612,19 @@
                     <!-- Dynamic dictionary items rendered from the database -->
                 </div>
             </div>
+
+            <!-- Updating Placeholder View -->
+            <div id="vocab-updating-view" class="hidden max-w-xl mx-auto flex flex-col items-center justify-center text-center py-16 px-6 bg-white/90 border border-amber-200 rounded-3xl shadow-md">
+                <span class="text-6xl mb-4 animate-bounce">📖</span>
+                <h3 class="text-xl font-extrabold text-slate-800">Sổ Tay Từ Vựng Đang Cập Nhật</h3>
+                <p class="text-xs text-slate-500 mt-3 max-w-sm font-semibold leading-relaxed">Kho dữ liệu từ vựng cho đề này đang trong tiến trình sắp xếp biên dịch. Mong bạn thông cảm!</p>
+            </div>
         </div>
 
     </div>
 
     <script>
-        // High-quality segmented HSK4 Vocabularies databases for all 5 exams
+        // Highly unified HSK4 Vocabularies database (Exam 1 contains the fully combined list of 181 unique entries)
         const EXAM_VOCAB_DATABASES = {
             1: [
                 { hz: "掌握", py: "zhǎngwō", vi: "Nắm vững, làm chủ" },
@@ -581,6 +649,7 @@
                 { hz: "一下子", py: "yíxiàzi", vi: "Một lát, bỗng chốc" },
                 { hz: "变", py: "biàn", vi: "Thay đổi, biến đổi" },
                 { hz: "暖和", py: "nuǎnhuo", vi: "Ấm áp, dễ chịu" },
+                { hz: "暗中", py: "ànzhōng", vi: "Trong bóng tối, âm thầm" },
                 { hz: "其实", py: "qíshí", vi: "Thực ra, thực chất" },
                 { hz: "发脾气", py: "fā píqi", vi: "Nổi giận, cáu kỉnh" },
                 { hz: "平时", py: "píngshí", vi: "Ngày thường, bình thường" },
@@ -624,6 +693,7 @@
                 { hz: "死亡", py: "sǐwáng", vi: "Tử vong, cái chết" },
                 { hz: "尊重", py: "zūnzhòng", vi: "Tôn trọng, kính trọng" },
                 { hz: "启发", py: "qǐfā", vi: "Khơi gợi, truyền cảm hứng" },
+                { hz: "留下", py: "liúxià", vi: "Để lại, lưu lại" },
                 { hz: "因此", py: "yīncǐ", vi: "Vì thế, do đó" },
                 { hz: "养成", py: "yǎngchéng", vi: "Nuôi dưỡng, hình thành (thói quen)" },
                 { hz: "隔壁", py: "gébì", vi: "Sát vách, nhà bên cạnh" },
@@ -653,6 +723,7 @@
                 { hz: "要静下心来", py: "yào jìng xià xīn lái", vi: "Cần tĩnh tâm lại" },
                 { hz: "仔细", py: "zǐxì", vi: "Tỉ mỉ, cẩn thận" },
                 { hz: "整理", py: "zhěnglǐ", vi: "Sắp xếp, chỉnh lý" },
+                { hz: "聚会", py: "jùhuì", vi: "Tụ họp, họp mặt" },
                 { hz: "付款", py: "fùkuǎn", vi: "Thanh toán, trả tiền" },
                 { hz: "现金", py: "xiànjīn", vi: "Tiền mặt" },
                 { hz: "方便", py: "fāngbiàn", vi: "Thuận tiện, tiện lợi" },
@@ -695,15 +766,49 @@
                 { hz: "研究", py: "yánjiū", vi: "Nghiên cứu" },
                 { hz: "尽管", py: "jǐnguǎn", vi: "Cho dù, cứ việc" },
                 { hz: "幸运", py: "xìngyùn", vi: "May mắn" },
-                { hz: "病得很厉害", py: "bìng de hěn lìhai", vi: "Bị bệnh rất nặng" }
+                { hz: "病得很厉害", py: "bìng de hěn lìhai", vi: "Bị bệnh rất nặng" },
+                { hz: "支持", py: "zhīchí", vi: "Ủng hộ, hỗ trợ" },
+                { hz: "裙子", py: "qúnzi", vi: "Váy, chân váy" },
+                { hz: "剩下", py: "shèngxià", vi: "Còn lại, thừa lại" },
+                { hz: "寒假", py: "hánjià", vi: "Nghỉ đông" },
+                { hz: "否则", py: "fǒuzé", vi: "Nếu không, bằng không" },
+                { hz: "抱歉", py: "bàoqiàn", vi: "Xin lỗi, đáng tiếc" },
+                { hz: "小心", py: "xiǎoxīn", vi: "Cẩn thận, coi chừng" },
+                { hz: "信用卡", py: "xìnyòngkǎ", vi: "Thẻ tín dụng" },
+                { hz: "付钱", py: "fùqián", vi: "Trả tiền, thanh toán" },
+                { hz: "取钱", py: "qǔqián", vi: "Rút tiền" },
+                { hz: "存钱", py: "cúnqián", vi: "Gửi tiền, tiết kiệm tiền" },
+                { hz: "收款", py: "shōukuǎn", vi: "Thu tiền, nhận tiền thanh toán" },
+                { hz: "懂礼貌", py: "dǒng lǐmào", vi: "Hiểu lễ nghĩa, biết lễ phép" },
+                { hz: "预习", py: "yùxí", vi: "Chuẩn bị bài trước, xem trước bài" },
+                { hz: "练习", py: "liànxí", vi: "Luyện tập, bài tập" },
+                { hz: "复习", py: "fùxí", vi: "Ôn tập" },
+                { hz: "提前准备", py: "tíqián zhǔnbèi", vi: "Chuẩn bị trước, chuẩn bị sớm" },
+                { hz: "周日", py: "zhōurì", vi: "Chủ nhật" },
+                { hz: "星期天", py: "xīngqītiān", vi: "Chủ nhật" },
+                { hz: "换", py: "huàn", vi: "Thay đổi, đổi, trao đổi" },
+                { hz: "邮件", py: "yóujiàn", vi: "Bưu kiện, thư từ" },
+                { hz: "电子邮件", py: "diànzǐ yóujiàn", vi: "Thư điện tử, email" },
+                { hz: "约会", py: "yuēhuì", vi: "Hẹn gặp, cuộc hẹn" },
+                { hz: "文章", py: "wénzhāng", vi: "Bài văn, bài báo" },
+                { hz: "修改", py: "xiāugǎi", vi: "Sửa đổi, chỉnh sửa" },
+                { hz: "定时间", py: "dìng shíjiān", vi: "Định thời gian, hẹn giờ" },
+                { hz: "动词+不了", py: "dòngcí+bùliǎo", vi: "Cấu trúc: Động từ + 不了 (Không thể làm)" },
+                { hz: "缺少", py: "quēshǎo", vi: "Thiếu thốn, thiếu hụt" },
+                { hz: "缺点", py: "quēdiǎn", vi: "Nhược điểm, khuyết điểm" },
+                { hz: "于是", py: "yúshì", vi: "Thế là, cho nên" },
+                { hz: "天还没亮", py: "tiān hái méi liàng", vi: "Trời còn chưa sáng" },
+                { hz: "紧张", py: "jǐnzhāng", vi: "Căng thẳng, lo lắng" },
+                { hz: "购物", py: "gòuwù", vi: "Mua sắm" },
+                { hz: "代表", py: "dàibiǎo", vi: "Đại biểu, đại diện, thay mặt" }
             ],
-            2: [],
+            2: [], // Empty as requested, marked as updating
             3: [],
             4: [],
             5: []
         };
 
-        // Translative context matrices for all 5 exams
+        // Translative context matrices (Exam 1 now has all 30 combined sentences)
         const EXAM_TRANSLATION_DATABASES = {
             1: [
                 {
@@ -718,14 +823,14 @@
                     hz: "尽管他忙着出差，但他到底还是同意去看看演出了。",
                     py: "Jǐnguǎn tā mángzhe chūchāi, dàn tā dàodǐ háishì tóngyì qù kànkan yǎnchū le.",
                     keywords: ["尽管", "出差", "到底", "演出"],
-                    note: "'尽管...但...' thể hiện sự chuyển ngoặt lớn. Cụm '到底还是' biểu thị kết quả cuối cùng vẫn như mong đợi."
+                    note: "'尽管...bận...' thể hiện sự chuyển ngoặt lớn. Cụm '到底还是' biểu thị kết quả cuối cùng vẫn như mong đợi."
                 },
                 {
                     vi: "Khi gặp tắc xe trên đường ra sân bay, cô ấy vội vã thời gian đến mức quên cả mang máy ảnh.",
                     hz: "在去机场的路上遇到堵车时，她太赶时间了，甚至连照相机都忘了带。",
                     py: "Zài qù jīchǎng de lùshàng yùdào dǔchē shí, tā tài gǎn shíjiān le, shènzhì lián zhàoxiàngjī dōu wàng le dài.",
                     keywords: ["堵车", "赶时间", "甚至", "照相机"],
-                    note: "Cấu trúc nhấn mạnh cường độ '甚至连... do... ' (thậm chí ngay cả... cũng)."
+                    note: "Cấu trúc nhấn mạnh cường độ '甚至连...都...' (thậm chí ngay cả... cũng)."
                 },
                 {
                     vi: "Thầy hiệu trưởng hy vọng học viên thạc sĩ có thể kiên trì rèn luyện thói quen tốt.",
@@ -735,8 +840,7 @@
                     note: "'养成' là động từ kết hợp cực mạnh với danh từ '习惯' (hình thành thói quen tốt)."
                 },
                 {
-                    vi: "Thực ra, nếu bạn dũng cảm đối mặt với thất bại, bạn sẽ đạt được kinh nghiệm thực tế quý giá.",
-                    hz: "其实，如果你勇敢面对失败， you 就会获得宝贵的实际经验。",
+                    vi: "Thực ra, nếu bạn dũng cảm đối mặt with thất bại, you sẽ dạt được kinh nghiệm thực tế quý giá.",
                     hz: "其实，如果你勇敢面对失败，你就会获得宝贵的实际经验。",
                     py: "Qíshí, rúguǒ nǐ yǒnggǎn miànduì shībài, nǐ jiù huì huòdé bǎoguì de shíjì jīngyàn.",
                     keywords: ["其实", "勇敢", "获得", "经验"],
@@ -782,7 +886,7 @@
                     hz: "能在郊区应聘成功让他感到非常幸运和愉快。",
                     py: "Néng zài jiāoqū yìngpìn chénggōng ràng tā gǎndào fēicháng xìngyùn hé yúkuài.",
                     keywords: ["郊区", "应聘", "幸运", "愉快"],
-                    note: "'应聘成功' là ứng tuyển thành công. Động từ kiêm ngữ '让' chỉ tác nhân kích hoạt cảm xúc."
+                    note: "'应聘 thành công' là ứng tuyển thành công. Động từ kiêm ngữ '让' chỉ tác nhân kích hoạt cảm xúc."
                 },
                 {
                     vi: "Anh ấy hối hận vì thói cẩu thả trong lúc thanh toán hóa đơn bằng tiền mặt.",
@@ -813,11 +917,11 @@
                     note: "'实在' biểu thị thái độ chân thành của người nói đứng trước động từ năng nguyện phủ định '不想'."
                 },
                 {
-                    vi: "Để tiết kiệm tiền, cô ấy chỉ ăn bánh quy thay vị bữa ăn chính.",
+                    vi: "Để tiết kiệm tiền, cô ấy chỉ ăn bánh quy thay vì bữa ăn chính.",
                     hz: "为了省钱，她只吃饼干而不吃正餐。",
                     py: "Wèile shěng qián, tā zhǐ chī bǐnggān ér bù chī zhèngcān.",
                     keywords: ["省钱", "饼干", "正餐"],
-                    note: "Liên từ chuyển tiếp '而' kết nối hai vế trái ngược biểu thị ý nghĩa phản bác."
+                    note: "Liên từ chuyển tiếp 'er' kết nối hai vế trái ngược biểu thị ý nghĩa phản bác."
                 },
                 {
                     vi: "Cho dù là nghệ thuật đích thực cũng cần thời gian tích lũy lâu dài để thấu hiểu.",
@@ -846,52 +950,84 @@
                     py: "Wǒmen zài bàngōngshì dǎyìn wénjiàn shí xūyào jiéyuē zhǐzhāng.",
                     keywords: ["打印", "节约"],
                     note: "'节约' đi với tân ngữ '纸张' để diễn tả ý nghĩa tiết kiệm tài nguyên."
-                }
-            ],
-            2: [
-                {
-                    vi: "Ban đầu tôi không định tham gia, nhưng do sự bảo đảm của cô ấy nên tôi đã đăng ký.",
-                    hz: "本来我不想参加，但是因为她的保证，我报名了。",
-                    py: "Běnlái wǒ bù xiǎng cānjiā, dànshì yīnwèi tā de bǎozhèng, wǒ bàomíng le.",
-                    keywords: ["本来", "保证", "报名"],
-                    note: "Liên từ chuyển tiếp '但是' nối kết hành vi và nguyên nhân."
                 },
                 {
-                    vi: "Hiệu trưởng biểu dương bạn vì bạn đã hoàn thành xuất sắc cuốn vở ghi chép này.",
-                    hz: "校长表扬你，因为你非常优秀地完成了这本笔记本。",
-                    py: "Xiàozhǎng biǎoyáng nǐ, yīnwèi nǐ fēicháng yōuxiù de wánchéng le zhè běn bǐjìběn.",
-                    keywords: ["表扬", "笔记本"],
-                    note: "Cấu trúc bổ nghĩa trạng thái thông qua trợ từ kết cấu '地'."
+                    vi: "Nếu không chuẩn bị trước, bạn sẽ cảm thấy vô cùng căng thẳng trong cuộc hẹn.",
+                    hz: "否则不提前准备，你会在约会中感到非常紧张。",
+                    py: "Fǒuzé bù tíqián zhǔnbèi, nǐ huì zài yuēhuì zhōng gǎndào fēicháng jǐnzhāng.",
+                    keywords: ["否则", "提前准备", "约会", "紧张"],
+                    note: "Liên từ '否则' (nếu không thì) đứng đầu mệnh đề kết quả. '提前准备' đóng vai trò điều kiện chính."
+                },
+                {
+                    vi: "Tôi rất tiếc vì đã cẩu thả làm mất thẻ tín dụng khi đi công tác.",
+                    hz: "我很抱歉在出差时粗心地丢了信用卡。",
+                    py: "Wǒ hěn bàoqiàn zài chūchāi shí cūxīn de diū le xìnyòngkǎ.",
+                    keywords: ["抱歉", "出差", "粗心", "信用卡"],
+                    note: "Trạng ngữ chỉ thời gian '在出差时' đứng trước cụm vị ngữ chính. '粗心地' là trạng ngữ bổ nghĩa thái độ."
+                },
+                {
+                    vi: "Ngày mai là chủ nhật, tôi muốn đi mua sắm cùng bạn thân.",
+                    hz: "明天是周日，我想和闺蜜一起去购物。",
+                    py: "Míngtiān : zhōurì, wǒ xiǎng hé guīmì yìqǐ qù gòuwù.",
+                    hz: "明天是周日，我想和闺蜜一起去购物。",
+                    py: "Míngtiān shì zhōurì, wǒ xiǎng hé guīmì yìqǐ qù gòuwù.",
+                    keywords: ["周日", "购物"],
+                    note: "Cấu trúc giao tiếp kinh đoán '和...一起' (cùng với ai đó làm gì)."
+                },
+                {
+                    vi: "Thế là anh ấy đã thức dậy để ôn tập từ khi trời còn chưa sáng.",
+                    hz: "于是天还没亮他就起床复习了。",
+                    py: "Yúshì tiān hái méi liàng tā jiù qǐchuáng fùxí le.",
+                    keywords: ["于是", "天还没亮", "复习"],
+                    note: "Liên từ liên kết nguyên nhân hệ quả '于是' (thế là) phối hợp cùng từ nhấn mạnh hành động xảy ra sớm '就'."
+                },
+                {
+                    vi: "Giáo sư đề nghị chúng tôi chỉnh sửa bài văn này càng sớm càng tốt.",
+                    hz: "教授建议我们尽快修改这篇文章。",
+                    py: "Jiàoshòu jiànyì wǒmen jǐnkuài xiāugǎi zhè piān wénzhāng.",
+                    keywords: ["教授", "修改", "文章"],
+                    note: "'建议' làm động từ giới thiệu mệnh đề bổ ngữ khuyên bảo phía sau."
+                },
+                {
+                    vi: "Căn phòng này thiếu thốn đồ đạc, thế là chúng tôi quyết định mua thêm váy mới.",
+                    hz: "这个房间缺少家具，于是我们决定去买新裙子。",
+                    py: "Zhège fángjiān quēshǎo jiājù, yúshì wǒmen juédìng qù mǎi xīn qúnzi.",
+                    keywords: ["缺少", "于是", "裙子"],
+                    note: "'缺少' diễn đạt trạng thái thiếu hụt đồ đạc vật chất cụ thể."
+                },
+                {
+                    vi: "Thực sự xin lỗi, tôi không thể giúp bạn rút tiền mặt hôm nay được.",
+                    hz: "实在抱歉，今天我帮不了你取现金。",
+                    py: "Shízài bàoqiàn, jīntiān wǒ bāng bù liǎo nǐ qǔ xiànjīn.",
+                    keywords: ["实在", "付款", "动词+不了"],
+                    note: "Cấu trúc bổ ngữ khả năng phủ định '帮不了' (không thể giúp được)."
+                },
+                {
+                    vi: "Học viên cần chuẩn bị bài trước và ôn tập sau giờ học để khắc phục nhược điểm.",
+                    hz: "学生需要预习和复习来克服缺点。",
+                    py: "Xuéshēng xūyào yùxí hé fùxí lái kèfú quēdiǎn.",
+                    keywords: ["预习", "复习", "缺点"],
+                    note: "'预习' (xem bài trước) và '复习' (ôn tập) luôn là cặp đôi từ vựng song hành trong giáo dục."
+                },
+                {
+                    vi: "Đại diện company đã gửi một bức thư điện tử để xác định lại thời gian.",
+                    hz: "公司代表发了一封电子邮件来重新定时间。",
+                    py: "Gōngsī dàibiǎo fā le yì fēng diànzǐ yóujiàn lái chóngxīn dìng shíjiān.",
+                    keywords: ["代表", "电子邮件", "定时间"],
+                    note: "Sử dụng lượng từ thích hợp '封' (fēng) đi trước danh từ email."
+                },
+                {
+                    vi: "Bố mẹ luôn ủng hộ và dạy tôi phải biết lịch sự với hàng xóm.",
+                    hz: "父母总是支持我，并教我要对邻居懂礼貌。",
+                    py: "Fùmǔ zǒngshì zhīchí wǒ, bìng jiāo wǒ yào duì línjū dǒng lǐmào.",
+                    keywords: ["支持", "懂礼貌"],
+                    note: "Giới từ hướng tới đối tượng cụ thể '对...懂礼貌' (lịch sự, lễ phép với ai)."
                 }
             ],
-            3: [
-                {
-                    vi: "Không chỉ thành công trong việc tham quan Trường Giang, họ còn đạt được sự hiểu biết sâu sắc.",
-                    hz: "不仅参观长江成功，他们还获得了深刻的了解。",
-                    py: "Bùjǐn cānguān chángjiāng chénggōng, tāmen hái huòdé le shēnkè de liǎojiě.",
-                    keywords: ["不仅", "参观", "成功"],
-                    note: "Cặp liên từ tăng tiến '不仅...还...' (Không những... mà còn...)."
-                }
-            ],
-            4: [
-                {
-                    vi: "Tôi rất kinh ngạc khi thấy anh ấy lại đi công tác và làm lại tài liệu in ấn đó.",
-                    hz: "我很吃惊地看到他去出差并重新做那份打印材料。",
-                    py: "Wǒ hěn chījīng de kàndào tā qù chūchāi bìng chóngxīn zuò nà fèn dǎyìn cáiliào.",
-                    keywords: ["吃惊", "出差", "重新"],
-                    note: "Động từ năng nguyện '重新' đứng trước hành động để chỉ việc lặp lại."
-                }
-            ],
-            5: [
-                {
-                    vi: "Đại sứ quán thông báo rằng đại biểu của địa phương sẽ được giảm giá.",
-                    hz: "大使馆通知，当地 de 代表将获得打折优惠。",
-                    hz: "大使馆通知，当地的代表将获得打折优惠。",
-                    py: "Dàshǐguǎn tōngzhī, dāngdì de dàibiǎo jiāng huòdé dǎzhé yōuhuì.",
-                    keywords: ["大使馆", "当地", "代表"],
-                    note: "Định ngữ chỉ phạm vi không gian '当地的' làm nổi bật danh từ đại diện."
-                }
-            ]
+            2: [],
+            3: [],
+            4: [],
+            5: []
         };
 
         // Main application state management
@@ -901,6 +1037,8 @@
             streak: 1,
             xp: 0,
             masteredWords: [], // Array of indices of mastered words for current exam
+            selectedFlashcardWords: [], // Custom study array containing state.currentExamId_word.hz
+            flashcardMode: 'all', // 'all' or 'selected'
             flashcardDeck: [],
             currentFlashIndex: 0,
             currentQuizWord: null,
@@ -931,9 +1069,11 @@
 
         // Setup active exam data vectors
         function setupExamData() {
-            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId];
-            state.flashcardDeck = [...currentVocabDb];
-            state.currentFlashIndex = 0;
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            
+            // Re-apply state.flashcardMode to sync current study deck correctly
+            setFlashcardMode(state.flashcardMode || 'all');
+            
             state.quizStreak = 0;
             state.dictationSuccessCount = 0;
             state.currentTranslationIndex = 0;
@@ -941,15 +1081,52 @@
 
             // Update title
             const examTitles = {
-                1: "HSK4 Đề Thi 1: Chinh Phục 137 Từ Vựng Cốt Lõi",
-                2: "HSK4 Đề Thi 2: Từ Vựng Mở Rộng Phần B",
-                3: "HSK4 Đề Thi 3: Từ Vựng Mở Rộng Phần C",
-                4: "HSK4 Đề Thi 4: Từ Vựng Mở Rộng Phần D",
-                5: "HSK4 Đề Thi 5: Từ Vựng Mở Rộng Phần E"
+                1: "HSK4 Đề Thi 1: Ôn Tập 181 Từ Vựng Cốt Lõi",
+                2: "HSK4 Đề Thi 2: Đang Cập Nhật",
+                3: "HSK4 Đề Thi 3: Đang Cập Nhật",
+                4: "HSK4 Đề Thi 4: Đang Cập Nhật",
+                5: "HSK4 Đề Thi 5: Đang Cập Nhật"
             };
             document.getElementById('active-exam-title').innerText = examTitles[state.currentExamId];
             document.getElementById('tab-vocab-count-indicator').innerText = `(${currentVocabDb.length})`;
-            document.getElementById('translation-list-header-text').innerText = `${EXAM_TRANSLATION_DATABASES[state.currentExamId].length} Thử Thách Dịch HSK4`;
+            
+            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId] || [];
+            document.getElementById('translation-list-header-text').innerText = `${currentTranslationDb.length} Thử Thách Dịch HSK4`;
+
+            // Verify active exam data availability to show updating views
+            checkActiveExamAvailability();
+            updateFlashcardCounts();
+        }
+
+        // Toggles between active dashboards and beautifully designed "updating" placeholder states
+        function checkActiveExamAvailability() {
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            const hasData = (currentVocabDb.length > 0);
+
+            // Update details for flashcards updating info text
+            if (!hasData) {
+                document.getElementById('flashcards-updating-text').innerText = `Cô Nana đang thiết lập ngân hàng từ vựng, audio Pinyin và đề thi bổ trợ chất lượng cao cho Đề Thi số ${state.currentExamId}. Hãy ôn luyện chắc chắn Đề Thi 1 trước nhé! 💕`;
+            }
+
+            // Perform UI transitions
+            toggleView('flashcards-active-view', 'flashcards-updating-view', hasData);
+            toggleView('quiz-active-view', 'quiz-updating-view', hasData);
+            toggleView('dictation-active-view', 'dictation-updating-view', hasData);
+            toggleView('translation-active-view', 'translation-updating-view', hasData);
+            toggleView('vocab-active-view', 'vocab-updating-view', hasData);
+        }
+
+        function toggleView(activeId, updatingId, hasData) {
+            const activeEl = document.getElementById(activeId);
+            const updatingEl = document.getElementById(updatingId);
+            if (!activeEl || !updatingEl) return;
+            if (hasData) {
+                activeEl.classList.remove('hidden');
+                updatingEl.classList.add('hidden');
+            } else {
+                activeEl.classList.add('hidden');
+                updatingEl.classList.remove('hidden');
+            }
         }
 
         // Exam Switcher Logic
@@ -970,7 +1147,11 @@
             setupExamData();
             initApp();
             
-            showToast(`🚀 Đã chuyển sang HSK4 Đề Thi ${examId}!`, 'success');
+            if (examId === 1) {
+                showToast(`🚀 Đã tải xong HSK4 Đề Thi 1! Sẵn sàng học tập cùng cô Nana!`, 'success');
+            } else {
+                showToast(`🌼 Đề thi ${examId} đang được cập nhật nội dung mới!`, 'info');
+            }
             
             // Smoothly scroll down to exam content
             document.getElementById('active-exam-title').scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -985,6 +1166,8 @@
                     state.streak = parsed.streak || 1;
                     state.xp = parsed.xp || 0;
                     state.masteredWords = parsed.masteredWords || [];
+                    state.selectedFlashcardWords = parsed.selectedFlashcardWords || [];
+                    state.flashcardMode = parsed.flashcardMode || 'all';
                 } catch(e) {
                     console.error("Lỗi khi khôi phục dữ liệu", e);
                 }
@@ -996,19 +1179,21 @@
             const dataToSave = {
                 streak: state.streak,
                 xp: state.xp,
-                masteredWords: state.masteredWords
+                masteredWords: state.masteredWords,
+                selectedFlashcardWords: state.selectedFlashcardWords,
+                flashcardMode: state.flashcardMode
             };
             localStorage.setItem('nana_hsk4_v2_data', JSON.stringify(dataToSave));
             updateStatsUI();
         }
 
         function updateStatsUI() {
-            const totalWords = EXAM_VOCAB_DATABASES[state.currentExamId].length;
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            const totalWords = currentVocabDb.length;
+            
             // Calculate mastered words only for current exam to display accurately
-            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId];
             let masteredInCurrent = 0;
             state.masteredWords.forEach(wordKey => {
-                // wordKey format: "examId_wordHz"
                 if (wordKey.startsWith(`${state.currentExamId}_`)) {
                     masteredInCurrent++;
                 }
@@ -1027,6 +1212,7 @@
 
         function showToast(message, type = 'info') {
             const container = document.getElementById('toast-container');
+            if (!container) return;
             const toast = document.createElement('div');
             toast.className = `p-4 rounded-xl shadow-lg border text-sm font-bold transition-all duration-300 transform translate-y-2 opacity-0 pointer-events-auto flex items-center gap-3`;
             
@@ -1067,16 +1253,25 @@
             });
 
             const activeBtn = document.getElementById(`tab-${tabId}`);
-            activeBtn.classList.remove('text-slate-600', 'hover:text-pink-600', 'hover:bg-white/60');
-            activeBtn.classList.add('active', 'text-pink-600', 'bg-white', 'border', 'border-pink-200', 'shadow-sm');
+            if (activeBtn) {
+                activeBtn.classList.remove('text-slate-600', 'hover:text-pink-600', 'hover:bg-white/60');
+                activeBtn.classList.add('active', 'text-pink-600', 'bg-white', 'border', 'border-pink-200', 'shadow-sm');
+            }
 
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.add('hidden');
             });
-            document.getElementById(`content-${tabId}`).classList.remove('hidden');
+            
+            const targetContent = document.getElementById(`content-${tabId}`);
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+            }
 
-            if (tabId === 'dictation') {
-                setTimeout(() => document.getElementById('dictation-input').focus(), 300);
+            if (tabId === 'dictation' && EXAM_VOCAB_DATABASES[state.currentExamId].length > 0) {
+                setTimeout(() => {
+                    const dictInput = document.getElementById('dictation-input');
+                    if (dictInput) dictInput.focus();
+                }, 300);
             }
         }
 
@@ -1099,13 +1294,148 @@
             window.speechSynthesis.speak(utterance);
         }
 
+        // Toggles Study Mode on Flashcards
+        function setFlashcardMode(mode) {
+            state.flashcardMode = mode;
+            saveUserData();
+            
+            const allBtn = document.getElementById('mode-all-btn');
+            const selectedBtn = document.getElementById('mode-selected-btn');
+            const emptyState = document.getElementById('selected-empty-state');
+            const cardWrapper = document.getElementById('flashcard-card-wrapper');
+            const controls = document.getElementById('flashcards-control-buttons');
+
+            if (!allBtn || !selectedBtn) return;
+
+            if (mode === 'all') {
+                allBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-black transition-all bg-amber-400 text-slate-900 shadow-sm flex-1 sm:flex-initial text-center";
+                selectedBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-black transition-all text-slate-600 hover:bg-amber-100/40 flex-1 sm:flex-initial text-center";
+                
+                if (emptyState) emptyState.classList.add('hidden');
+                if (cardWrapper) cardWrapper.classList.remove('hidden');
+                if (controls) controls.classList.remove('hidden');
+                
+                const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+                state.flashcardDeck = [...currentVocabDb];
+                state.currentFlashIndex = 0;
+            } else {
+                allBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-black transition-all text-slate-600 hover:bg-amber-100/40 flex-1 sm:flex-initial text-center";
+                selectedBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-black transition-all bg-pink-500 text-white shadow-sm flex-1 sm:flex-initial text-center";
+                
+                const selectedKeys = (state.selectedFlashcardWords || []).filter(key => key.startsWith(`${state.currentExamId}_`));
+                const selectedWords = EXAM_VOCAB_DATABASES[state.currentExamId].filter(word => selectedKeys.includes(`${state.currentExamId}_${word.hz}`));
+                
+                if (selectedWords.length === 0) {
+                    if (emptyState) emptyState.classList.remove('hidden');
+                    if (cardWrapper) cardWrapper.classList.add('hidden');
+                    if (controls) controls.classList.add('hidden');
+                    const progressText = document.getElementById('flashcard-progress-text');
+                    if (progressText) progressText.innerText = "0 / 0";
+                    state.flashcardDeck = [];
+                } else {
+                    if (emptyState) emptyState.classList.add('hidden');
+                    if (cardWrapper) cardWrapper.classList.remove('hidden');
+                    if (controls) controls.classList.remove('hidden');
+                    
+                    state.flashcardDeck = [...selectedWords];
+                    state.currentFlashIndex = 0;
+                }
+            }
+            renderFlashcard();
+            updateFlashcardCounts();
+        }
+
+        // Toggles a word from Vocabulary Dictionary as chosen for study
+        function toggleSelectWord(wordKey) {
+            state.selectedFlashcardWords = state.selectedFlashcardWords || [];
+            const index = state.selectedFlashcardWords.indexOf(wordKey);
+            const hzPart = wordKey.split('_')[1] || '';
+            
+            if (index > -1) {
+                state.selectedFlashcardWords.splice(index, 1);
+                showToast(`Đã bỏ chọn học từ vựng "${hzPart}"`, 'info');
+            } else {
+                state.selectedFlashcardWords.push(wordKey);
+                showToast(`Đã thêm từ vựng "${hzPart}" vào Flashcards! ⭐`, 'success');
+                confetti({
+                    particleCount: 15,
+                    colors: ['#FBBF24', '#EC4899'],
+                    spread: 40,
+                    origin: { y: 0.9 }
+                });
+            }
+            saveUserData();
+            renderVocabList();
+            updateFlashcardCounts();
+            
+            // Auto refresh deck if already on 'selected' flashcard mode
+            if (state.flashcardMode === 'selected') {
+                const selectedKeys = state.selectedFlashcardWords.filter(key => key.startsWith(`${state.currentExamId}_`));
+                const selectedWords = EXAM_VOCAB_DATABASES[state.currentExamId].filter(word => selectedKeys.includes(`${state.currentExamId}_${word.hz}`));
+                state.flashcardDeck = [...selectedWords];
+                if (state.currentFlashIndex >= state.flashcardDeck.length) {
+                    state.currentFlashIndex = 0;
+                }
+                
+                const emptyState = document.getElementById('selected-empty-state');
+                const cardWrapper = document.getElementById('flashcard-card-wrapper');
+                const controls = document.getElementById('flashcards-control-buttons');
+                
+                if (selectedWords.length === 0) {
+                    if (emptyState) emptyState.classList.remove('hidden');
+                    if (cardWrapper) cardWrapper.classList.add('hidden');
+                    if (controls) controls.classList.add('hidden');
+                    document.getElementById('flashcard-progress-text').innerText = "0 / 0";
+                } else {
+                    if (emptyState) emptyState.classList.add('hidden');
+                    if (cardWrapper) cardWrapper.classList.remove('hidden');
+                    if (controls) controls.classList.remove('hidden');
+                }
+                renderFlashcard();
+            }
+        }
+
+        // Updates counters and indicators on Flashcards Tab & Dictionary Tab
+        function updateFlashcardCounts() {
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            const total = currentVocabDb.length;
+            
+            const selectedKeys = (state.selectedFlashcardWords || []).filter(key => key.startsWith(`${state.currentExamId}_`));
+            const count = selectedKeys.length;
+            
+            const allCountEl = document.getElementById('flash-count-all');
+            const selectedCountEl = document.getElementById('flash-count-selected');
+            
+            if (allCountEl) allCountEl.innerText = total;
+            if (selectedCountEl) selectedCountEl.innerText = count;
+            
+            const dictIndicator = document.getElementById('selected-vocab-count-indicator');
+            if (dictIndicator) {
+                dictIndicator.innerText = `Đã chọn: ${count} từ`;
+                if (count > 0) {
+                    dictIndicator.className = "text-xs bg-pink-100 text-pink-700 px-3 py-1.5 rounded-lg font-black shadow-sm transition-all flex items-center gap-1 animate-pulse";
+                } else {
+                    dictIndicator.className = "text-xs bg-slate-100 text-slate-500 px-3 py-1.5 rounded-lg font-bold transition-all";
+                }
+            }
+        }
+
         function renderFlashcard() {
             if (state.flashcardDeck.length === 0) {
-                state.flashcardDeck = [...EXAM_VOCAB_DATABASES[state.currentExamId]];
+                if (state.flashcardMode === 'selected') {
+                    const progressText = document.getElementById('flashcard-progress-text');
+                    if (progressText) progressText.innerText = "0 / 0";
+                    return;
+                }
+                const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+                if (currentVocabDb.length === 0) return; // Prevent loop crashes on empty databases
+                state.flashcardDeck = [...currentVocabDb];
                 state.currentFlashIndex = 0;
             }
 
             const currentWord = state.flashcardDeck[state.currentFlashIndex];
+            if (!currentWord) return;
+
             document.getElementById('flashcard-hanzi').innerText = currentWord.hz;
             document.getElementById('flashcard-pinyin').innerText = currentWord.py;
             document.getElementById('flashcard-vietnamese').innerText = currentWord.vi;
@@ -1116,6 +1446,7 @@
         }
 
         function flipFlashcard() {
+            if (state.flashcardDeck.length === 0) return;
             state.isFlipped = !state.isFlipped;
             const inner = document.getElementById('flashcard-inner');
             if (state.isFlipped) {
@@ -1127,13 +1458,17 @@
         }
 
         function playCurrentWordAudio() {
+            if (state.flashcardDeck.length === 0) return;
             const currentWord = state.flashcardDeck[state.currentFlashIndex];
+            if (!currentWord) return;
             const rate = parseFloat(document.getElementById('audio-rate-select').value);
             playSpeech(currentWord.hz, rate);
         }
 
         function flashcardAction(mastered) {
+            if (state.flashcardDeck.length === 0) return;
             const currentWord = state.flashcardDeck[state.currentFlashIndex];
+            if (!currentWord) return;
             const wordKey = `${state.currentExamId}_${currentWord.hz}`;
 
             if (mastered) {
@@ -1160,13 +1495,24 @@
 
         function resetFlashcards() {
             state.currentFlashIndex = 0;
-            state.flashcardDeck = [...EXAM_VOCAB_DATABASES[state.currentExamId]];
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            if (state.flashcardMode === 'selected') {
+                const selectedKeys = state.selectedFlashcardWords.filter(key => key.startsWith(`${state.currentExamId}_`));
+                const selectedWords = EXAM_VOCAB_DATABASES[state.currentExamId].filter(word => selectedKeys.includes(`${state.currentExamId}_${word.hz}`));
+                state.flashcardDeck = [...selectedWords];
+            } else {
+                state.flashcardDeck = [...currentVocabDb];
+            }
             renderFlashcard();
-            showToast("Bảng từ đã được đặt lại từ vựng ban đầu!", "info");
+            if (state.flashcardDeck.length > 0) {
+                showToast("Bảng từ đã được đặt lại từ vựng ban đầu!", "info");
+            }
         }
 
         function generateQuizQuestion() {
-            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId];
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            if (currentVocabDb.length === 0) return;
+            
             const randomIdx = Math.floor(Math.random() * currentVocabDb.length);
             state.currentQuizWord = currentVocabDb[randomIdx];
             
@@ -1186,6 +1532,7 @@
             choices.sort(() => Math.random() - 0.5);
 
             const container = document.getElementById('quiz-options-container');
+            if (!container) return;
             container.innerHTML = '';
 
             choices.forEach((choice, index) => {
@@ -1209,6 +1556,7 @@
 
         function selectQuizOption(selectedBtn, answerHanzi) {
             const container = document.getElementById('quiz-options-container');
+            if (!container) return;
             const buttons = container.getElementsByTagName('button');
             
             for (let btn of buttons) {
@@ -1250,16 +1598,23 @@
         }
 
         function getNewDictationWord() {
-            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId];
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            if (currentVocabDb.length === 0) return;
+            
             const randomIdx = Math.floor(Math.random() * currentVocabDb.length);
             state.currentDictationWord = currentVocabDb[randomIdx];
             
-            document.getElementById('dictation-input').value = '';
-            document.getElementById('dictation-hints-container').classList.add('hidden');
+            const dictInput = document.getElementById('dictation-input');
+            if (dictInput) dictInput.value = '';
+            
+            const hintsContainer = document.getElementById('dictation-hints-container');
+            if (hintsContainer) hintsContainer.classList.add('hidden');
             
             const fb = document.getElementById('dictation-feedback');
-            fb.className = "hidden p-4 rounded-2xl border text-center font-bold";
-            fb.innerText = "";
+            if (fb) {
+                fb.className = "hidden p-4 rounded-2xl border text-center font-bold";
+                fb.innerText = "";
+            }
 
             setTimeout(() => {
                 playDictationAudio();
@@ -1274,17 +1629,23 @@
 
         function showDictationHint() {
             if (state.currentDictationWord) {
-                document.getElementById('dictation-hint-pinyin').innerText = state.currentDictationWord.py;
-                document.getElementById('dictation-hint-meaning').innerText = state.currentDictationWord.vi;
-                document.getElementById('dictation-hints-container').classList.remove('hidden');
+                const hintPy = document.getElementById('dictation-hint-pinyin');
+                const hintVi = document.getElementById('dictation-hint-meaning');
+                const hintsContainer = document.getElementById('dictation-hints-container');
+                if (hintPy) hintPy.innerText = state.currentDictationWord.py;
+                if (hintVi) hintVi.innerText = state.currentDictationWord.vi;
+                if (hintsContainer) hintsContainer.classList.remove('hidden');
             }
         }
 
         function checkDictationAnswer() {
-            const userVal = document.getElementById('dictation-input').value.trim();
+            if (!state.currentDictationWord) return;
+            const dictInput = document.getElementById('dictation-input');
+            const userVal = dictInput ? dictInput.value.trim() : '';
             const correctVal = state.currentDictationWord.hz;
             const fb = document.getElementById('dictation-feedback');
             
+            if (!fb) return;
             fb.classList.remove('hidden');
 
             if (userVal === correctVal) {
@@ -1314,10 +1675,14 @@
 
         function renderTranslationList() {
             const listContainer = document.getElementById('translation-list');
+            if (!listContainer) return;
             listContainer.innerHTML = '';
 
-            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId];
-            document.getElementById('current-translation-max').innerText = currentTranslationDb.length;
+            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId] || [];
+            const maxIndicator = document.getElementById('current-translation-max');
+            if (maxIndicator) maxIndicator.innerText = currentTranslationDb.length;
+
+            if (currentTranslationDb.length === 0) return;
 
             currentTranslationDb.forEach((item, index) => {
                 const btn = document.createElement('button');
@@ -1343,7 +1708,7 @@
         }
 
         function selectTranslation(index) {
-            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId];
+            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId] || [];
             if (currentTranslationDb.length === 0) return;
 
             const oldSelected = document.getElementById(`trans-btn-${state.currentTranslationIndex}`);
@@ -1358,6 +1723,8 @@
             }
 
             const item = currentTranslationDb[index];
+            if (!item) return;
+
             document.getElementById('current-translation-idx').innerText = index + 1;
             document.getElementById('translation-prompt').innerText = item.vi;
             document.getElementById('translation-input').value = '';
@@ -1366,18 +1733,21 @@
 
             // Render tags
             const kwContainer = document.getElementById('translation-keywords-container');
-            kwContainer.innerHTML = '';
-            item.keywords.forEach(kw => {
-                const badge = document.createElement('span');
-                badge.className = "text-xs px-3 py-1 bg-pink-100 text-pink-700 border border-pink-200 rounded-lg font-bold font-sans";
-                badge.innerText = kw;
-                kwContainer.appendChild(badge);
-            });
+            if (kwContainer) {
+                kwContainer.innerHTML = '';
+                item.keywords.forEach(kw => {
+                    const badge = document.createElement('span');
+                    badge.className = "text-xs px-3 py-1 bg-pink-100 text-pink-700 border border-pink-200 rounded-lg font-bold font-sans";
+                    badge.innerText = kw;
+                    kwContainer.appendChild(badge);
+                });
+            }
         }
 
         function evaluateTranslation() {
-            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId];
+            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId] || [];
             const item = currentTranslationDb[state.currentTranslationIndex];
+            if (!item) return;
             const userRaw = document.getElementById('translation-input').value.trim();
             
             if (!userRaw) {
@@ -1439,8 +1809,9 @@
         }
 
         function revealTranslationAnswer() {
-            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId];
+            const currentTranslationDb = EXAM_TRANSLATION_DATABASES[state.currentExamId] || [];
             const item = currentTranslationDb[state.currentTranslationIndex];
+            if (!item) return;
             
             document.getElementById('trans-accuracy-rate').innerText = "Xem đáp án chuẩn";
             document.getElementById('trans-keyword-status').innerText = `${item.keywords.length} / ${item.keywords.length}`;
@@ -1454,29 +1825,19 @@
 
         function renderVocabList() {
             const grid = document.getElementById('vocab-grid');
+            if (!grid) return;
             grid.innerHTML = '';
+
+            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId] || [];
+            if (currentVocabDb.length === 0) return;
 
             const searchVal = document.getElementById('vocab-search').value.toLowerCase().trim();
             const filterVal = document.getElementById('vocab-filter-mastery').value;
 
-            const currentVocabDb = EXAM_VOCAB_DATABASES[state.currentExamId];
-
-            if (!currentVocabDb || currentVocabDb.length === 0) {
-                grid.innerHTML = `
-                    <div class="col-span-full text-center py-16">
-                        <div class="inline-flex flex-col items-center gap-4 bg-pink-50 border border-pink-200 rounded-3xl px-10 py-8 shadow-sm">
-                            <span class="text-4xl animate-pulse">🌸</span>
-                            <p class="text-lg font-extrabold text-pink-600">Đang Cập Nhật</p>
-                            <p class="text-sm text-slate-500 font-semibold max-w-xs text-center">Cô Nana đang biên soạn từ vựng cho đề này. Vui lòng quay lại sau nhé! 💕</p>
-                        </div>
-                    </div>
-                `;
-                return;
-            }
-
-            currentVocabDb.forEach((word, index) => {
+            currentVocabDb.forEach((word) => {
                 const wordKey = `${state.currentExamId}_${word.hz}`;
                 const isMastered = state.masteredWords.includes(wordKey);
+                const isSelected = (state.selectedFlashcardWords || []).includes(wordKey);
                 
                 if (filterVal === 'mastered' && !isMastered) return;
                 if (filterVal === 'unlearned' && isMastered) return;
@@ -1494,7 +1855,7 @@
                 }`;
 
                 card.innerHTML = `
-                    <div class="flex justify-between items-start mb-2">
+                    <div class="flex justify-between items-center mb-2 gap-1 flex-wrap">
                         <span class="text-[9px] px-2 py-0.5 rounded-md font-bold uppercase ${
                             isMastered 
                             ? 'bg-amber-100 text-amber-700' 
@@ -1502,11 +1863,24 @@
                         }">
                             ${isMastered ? 'Đã thuộc' : 'Chưa thuộc'}
                         </span>
-                        <button onclick="playSpeech('${word.hz}', 1.0)" class="p-2 bg-slate-50 hover:bg-slate-100 text-slate-700 rounded-lg border border-slate-200 transition-all text-xs font-bold" title="Phát âm">
-                            📢 Nghe
-                        </button>
+                        
+                        <div class="flex items-center gap-1.5">
+                            <!-- Toggle custom selection button -->
+                            <button onclick="event.stopPropagation(); toggleSelectWord('${wordKey}')" class="p-1.5 rounded-lg border transition-all text-xs font-bold flex items-center gap-1 ${
+                                isSelected 
+                                ? 'bg-pink-500 border-pink-500 text-white shadow-sm' 
+                                : 'bg-white border-slate-200 text-slate-500 hover:border-pink-300'
+                            }" title="${isSelected ? 'Bỏ chọn học' : 'Chọn học flashcard'}">
+                                <span class="text-[11px]">${isSelected ? '⭐' : '☆'}</span> 
+                                <span class="hidden sm:inline">${isSelected ? 'Đang chọn' : 'Chọn học'}</span>
+                            </button>
+                            
+                            <button onclick="event.stopPropagation(); playSpeech('${word.hz}', 1.0)" class="p-1.5 bg-slate-50 hover:bg-slate-100 text-slate-700 rounded-lg border border-slate-200 transition-all text-xs font-bold" title="Phát âm">
+                                📢 Nghe
+                            </button>
+                        </div>
                     </div>
-                    <div class="space-y-1">
+                    <div class="space-y-1 mt-2">
                         <h4 class="text-2xl font-bold text-slate-850 font-sans tracking-wide">${word.hz}</h4>
                         <p class="text-xs text-pink-500 font-bold font-sans">${word.py}</p>
                         <p class="text-xs md:text-sm text-slate-600 font-semibold">${word.vi}</p>
