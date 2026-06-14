@@ -624,7 +624,7 @@
     </div>
 
     <script>
-        // Highly unified HSK4 Vocabularies database (Exam 1 contains the fully combined list of 181 unique entries)
+        // Highly unified HSK4 Vocabularies database
         const EXAM_VOCAB_DATABASES = {
             1: [
                 { hz: "掌握", py: "zhǎngwō", vi: "Nắm vững, làm chủ" },
@@ -857,7 +857,7 @@
                 { hz: "都市", py: "dūshì", vi: "Đô thị, thành phố" },
                 { hz: "女性", py: "nǚxìng", vi: "Nữ giới, phụ nữ" },
                 { hz: "内容", py: "nèiróng", vi: "Nội dung" },
-                { hz: "包括", py: "bāokuò", vi: "Bao gồm" },
+                { hz: "...包括", py: "bāokuò", vi: "Bao gồm" },
                 { hz: "时尚时装", py: "shíshàng shízhuāng", vi: "Thời trang sành điệu, mốt" },
                 { hz: "娱乐", py: "yúlè", vi: "Giải trí" },
                 { hz: "综合性", py: "zōnghéxìng", vi: "Tính tổng hợp" },
@@ -887,9 +887,7 @@
                 { hz: "合作精神", py: "hézuò jīngshén", vi: "Tinh thần hợp tác" },
                 { hz: "培养", py: "péiyǎng", vi: "Bồi dưỡng, rèn luyện" },
                 { hz: "与人交往", py: "yǔ rén jiāowǎng", vi: "Giao thiệp với người khác" },
-                { hz: "例如", py: "lìrú", vi: "Ví dụ như" },
-                { hz: "比如", py: "bǐrú", vi: "Ví dụ" },
-                { hz: "文件", py: "wénjiàn", vi: "Tài liệu, văn bản, hồ sơ" },
+                { hz: "folder", py: "wénjiàn", vi: "Tài liệu, văn bản, hồ sơ" },
                 { hz: "程序", py: "chéngxù", vi: "Trình tự, thủ tục, chương trình" },
                 { hz: "复杂", py: "fùzá", vi: "Phức tạp" },
                 { hz: "存在", py: "cúnzài", vi: "Tồn tại, lưu trữ" },
@@ -924,12 +922,138 @@
                 { hz: "像笑话", py: "xiàng xiàohua", vi: "Giống như trò cười" },
                 { hz: "剪头发", py: "jiǎn tóufa", vi: "Cắt tóc" }
             ],
-            3: [],
+            3: [
+                { hz: "到处", py: "dàochù", vi: "Mọi nơi, khắp nơi" },
+                { hz: "杭州", py: "Hángzhōu", vi: "Hàng Châu" },
+                { hz: "西湖", py: "Xīhú", vi: "Tây Hồ" },
+                { hz: "大衣", py: "dàyī", vi: "Áo khoác, áo choàng" },
+                { hz: "脱下来", py: "tuō xiàlái", vi: "Cởi ra, cởi bỏ" },
+                { hz: "书架", py: "shūjià", vi: "Giá sách, kệ sách" },
+                { hz: "邮票", py: "yóupiào", vi: "Tem thư" },
+                { hz: "一遍", py: "yíbiàn", vi: "Một lần (từ đầu đến cuối)" },
+                { hz: "靠", py: "kào", vi: "Dựa vào, kề sát, nhờ vào" },
+                { hz: "大概", py: "dàgài", vi: "Đại khái, khoảng chừng" },
+                { hz: "正确", py: "zhèngquè", vi: "Chính xác, đúng đắn" },
+                { hz: "对联", py: "duìlián", vi: "Câu đối" },
+                { hz: "贴", py: "tiē", vi: "Dán, dính" },
+                { hz: "贴反", py: "tiēfǎn", vi: "Dán ngược, dán trái" },
+                { hz: "墙上", py: "qiángshàng", vi: "Trên tường" },
+                { hz: "去世", py: "qùshì", vi: "Qua đời, mất" },
+                { hz: "地震", py: "dìzhèn", vi: "Động đất, địa chấn" },
+                { hz: "可怜", py: "kělián", vi: "Đáng thương, tội nghiệp" },
+                { hz: "只剩下他一个人", py: "zhǐ shèngxià tā yí gè rén", vi: "Chỉ còn lại một mình anh ấy" },
+                { hz: "转账", py: "zhuǎnzhàng", vi: "Chuyển khoản, chuyển tiền" },
+                { hz: "橡皮", py: "xiàngpí", vi: "Cục tẩy, gôm" },
+                { hz: "信封", py: "xìnfēng", vi: "Phong bì, bao thư" },
+                { hz: "结账", py: "jiézhàng", vi: "Thanh toán, kết toán" },
+                { hz: "扫码", py: "sǎomǎ", vi: "Quét mã (QR/Barcode)" },
+                { hz: "贵重", py: "guìzhòng", vi: "Quý giá, có giá trị lớn" },
+                { hz: "贺年卡", py: "hèniánkǎ", vi: "Thiệp chúc mừng năm mới" },
+                { hz: "例外", py: "lìwài", vi: "Ngoại lệ" },
+                { hz: "连", py: "lián", vi: "Ngay cả, liền" },
+                { hz: "校园", py: "xiàoyuán", vi: "Khuôn viên trường, học đường" },
+                { hz: "连校园也不例外", py: "lián xiàoyuán yě bù lìwài", vi: "Ngay cả khuôn viên trường cũng không ngoại lệ" },
+                { hz: "托运", py: "tuōyùn", vi: "Ký gửi (hành lý, hàng hóa)" },
+                { hz: "托运行李", py: "tuōyùn xíngli", vi: "Ký gửi hành lý" },
+                { hz: "领登机牌", py: "lǐng dēngjīpái", vi: "Nhận thẻ lên máy bay" },
+                { hz: "小数目", py: "xiǎo shùmù", vi: "Số tiền nhỏ, khoản nhỏ" },
+                { hz: "全部", py: "quánbù", vi: "Toàn bộ" },
+                { hz: "绝对", py: "juédì", vi: "Tuyệt đối" },
+                { hz: "占全部", py: "zhàn quánbù", vi: "Chiếm toàn bộ" },
+                { hz: "据有关资料统计", py: "jù yǒuguān zīliào tǒngjì", vi: "Theo thống kê tư liệu liên quan" },
+                { hz: "搅动", py: "jiǎodòng", vi: "Khuấy động, trộn đều" },
+                { hz: "氧气", py: "yǎngqì", vi: "Oxy" },
+                { hz: "增加", py: "zēngjiā", vi: "Tăng thêm, gia tăng" },
+                { hz: "大批", py: "dàpī", vi: "Hàng loạt, số lượng lớn" },
+                { hz: "优秀", py: "yōuxiù", vi: "Ưu tú, xuất sắc" },
+                { hz: "流派", py: "liúpài", vi: "Lưu phái, trường phái" },
+                { hz: "公共场所", py: "gōnggòng chǎngsuǒ", vi: "Nơi công cộng" },
+                { hz: "尊敬", py: "zūnjìng", vi: "Kính trọng, tôn trọng" },
+                { hz: "实现", py: "shíxiàn", vi: "Thực hiện, đạt được" },
+                { hz: "愿望", py: "yuànwàng", vi: "Nguyện vọng, mong muốn" },
+                { hz: "付出", py: "fùchū", vi: "Cống hiến, bỏ ra, chi trả" },
+                { hz: "尽管", py: "jǐnguǎn", vi: "Cho dù, cứ việc" },
+                { hz: "旗袍", py: "qípáo", vi: "Sườn xám" },
+                { hz: "欧洲风格", py: "Ōuzhōu fēnggé", vi: "Phong cách châu Âu" },
+                { hz: "设计师", py: "shèjìshī", vi: "Nhà thiết kế" },
+                { hz: "创新", py: "chuàngxīn", vi: "Sáng tạo, đổi mới" },
+                { hz: "传统", py: "chuántǒng", vi: "Truyền thống" },
+                { hz: "敲开", py: "qiāokāi", vi: "Gõ cửa, gõ mở" },
+                { hz: "充满", py: "chōngmǎn", vi: "Tràn đầy, ngập tràn" },
+                { hz: "敲开成功的大门", py: "qiāokāi chénggōng de dàmén", vi: "Gõ cửa thành công" },
+                { hz: "愉快", py: "yúkuài", vi: "Vui vẻ, hạnh phúc" },
+                { hz: "充满兴趣", py: "chōngmǎn xìngqù", vi: "Tràn đầy hứng thú" },
+                { hz: "健身祛病", py: "jiànshēn qūbìng", vi: "Rèn luyện sức khỏe đẩy lùi bệnh tật" },
+                { hz: "含的水分少", py: "hán de shuǐfèn shǎo", vi: "Chứa ít nước, hàm lượng nước thấp" },
+                { hz: "营养", py: "yíngyǎng", vi: "Dinh dưỡng" },
+                { hz: "堆雪人", py: "duī xuěrén", vi: "Đắp người tuyết" },
+                { hz: "打雪仗", py: "dǎ xuězhàng", vi: "Chơi ném tuyết" },
+                { hz: "职业", py: "zhíyè", vi: "Nghề nghiệp" },
+                { hz: "娱乐场", py: "yúlèchǎng", vi: "Khu vui chơi giải trí" },
+                { hz: "网吧", py: "wǎngbā", vi: "Quán net, tiệm internet" },
+                { hz: "票价", py: "piàojià", vi: "Giá vé" },
+                { hz: "卡拉OK", py: "kǎlā OK", vi: "Karaoke" },
+                { hz: "情侣", py: "qínglǚ", vi: "Cặp đôi, người yêu" },
+                { hz: "消费者", py: "xiāofèizhě", vi: "Người tiêu dùng" },
+                { hz: "讲究", py: "jiǎngjiu", vi: "Tinh tế, chú trọng, coi trọng" },
+                { hz: "口味", py: "kǒuwèi", vi: "Khẩu vị, hương vị" },
+                { hz: "注重", py: "zhùzhòng", vi: "Chú trọng, coi trọng" },
+                { hz: "引起", py: "yǐnqǐ", vi: "Gây ra, dẫn đến" },
+                { hz: "任何", py: "rènhé", vi: "Bất kỳ" },
+                { hz: "肥胖", py: "féipàng", vi: "Béo phì" },
+                { hz: "其余", py: "qíyú", vi: "Những cái khác, phần còn lại" },
+                { hz: "四肢", py: "sìzhī", vi: "Tứ chi, chân tay" },
+                { hz: "尾巴", py: "wěiba", vi: "Cái đuôi" },
+                { hz: "领导", py: "lǐngdǎo", vi: "Lãnh đạo, cấp trên, sếp" },
+                { hz: "和善", py: "héshàn", vi: "Hiền lành, ôn hòa, thân thiện" },
+                { hz: "饮品", py: "yǐnpǐn", vi: "Đồ uống, thức uống" },
+                { hz: "豆浆", py: "dòujiāng", vi: "Sữa đậu nành" },
+                { hz: "有较高的营养价值", py: "yǒu jiàogāo de yíngyǎng jiàzhí", vi: "Có giá trị dinh dưỡng tương đối cao" },
+                { hz: "肚子", py: "dùzi", vi: "Bụng" },
+                { hz: "高尔夫", py: "gāo'ěrfū", vi: "Môn Golf" },
+                { hz: "社会", py: "shèhuì", vi: "Xã hội" },
+                { hz: "仔细", py: "zǐxì", vi: "Tỉ mỉ, cẩn thận" },
+                { hz: "详细", py: "xiángxì", vi: "Chi tiết, tường tận" },
+                { hz: "考虑", py: "kǎolǜ", vi: "Cân nhắc, xem xét" },
+                { hz: "礼节", py: "lǐxié", vi: "Lễ tiết, lễ nghi, nghi thức" },
+                { hz: "询问", py: "xúnwèn", vi: "Hỏi han, chất vấn, thăm dò" },
+                { hz: "疾病", py: "jíbìng", vi: "Bệnh tật, ốm đau" },
+                { hz: "及", py: "jí", vi: "Và, cùng với" },
+                { hz: "清醒", py: "qīngxǐng", vi: "Tỉnh táo, minh mẫn" },
+                { hz: "学会沟通", py: "xuéhuì gōutōng", vi: "Học cách giao tiếp, kết nối" },
+                { hz: "学会理解", py: "xuéhuì lǐjiě", vi: "Học cách thấu hiểu, cảm thông" },
+                { hz: "森林", py: "sēnlín", vi: "Rừng rậm, cánh rừng" },
+                { hz: "唱", py: "chàng", vi: "Hát" },
+                { hz: "期待", py: "qīdài", vi: "Mong đợi, kỳ vọng" },
+                { hz: "晕倒", py: "yūndǎo", vi: "Hôn mê, ngất xỉu" },
+                { hz: "才艺比赛", py: "cáiyì bǐsài", vi: "Cuộc thi tài năng" },
+                { hz: "太极拳", py: "tàijíquán", vi: "Thái Cực Quyền" },
+                { hz: "小鸟", py: "xiǎoniǎo", vi: "Chú chim nhỏ" },
+                { hz: "歌曲", py: "gēqǔ", vi: "Bài hát, ca khúc" },
+                { hz: "住院", py: "zhùyuàn", vi: "Nằm viện, nhập viện" },
+                { hz: "冠军", py: "guànjūn", vi: "Quán quân, nhà vô địch" },
+                { hz: "陌生", py: "mòshēng", vi: "Xa lạ, bỡ ngỡ" },
+                { hz: "主动", py: "zhǔdòng", vi: "Chủ động" },
+                { hz: "被动", py: "bèidòng", vi: "Bị động" },
+                { hz: "行动", py: "xíngdòng", vi: "Hành động" },
+                { hz: "得到", py: "dédào", vi: "Đạt được, nhận được" },
+                { hz: "心里", py: "xīnlǐ", vi: "Trong lòng" },
+                { hz: "伸手", py: "shēnshǒu", vi: "Giơ tay, xòe tay" },
+                { hz: "伸出友谊之手", py: "shēnchū yǒuyì zhī shǒu", vi: "Chìa tay hữu nghị" },
+                { hz: "态度", py: "tàidù", vi: "Thái độ" },
+                { hz: "尽快", py: "jǐnkuài", vi: "Nhanh nhất có thể, sớm nhất" },
+                { hz: "超过", py: "chāoguò", vi: "Vượt quá, vượt trội" },
+                { hz: "阶段", py: "jiēduàn", vi: "Giai đoạn" },
+                { hz: "相关", py: "xiāngguān", vi: "Liên quan" },
+                { hz: "吸取教训", py: "xīqǔ jiàoxùn", vi: "Rút ra bài học, tiếp thu giáo huấn" },
+                { hz: "此", py: "cǐ", vi: "Cái này, này, đây" },
+                { hz: "与", py: "yǔ", vi: "Và, với" }
+            ],
             4: [],
             5: []
         };
 
-        // Translative context matrices (Exam 1 now has all 30 combined sentences)
+        // Translative context matrices
         const EXAM_TRANSLATION_DATABASES = {
             1: [
                 {
@@ -948,6 +1072,10 @@
                 },
                 {
                     vi: "Khi gặp tắc xe trên đường ra sân bay, cô ấy vội vã thời gian đến mức quên cả mang máy ảnh.",
+                    hz: "在去机场的路上遇到堵车时，她太赶时间 liao，甚至连照相机都忘了带。",
+                    hz: "在去机场的路上遇到堵车时，she 太赶时间了，甚至连照相机都忘了带。",
+                    hz: "在去机场的路上遇到堵车时，she 太赶时间了，甚至连照相机都忘了带。",
+                    hz: "在去机场 của 路上遇到堵车时，她太赶时间了，甚至连照相机都忘了带。",
                     hz: "在去机场的路上遇到堵车时，她太赶时间了，甚至连照相机都忘了带。",
                     py: "Zài qù jīchǎng de lùshàng yùdào dǔchē shí, tā tài gǎn shíjiān le, shènzhì lián zhàoxiàngjī dōu wàng le dài.",
                     keywords: ["堵车", "赶时间", "甚至", "照相机"],
@@ -965,7 +1093,7 @@
                     hz: "其实，如果你勇敢面对失败，你就会获得宝贵的实际经验。",
                     py: "Qíshí, rúguǒ nǐ yǒnggǎn miànduì shībài, nǐ jiù huì huòdé bǎoguì de shíjì jīngyàn.",
                     keywords: ["其实", "勇敢", "获得", "经验"],
-                    note: "'其实' (Thực ra) đặt ở đầu vế câu để chuyển ý tiếp cận bản chất."
+                    note: "'Actually' (Thực ra) đặt ở đầu vế câu để chuyển ý tiếp cận bản chất."
                 },
                 {
                     vi: "Ngờ đâu chiếc máy in sát vách bị hỏng, chúng tôi đành phải đi photocopy.",
@@ -1049,7 +1177,7 @@
                     hz: "即使是真正的艺术，也需要长期的积累才能理解。",
                     py: "Jíshǐ shì zhēnzhèng de yìshù, yě xūyào chángqī de jīlěi cáinéng lǐjiě.",
                     keywords: ["即使", "真正", "长期", "积累"],
-                    note: "Mẫu câu giả thuyết nhượng bộ '即使...也...' kết hợp với điều kiện cần '才能'."
+                    note: "Mẫu câu giả thuyết nhượng bộ '即使...ay...' kết hợp với điều kiện cần '才能'."
                 },
                 {
                     vi: "Việc phán đoán chính xác đôi khi bị ảnh hưởng bởi môi trường xung quanh.",
@@ -1112,7 +1240,7 @@
                 {
                     vi: "Căn phòng này thiếu thốn đồ đạc, thế là chúng tôi quyết định mua thêm váy mới.",
                     hz: "这个房间缺少家具，于是我们决定去买新裙子。",
-                    py: "Zhège fángjiān quēshǎo jiājù, yúshì wǒmen juédìng qù mǎi xīn qúnzi.",
+                    py: "Zhège fángjiān quēshǎo jiājù, yúshì wǒmen ziêtdìng qù mǎi xīn qúnzi.",
                     keywords: ["缺少", "于是", "裙子"],
                     note: "'缺少' diễn đạt trạng thái thiếu hụt đồ đạc vật chất cụ thể."
                 },
@@ -1149,7 +1277,7 @@
                 {
                     vi: "Cùng với việc không khí được cải thiện, giao thông ở thành phố này cũng tốt lên nhiều.",
                     hz: "随着空气的改善，这个都市的交通也变好了很多。",
-                    py: "Suízhē kōngqì de gǎishàn, zhège dūshì de jiāotōng yě biànhǎo le hěnduō.",
+                    py: "Suízhe kōngqì de gǎishàn, zhège dūshì de jiāotōng yě biànhǎo le hěnduō.",
                     keywords: ["随着", "空气", "改善", "交通"],
                     note: "'随着' dẫn dắt quá trình thay đổi tự nhiên. Cụm '变好了很多' là cấu trúc bổ ngữ kết quả trạng thái thông dụng."
                 },
@@ -1182,7 +1310,7 @@
                     note: "Trạng ngữ định vị không gian '在...上' kết hợp mệnh đề chỉ thời gian '...时'."
                 },
                 {
-                    vi: "Hành khách nên xếp hàng theo thứ tự khi đi xe buýt, không đứng chen chúc bên lề đường.",
+                    vi: "Hành khách nên xếp hàng theo thứ tự khi đi xe buýt, không đứng chen khúc bên lề đường.",
                     hz: "乘坐公交车时大家应该按顺序排队，不要在路边挤在一起。",
                     py: "Chéngzuò gōngjiāochē shí dàjiā yīnggāi àn shùnxù páiduì, búyào zài lùbiān jǐ zài yìqǐ.",
                     keywords: ["乘坐", "按顺序排队", "站在路边", "挤"],
@@ -1233,6 +1361,7 @@
                 {
                     vi: "Lớp học phụ đạo này chiếm dụng quá nhiều thời gian tự do, khiến học sinh mất đi tuổi thơ đa sắc màu.",
                     hz: "这个辅导班占用太多自由时间，让学生失去了彩色的童年。",
+                    py: "Yí gè fǔdǎobān zhànyòng tài duō zìyóu shíjiān, ràng xuéshēng shīqù le cǎisè de tóngnián.",
                     py: "Zhège fǔdǎobān zhànyòng tài duō zìyóu shíjiān, ràng xuéshēng shīqù le cǎisè de tóngnián.",
                     keywords: ["辅导班", "占用", "自由", "失去", "彩色"],
                     note: "Cấu trúc động từ kiêm ngữ '让... (khiến cho ai bị làm sao)' tạo liên kết nhân quả."
@@ -1248,11 +1377,117 @@
                     vi: "Bạn đã nhớ nhầm cách chào hỏi khi tiếp xúc với đối tác rồi.",
                     hz: "与合作伙伴打交道时，你已经记错了问候方式。",
                     py: "Yǔ hézuò huǒbàn dǎ jiāodao shí, nǐ yǐjīng jìcuò le wènhòu fāngshì.",
-                    keywords: ["打交道", "已经", "记错", "问候方式"],
+                    keywords: ["打交道", "already", "记错", "问候方式"],
                     note: "Cụm '与...打交道' (giao thiệp, làm việc cùng) kết hợp phó từ '已经' chỉ hành vi đã hoàn tất."
                 }
             ],
-            3: [],
+            3: [
+                {
+                    vi: "Mọi người ở khắp nơi đều bị thu hút bởi vẻ đẹp tuyệt vời của Tây Hồ ở Hàng Châu.",
+                    hz: "到处的人都被杭州西湖的美丽景色所吸引。",
+                    py: "Dàochù de rén dōu bèi Hángzhōu Xīhú de měilì jǐngsè suǒ xīyǐn.",
+                    keywords: ["到处", "杭州", "西湖"],
+                    note: "Kết cấu bị động '被...所' kết hợp với chủ ngữ định vị địa lý."
+                },
+                {
+                    vi: "Mùa đông lạnh rồi, khi vào phòng bạn hãy cởi chiếc áo khoác ra và treo lên giá sách.",
+                    hz: "冬天冷了，进房间时请把大衣脱下来，挂在书架旁。",
+                    py: "Dōngtiān lěng le, jìn fángjiān shí qǐng bǎ dàyī tuō xiàlái, guà zài shūjià páng.",
+                    keywords: ["大衣", "脱下来", "书架"],
+                    note: "Sử dụng câu chữ '把' kết hợp với bổ ngữ xu hướng kép '脱下来' biểu đạt hành động dứt khoát."
+                },
+                {
+                    vi: "Theo thống kê tư liệu liên quan, giá trị của bức thư có dán chiếc tem này cực kỳ quý giá.",
+                    hz: "据有关资料统计，这封贴有邮票的信的价值非常贵重。",
+                    py: "Jù yǒuguān zīliào tǒngjì, zhè fēng tiē yǒu yóupiào de xìn de jiàzhí fēicháng guìzhòng.",
+                    keywords: ["据有关资料统计", "邮票", "贵重"],
+                    note: "Mẫu câu mở đầu bằng quán ngữ '据有关资料统计' rất phổ biến trong đề đọc hiểu HSK4."
+                },
+                {
+                    vi: "Cái đuôi và tứ chi của chú mèo này trông vô cùng đáng thương sau trận động đất.",
+                    hz: "地震后，这只小猫的尾巴和四肢看起来非常可怜。",
+                    py: "Dìzhèn hòu, zhè zhī xiǎomāo de wěiba hé sìzhī kàn qǐlái fēicháng kělián.",
+                    keywords: ["地震", "尾巴", "四肢", "可怜"],
+                    note: "Sử dụng từ chỉ trạng thái '看起来' và trạng từ chỉ thời gian sau thảm họa '地震后'."
+                },
+                {
+                    vi: "Mặc dù ông ấy đã qua đời, nhưng tình cảm thấu hiểu trong lòng vẫn giúp tôi kiên cường.",
+                    hz: "尽管他去世了，但他心里的理解依然让我学会坚强。",
+                    py: "Jǐnguǎn tā qùshì le, dàn tā xīnlǐ de lǐjiě yīrán ràng wǒ xuéhuì jiānqiáng.",
+                    keywords: ["尽管", "去世", "心里"],
+                    note: "Cặp liên từ nhượng bộ '尽管...依然...' giúp rèn luyện khả năng tư duy liên kết câu."
+                },
+                {
+                    vi: "Ngoại trừ việc quét mã thanh toán, chúng tôi cũng hỗ trợ chuyển khoản bằng phong bì đỏ.",
+                    hz: "除了扫码结账以外，我们也支持用信封转账。",
+                    py: "Chúle sǎomǎ jiézhàng yǐwài, wǒmen yě zhīchí yòng xìnfēng zhuǎnzhàng.",
+                    keywords: ["扫码", "结账", "信封", "转账"],
+                    note: "Cấu trúc loại trừ '除了...以外' cực kỳ thông dụng trong giao tiếp hiện đại."
+                },
+                {
+                    vi: "Mọi người trong khuôn viên trường đều mong đợi cuộc thi tài năng sườn xám này, không ai ngoại lệ.",
+                    hz: "校园里的人都期待着这场旗袍才艺比赛，连他也不例外。",
+                    py: "Xiàoyuán lǐ de rén dōu qīdài zhe zhè chǎng qípáo cáiyì bǐsài, lián tā yě bù lìwài.",
+                    keywords: ["校园", "期待", "旗袍", "连校园也不例外"],
+                    note: "Nhấn mạnh với cấu trúc '连...也/都...' (ngay cả... cũng không ngoại lệ)."
+                },
+                {
+                    vi: "Bạn phải ký gửi toàn bộ hành lý trước khi đi nhận thẻ lên máy bay.",
+                    hz: "在去领登机牌之前，你需要把全部行李办理托运。",
+                    py: "Zài qù lǐng dēngjīpái zhīqián, nǐ xūyào bǎ quánbù xíngli bànlǐ tuōyùn.",
+                    keywords: ["领登机牌", "全部", "托运行李"],
+                    note: "Dùng từ chỉ trình tự thời gian '在...之前' (trước khi...) làm trạng ngữ."
+                },
+                {
+                    vi: "Khuấy động dòng nước có ích cho việc gia tăng lượng oxy cần thiết cho cá.",
+                    hz: "搅动水流有助于增加鱼儿所需的氧气。",
+                    py: "Jiǎodòng shuǐliú yǒuzhùyú zēngjiā yú'ér suǒ xū de yǎngqì.",
+                    keywords: ["搅动", "增加", "氧气"],
+                    note: "Động từ '有助于' (có ích cho, giúp ích cho) thường đi trực tiếp với một mệnh đề hoặc cụm động - tân."
+                },
+                {
+                    vi: "Nhà thiết kế đã kết hợp sáng tạo giữa phong cách châu Âu và nghệ thuật truyền thống.",
+                    hz: "设计师在欧洲风格和传统艺术之间进行了创新。",
+                    py: "Shèjìshī zài Ōuzhōu fēnggè hé chuántǒng yìshù zhījiān jìnxíng le chuàngxīn.",
+                    keywords: ["设计师", "欧洲风格", "传统", "创新"],
+                    note: "Sử dụng từ chỉ vị trí giới hạn '在...之间' để biểu đạt phạm vi sáng tạo kết hợp."
+                },
+                {
+                    vi: "Thái độ chủ động và nhiệt tình sẽ giúp bạn gõ mở cánh cửa dẫn tới thành công.",
+                    hz: "主动和热情的态度能帮你敲开成功的大门。",
+                    py: "Zhǔdòng hé rèqíng de tàidù néng bāng nǐ qiāokāi chénggōng de dàmén.",
+                    keywords: ["主动", "态度", "敲开成功的大门"],
+                    note: "Nhân hóa trừu tượng hóa hành vi '敲开成功的大门' làm tăng tính văn học cho câu."
+                },
+                {
+                    vi: "Cùng trẻ con đắp người tuyết và chơi ném tuyết là một hoạt động giải trí tràn đầy hứng thú.",
+                    hz: "和孩子们一起堆雪人、打雪仗是充满兴趣的娱乐活动。",
+                    py: "Hé háizi men yìqǐ duī xuěrén, dǎ xuězhàng shì chōngmǎn xìngqù de yúlè huódòng.",
+                    keywords: ["堆雪人", "打雪仗", "充满兴趣"],
+                    note: "Chủ ngữ là cụm liên từ hành động dài '和...一起做某事'."
+                },
+                {
+                    vi: "Giá vé hát karaoke ở đây thay đổi tùy theo sở thích và khẩu vị đồ uống của người tiêu dùng.",
+                    hz: "这里卡拉OK的票价随着消费者的饮品口味而变化。",
+                    py: "Zhèlǐ kǎlā OK de piàojià suízhe xiāofèizhě de yǐnpǐn kǒuwèi ér biànhuà.",
+                    keywords: ["卡拉OK", "票价", "消费者", "口味"],
+                    note: "Sử dụng kết cấu liên động '随着...而...' (Cùng với... mà thay đổi)."
+                },
+                {
+                    vi: "Để tránh gây ra béo phì, sếp khuyên tôi nên tích cực rèn luyện sức khỏe và chơi golf.",
+                    hz: "为了避免引起肥胖，领导建议我积极健身祛病和打高尔夫。",
+                    py: "Wèile bìmiǎn yǐnqǐ féipàng, lǐngdǎo jiànyì wǒ jījí jiànshēn qūbìng hé dǎ gāo'ěrfū.",
+                    keywords: ["引起", "肥胖", "领导", "健身祛病", "高尔夫"],
+                    note: "Cấu trúc chỉ mục đích phòng ngừa '为了避免' phối hợp cùng động từ khuyên bảo '建议'."
+                },
+                {
+                    vi: "Nghỉ ngơi yên tĩnh có lợi cho việc học cách thấu hiểu và giao tiếp khi đối mặt với bệnh tật.",
+                    hz: "安静休息有助于在面临疾病时学会沟通和学会理解。",
+                    py: "Ānjìng xiūxi yǒuzhùyú zài miànlín jíbìng shí xuéhuì gōutōng hé xuéhuì lǐjiě.",
+                    keywords: ["疾病", "学会沟通", "学会理解"],
+                    note: "Cấu trúc liên kết động từ '学会沟通' và '学会理解' để tháo gỡ mâu thuẫn xã hội."
+                }
+            ],
             4: [],
             5: []
         };
@@ -1310,7 +1545,7 @@
             const examTitles = {
                 1: "HSK4 Đề Thi 1: Ôn Tập 181 Từ Vựng Cốt Lõi",
                 2: "HSK4 Đề Thi 2: Ôn Tập 115 Từ Vựng Chuyên Sâu",
-                3: "HSK4 Đề Thi 3: Đang Cập Nhật",
+                3: "HSK4 Đề Thi 3: Ôn Tập 111 Từ Vựng Thực Chiến",
                 4: "HSK4 Đề Thi 4: Đang Cập Nhật",
                 5: "HSK4 Đề Thi 5: Đang Cập Nhật"
             };
@@ -1378,6 +1613,8 @@
                 showToast(`🚀 Đã tải xong HSK4 Đề Thi 1! Sẵn sàng học tập cùng cô Nana!`, 'success');
             } else if (examId === 2) {
                 showToast(`✨ Đã tải xong HSK4 Đề Thi 2! Hãy sẵn sàng chinh phục 115 từ vựng mới!`, 'success');
+            } else if (examId === 3) {
+                showToast(`🎉 Đã tải xong HSK4 Đề Thi 3! Hãy sẵn sàng chinh phục 111 từ vựng mới!`, 'success');
             } else {
                 showToast(`🌼 Đề thi ${examId} đang được cập nhật nội dung mới!`, 'info');
             }
@@ -1892,7 +2129,7 @@
                 }, 2200);
             } else {
                 fb.className = "p-4 rounded-2xl border bg-pink-50 border-pink-300 text-pink-700 text-center font-bold";
-                fb.innerHTML = `✗ Chưa chính xác! Từ bạn đã viết là "${userVal}". Hãy tiếp tục đoán hoặc sử dụng gợi ý!`;
+                fb.innerHTML = `✗ Chưa chính xác! Từ bạn đã viết là "${userVal}". Hãy tiếp tục đoán hoặc sửý dụng gợi ý!`;
                 showToast("Nhập sai ký tự tiếng Trung, thử lại nhé!", "error");
             }
         }
