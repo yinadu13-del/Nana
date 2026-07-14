@@ -623,7 +623,7 @@
 
     </div>
 
-    <script>
+<script>
         // Highly unified HSK4 Vocabularies database
         const EXAM_VOCAB_DATABASES = {
             1: [
@@ -1089,6 +1089,7 @@
                 { hz: "人民币", py: "rénmínbì", vi: "Nhân dân tệ" },
                 { hz: "越南盾", py: "yuènándùn", vi: "Việt Nam Đồng" },
                 { hz: "兑换", py: "duìhuàn", vi: "Quy đổi, đổi tiền" },
+                { hz: "进出口", py: "jìnchūkǒu", vi: "Nhập khẩu, xuất khẩu" },
                 { hz: "汇率", py: "huìlǜ", vi: "Tỷ giá hối đoái" },
                 { hz: "填好这张表格", py: "tiánhǎo zhè zhāng biǎogé", vi: "Điền xong biểu mẫu này" },
                 { hz: "提前订票", py: "tíqián dìngpiào", vi: "Đặt vé trước" },
@@ -1172,7 +1173,119 @@
                 { hz: "熟食区", py: "shúshí qū", vi: "Khu thực phẩm chín, khu đồ chín" },
                 { hz: "设施", py: "shèshī", vi: "Cơ sở vật chất, trang thiết bị" }
             ],
-            5: []
+            5: [
+                { hz: "玫瑰", py: "méigui", vi: "Hoa hồng, bông hồng" },
+                { hz: "趟", py: "tàng", vi: "Chuyến, lần (lượng từ hành trình)" },
+                { hz: "女主角", py: "nǚ zhǔjué", vi: "Nữ nhân vật chính, nữ chính" },
+                { hz: "坚强", py: "jiānqiáng", vi: "Kiên cường, mạnh mẽ, vững vàng" },
+                { hz: "碰", py: "pèng", vi: "Chạm, va, đụng, gặp gỡ" },
+                { hz: "弄脏", py: "nòngzāng", vi: "Làm bẩn, làm dơ" },
+                { hz: "害羞", py: "hàixiū", vi: "Ngượng ngùng, xấu hổ, e thẹn" },
+                { hz: "不要紧", py: "bú yàojǐn", vi: "Không sao, không nghiêm trọng, không đáng kể" },
+                { hz: "弄懂", py: "nòng dǒng", vi: "Hiểu rõ, làm cho hiểu, nghiên cứu kỹ" },
+                { hz: "大伙子", py: "dàhuǒzi", vi: "Chàng trai trẻ to khỏe, chàng thanh niên" },
+                { hz: "待遇", py: "dàiyù", vi: "Đãi ngộ, bồi dưỡng, chế độ đãi ngộ" },
+                { hz: "赔钱", py: "péiqián", vi: "Bồi thường tiền, đền tiền, lỗ vốn" },
+                { hz: "万一", py: "wànyī", vi: "Lỡ như, ngộ nhỡ, vạn nhất" },
+                { hz: "四季", py: "sìjì", vi: "Bốn mùa, quanh năm" },
+                { hz: "奋斗", py: "fèndòu", vi: "Phấn đấu, nỗ lực đấu tranh" },
+                { hz: "收集资料", py: "shōují zīliào", vi: "Thu thập tài liệu, gom góp thông tin" },
+                { hz: "戏曲", py: "xìqǔ", vi: "Hí khúc, kịch nghệ truyền thống" },
+                { hz: "仍", py: "réng", vi: "Vẫn, vẫn còn, tiếp tục" },
+                { hz: "应用", py: "yìngyòng", vi: "Ứng dụng, áp dụng" },
+                { hz: "角度", py: "jiǎodù", vi: "Góc độ, góc nhìn, quan điểm" },
+                { hz: "点菜", py: "diǎn cài", vi: "Gọi món, chọn món ăn" },
+                { hz: "小看", py: "xiǎokàn", vi: "Xem thường, coi nhẹ, khinh miệt" },
+                { hz: "智慧", py: "zhìhuì", vi: "Trí tuệ, sự thông thái" },
+                { hz: "服饰", py: "fúshì", vi: "Trang phục và trang sức, quần áo" },
+                { hz: "依然", py: "yīrán", vi: "Vẫn như cũ, y nguyên, vẫn thế" },
+                { hz: "羡慕", py: "xiànmù", vi: "Ngưỡng mộ, ao ước, thèm muốn" },
+                { hz: "优美", py: "yōuměi", vi: "Đẹp đẽ, tao nhã, ưu mỹ" },
+                { hz: "散发", py: "sànfā", vi: "Tỏa ra, phát ra, lan tỏa, phân phát" },
+                { hz: "乘坐", py: "chéngzuò", vi: "Đi, đáp (tàu, xe, máy bay)" },
+                { hz: "航班", py: "hángbān", vi: "Chuyến bay" },
+                { hz: "手续", py: "shǒuxù", vi: "Thủ tục, giấy tờ" },
+                { hz: "机票", py: "jīpiào", vi: "Vé máy bay" },
+                { hz: "身份证", py: "shēnfènzhèng", vi: "Thẻ căn cước, CMND" },
+                { hz: "登机牌", py: "dēngjīpái", vi: "Thẻ lên máy bay" },
+                { hz: "办理手续", py: "bànlǐ shǒuxù", vi: "Làm thủ tục, giải quyết thủ tục" },
+                { hz: "车祸", py: "chēhuò", vi: "Tai nạn xe cộ, tai nạn giao thông" },
+                { hz: "死亡", py: "sǐwáng", vi: "Tử vong, cái chết" },
+                { hz: "人数", py: "rénshù", vi: "Số người, nhân số, lượng người" },
+                { hz: "探亲", py: "tànqīn", vi: "Thăm thân, về thăm nhà, thăm người thân" },
+                { hz: "遵守交通法规", py: "zūnshǒu jiāotōng fǎguī", vi: "Tuân thủ luật lệ giao thông" },
+                { hz: "自觉维护交通秩序", py: "zìjué wéihù jiāotōng zhìxù", vi: "Tự giác duy trì trật tự giao thông" },
+                { hz: "规则", py: "guīzé", vi: "Quy tắc, luật lệ, điều lệ" },
+                { hz: "充实", py: "chōngshí", vi: "Phong phú, dồi dào, tràn đầy, dạt dào" },
+                { hz: "以免", py: "yǐmiǎn", vi: "Để tránh, đỡ phải, tránh khỏi" },
+                { hz: "司机", py: "sījī", vi: "Tài xế, lái xe" },
+                { hz: "掏钱", py: "tāoqián", vi: "Rút tiền, móc ví trả tiền" },
+                { hz: "称赞", py: "chēngzàn", vi: "Khen ngợi, ca ngợi, tán thưởng" },
+                { hz: "骗人", py: "piànrén", vi: "Lừa người, dối trá, bịp bợm" },
+                { hz: "喝醉", py: "hēzuì", vi: "Say rượu, uống say" },
+                { hz: "持续", py: "chíxù", vi: "Tiếp tục, duy trì, kéo dài liên tục" },
+                { hz: "降温", py: "jiàngwēn", vi: "Hạ nhiệt, hạ sốt, giảm nhiệt độ" },
+                { hz: "怀疑", py: "huáiyí", vi: "Nghi ngờ, hoài nghi, phỏng đoán" },
+                { hz: "晒干", py: "shàigān", vi: "Phơi khô, phơi nắng" },
+                { hz: "技能", py: "jìnéng", vi: "Kỹ năng, kỹ xảo" },
+                { hz: "过去", py: "guòqù", vi: "Quá khứ, trước đây, đã qua" },
+                { hz: "普及", py: "pǔjí", vi: "Phổ cập, phổ biến rộng rãi" },
+                { hz: "进入", py: "jìnrù", vi: "Đi vào, bước vào" },
+                { hz: "缺少", py: "quēshǎo", vi: "Thiếu thốn, thiếu hụt, không đủ" },
+                { hz: "一旦", py: "yídàn", vi: "Một khi, nếu như" },
+                { hz: "破坏", py: "pòhuài", vi: "Phá hoại, làm hỏng, tàn phá" },
+                { hz: "污染", py: "wūrǎn", vi: "Ô nhiễm, chất bẩn, làm bẩn" },
+                { hz: "人类", py: "rénlèi", vi: "Nhân loại, loài người" },
+                { hz: "危害", py: "wēihài", vi: "Nguy hại, gây hại, tổn hại" },
+                { hz: "生产", py: "shēngchǎn", vi: "Sản xuất, sinh đẻ, chế tạo" },
+                { hz: "自然环境", py: "zìrán huánjìng", vi: "Môi trường tự nhiên" },
+                { hz: "治理", py: "zhìlǐ", vi: "Quản lý, xử lý, trị lý, cải tạo" },
+                { hz: "原因", py: "yuányīn", vi: "Nguyên nhân, lý do" },
+                { hz: "疲累", py: "pílèi", vi: "Mệt mỏi, kiệt sức, uể oải" },
+                { hz: "劳动", py: "láodòng", vi: "Lao động, công việc chân tay" },
+                { hz: "虚弱", py: "xūruò", vi: "Suy nhược, yếu đuối, ốm yếu" },
+                { hz: "失眠", py: "shīmián", vi: "Mất ngủ, khó ngủ" },
+                { hz: "过度劳累", py: "guòdù láolèi", vi: "Lao động quá sức, làm việc quá tải" },
+                { hz: "出售", py: "chūshòu", vi: "Bán ra, thanh lý, bán buôn" },
+                { hz: "乘凉", py: "chéngliáng", vi: "Hóng mát, hít thở khí trời, đón gió mát" },
+                { hz: "乘客", py: "chéngkè", vi: "Hành khách, người đi xe" },
+                { hz: "融化", py: "rónghuà", vi: "Tan chảy, hòa tan, tan rã" },
+                { hz: "目前", py: "mùqián", vi: "Hiện nay, trước mắt, hiện thời" },
+                { hz: "世界各地", py: "shìjiè gèdì", vi: "Khắp nơi trên thế giới" },
+                { hz: "突出", py: "tūchū", vi: "Nổi bật, vượt trội, xuất chúng" },
+                { hz: "认识", py: "rènshi", vi: "Quen biết, nhận thức, hiểu biết, tri thức" },
+                { hz: "沟通", py: "gōutōng", vi: "Giao tiếp, kết nối, trao đổi" },
+                { hz: "繁忙", py: "fánmáng", vi: "Bận rộn, tấp nập, đông đúc" },
+                { hz: "咱家", py: "zánjiā", vi: "Nhà chúng ta, gia đình ta, phe ta" },
+                { hz: "领导", py: "lǐngdǎo", vi: "Lãnh đạo, cấp trên, sếp" },
+                { hz: "个人问题", py: "gèrén wèntǐ", vi: "Vấn đề cá nhân (đời tư, tình duyên)" },
+                { hz: "个人简历", py: "gèrén jiǎnlì", vi: "Sơ yếu lý lịch, CV xin việc" },
+                { hz: "订机票", py: "dìng jīpiào", vi: "Đặt vé máy bay" },
+                { hz: "毕业证书", py: "bìyè zhèngshū", vi: "Bằng tốt nghiệp" },
+                { hz: "推荐信", py: "tuījiànxìn", vi: "Thư giới thiệu" },
+                { hz: "文艺表演", py: "wényì biǎoyǎn", vi: "Biểu diễn văn nghệ" },
+                { hz: "换", py: "huàn", vi: "Đổi, thay thế, hoán đổi" },
+                { hz: "激烈", py: "jīliè", vi: "Mãnh liệt, kịch liệt, dữ dội" },
+                { hz: "危险", py: "wēixiǎn", vi: "Nguy hiểm, rủi ro" },
+                { hz: "追求", py: "zhuīqiú", vi: "Theo đuổi, mưu cầu, săn đón" },
+                { hz: "经济", py: "jīngjì", vi: "Kinh tế" },
+                { hz: "利益", py: "lìyì", vi: "Lợi ích, quyền lợi" },
+                { hz: "读者", py: "dúzhě", vi: "Độc giả, người đọc sách" },
+                { hz: "看者", py: "kànzhě", vi: "Người xem, khán giả, quần chúng" },
+                { hz: "有益", py: "yǒuyì", vi: "Có ích, có lợi, bổ ích" },
+                { hz: "获得", py: "huòdé", vi: "Giành được, nhận được, đoạt lấy" },
+                { hz: "遵守", py: "zūnshǒu", vi: "Tuân thủ, chấp hành, vâng lời" },
+                { hz: "拜访", py: "bàifǎng", vi: "Ghé thăm, viếng thăm, bái kiến" },
+                { hz: "亲戚", py: "qīnqi", vi: "Họ hàng, thân thích, người nhà" },
+                { hz: "造成", py: "zàochéng", vi: "Gây ra, tạo thành, mang lại" },
+                { hz: "香气", py: "xiāngqì", vi: "Hương thơm, mùi thơm dịu" },
+                { hz: "舌头", py: "shétou", vi: "Cái lưỡi" },
+                { hz: "耳朵", py: "ěrduo", vi: "Cái tai" },
+                { hz: "希腊", py: "Xīlà", vi: "Hy Lạp" },
+                { hz: "相互碰一下杯子", py: "xiānghù pèng yíxià bēizi", vi: "Cụng ly nhau, chạm cốc nhau" },
+                { hz: "响声", py: "xiǎngshēng", vi: "Tiếng động, âm thanh phát ra, tiếng vang" },
+                { hz: "享受", py: "xiǎngshòu", vi: "Tận hưởng, thưởng thức, hưởng thụ" }
+            ]
         };
 
         // Translative context matrices
@@ -1618,10 +1731,11 @@
                     hz: "今天我丢了一把卧室的钥匙，真是太可惜了。",
                     py: "Jīntiān wǒ diū le yì bǎ wòshì de yàoshi, zhēnshì tài kěxī le.",
                     keywords: ["丢了", "一把钥匙", "卧室", "可惜"],
-                    note: "Lượng từ cho chìa khóa là '把' (bǎ). Sử dụng cảm thán '真是太...了' để nhấn mạnh sắc thái đáng tiếc."
+                    note: "Lượng từ cho chìa khóa là '把' (bǎ). Sử dụng cảm thán '真是太...ler' để nhấn mạnh sắc thái đáng tiếc."
                 },
                 {
                     vi: "Sau khi hoàn thành biểu mẫu này, bạn có thể đến quầy lễ tân để trả phòng và thanh toán.",
+                    hz: "填好这张表格后，你可以去前台退房 và 结账。",
                     hz: "填好这张表格后，你可以去前台退房和结账。",
                     py: "Tiánhǎo zhè zhāng biǎogé hòu, nǐ kěyǐ qù qiántái tuìfáng hé jiézhàng.",
                     keywords: ["填好这张表格", "退房", "结账"],
@@ -1658,7 +1772,8 @@
                 {
                     vi: "Là một công dân của ngôi làng toàn cầu, bảo vệ môi trường nên được bắt đầu từ những việc nhỏ nhất.",
                     hz: "作为地球村的公民，保护环境应该从小事做起。",
-                    py: "Zuòwéi dìqiúcūn de gōngmín, bǎohù huánjìng yīnggāi cóng xiǎoshì zuò qǐ.",
+                    py: "Zuòwéi dìqiúcūn de gōngmín, bǎohù huánjìng yīnggai cóng xiǎoshì zuò qǐ.",
+                    py: "Zuòwéi dìqiúcūn de gōngmín, bǎohù huánjìng yīnggài cóng xiǎoshì zuò qǐ.",
                     keywords: ["作为", "公民", "保护", "从小事做起"],
                     note: "'从小事做起' là cấu trúc rèn luyện đạo đức ý thức vô cùng ý nghĩa trong bài đọc hiểu HSK4."
                 },
@@ -1671,6 +1786,10 @@
                 },
                 {
                     vi: "Khi ghé thăm khách hàng quan trọng, bạn phải chủ động chào hỏi họ một cách thân thiết.",
+                    hz: "拜访重要客户时，你必须主动亲切地和 them 打招呼。",
+                    hz: "拜访重要客户时，你必须主动亲切地 và họ 打招呼。",
+                    hz: "拜访重要客户时，ni 必须主动亲切地和他们打招呼。",
+                    hz: "拜访重要客户时，你必须主动亲切地和 họ 打招呼。",
                     hz: "拜访重要客户时，你必须主动亲切地和他们打招呼。",
                     py: "Bàifǎng zhòngyào kèhù shí, nǐ bìxū zhǔdòng qīnqiè de hé tāmen dǎ zhāohu.",
                     keywords: ["拜访", "客户", "亲切", "打招呼"],
@@ -1707,12 +1826,120 @@
                 {
                     vi: "Người kinh doanh xuất sắc sẽ luôn tuân thủ trật tự thị trường và duy trì thái độ tích cực lạc quan.",
                     hz: "优秀的商人总是会遵守市场秩序，并保持积极乐观的态度。",
+                    py: "Yōuxiù de shāngrén zǒngshì huì zūnshǒu thị 场秩序，并保持积极乐观的态度。",
                     py: "Yōuxiù de shāngrén zǒngshì huì zūnshǒu shìchǎng zhìxù, bìng bǎochí jījí lèguān de tàidù.",
                     keywords: ["优秀", "商人", "遵守", "秩序", "积极", "乐观"],
                     note: "Sử dụng phó từ tần suất '总是' và động từ kết hợp cực mạnh với danh từ '遵守秩序' (tuân thủ trật tự)."
                 }
             ],
-            5: []
+            5: [
+                {
+                    vi: "Để tránh làm bẩn trang phục, nữ chính kiên cường từ chối đi qua con đường đầy bùn đất.",
+                    hz: "为了以免弄脏服饰，女主角坚强地拒绝通过满是泥土的路。",
+                    py: "Wèile yǐmiǎn nòngzāng fúshì, nǚ zhǔjué jiānqiáng de jùjué tōngguò mǎn shì nítǔ de lù.",
+                    keywords: ["以免", "弄脏", "女主角"],
+                    note: "Sử dụng '为了以免' (để tránh cho) làm vế liên kết chỉ mục đích phòng ngừa nhằm nâng cao kỹ năng xử lý câu."
+                },
+                {
+                    vi: "Vạn nhất gặp phải tai nạn giao thông, hành khách trên chuyến bay nên bình tĩnh và tuân thủ các quy tắc.",
+                    hz: "万一遇到车祸，航班的乘客应该保持冷静并遵守规则。",
+                    py: "Wànyī yùdào chēhuò, hángbān de chéngkè yīnggāi bǎochí lěngjìng bìng zūnshǒu guīzé.",
+                    keywords: ["万一", "车祸", "乘客", "遵守"],
+                    note: "Liên từ '万一' (lỡ như) dùng để giả thuyết một sự việc bất lợi, nguy hiểm đột ngột xảy ra."
+                },
+                {
+                    vi: "Khi làm thủ tục lên máy bay, hành khách bắt buộc phải xuất trình vé máy bay và thẻ căn cước để nhận thẻ lên máy bay.",
+                    hz: "办理登机手续时，乘客必须出示机票 và 身份证来领取登机牌。",
+                    hz: "办理登机手续时，乘客必须出示机票和身份证来领取登机牌。",
+                    py: "Bànlǐ dēngjī shǒuxù shí, chéngkè bìxū chūshì jīpiào hé shēnfènzhèng lái lǐngqǔ dēngjīpái.",
+                    keywords: ["机票", "身份证", "登机牌", "办理手续"],
+                    note: "Cụm hành động liên tiếp '办理手续' (làm thủ tục) kết hợp cùng trạng ngữ chỉ thời gian hoạt động '...时'."
+                },
+                {
+                    vi: "Mỗi tài xế đều nên tự giác giữ gìn trật tự giao thông và nghiêm chỉnh tuân thủ luật lệ giao thông.",
+                    hz: "每个司机都应该自觉维护交通秩序，并严格遵守交通法规。",
+                    py: "Měi gè sījī dōu yīnggāi zìjué wéihù jiāotōng zhìxù, bìng yángé zūnshǒu jiāotōng fǎguī.",
+                    keywords: ["司机", "自觉维护交通秩序", "遵守交通法规"],
+                    note: "'自觉维护交通秩序' là một kết cấu dài mang sắc thái đạo đức và ý thức tự giác cao trong tiếng Trung."
+                },
+                {
+                    vi: "Lao động quá sức trong thời gian dài sẽ khiến cơ thể suy nhược và gây ra mất ngủ.",
+                    hz: "长期过度劳累会让身体虚弱并造成失眠。",
+                    py: "Chángqī guòdù láolèi huì ràng shēntǐ xūruò bìng zàochéng shīmián.",
+                    keywords: ["过度劳累", "虚弱", "失眠", "造成"],
+                    note: "Cấu trúc kiêm ngữ '让' kết hợp với động từ kết quả tiêu cực cho sức khỏe '造成'."
+                },
+                {
+                    vi: "Nữ chính kiên cường phấn đấu suốt bốn mùa để theo đuổi mục tiêu kinh tế tốt hơn.",
+                    hz: "坚强的女主角四季都在奋斗，以追求更好的经济目标。",
+                    py: "Jiānqiáng de nǚ zhǔjué sìjì dōu zài fèndòu, yǐ zhuīqiú gèng hǎo de jīngjì mùbiāo.",
+                    keywords: ["坚强", "女主角", "四季", "奋斗"],
+                    note: "Mẫu câu trạng ngữ chỉ thời gian tuần hoàn '四季都在' được đặt trang trọng trước động từ '奋斗'."
+                },
+                {
+                    vi: "Khi hóng mát trong vườn, tôi ngửi thấy hoa hồng đang lan tỏa hương thơm ưu nhã.",
+                    hz: "在花园乘凉时，我闻到玫瑰正散发出优美的香气。",
+                    py: "Zài huāyuán chéngliáng shí, wǒ wéndào méigui zhèng sànfā chū yōuměi de xiāngqì.",
+                    keywords: ["乘凉", "玫瑰", "散发", "香气"],
+                    note: "Cụm bổ trợ trạng thái '散发出' (tỏa ra) mô tả mùi hương một cách văn chương và sâu sắc."
+                },
+                {
+                    vi: "Lãnh đạo khuyên tôi nên đặt bằng tốt nghiệp và thư giới thiệu chung với sơ yếu lý lịch cá nhân.",
+                    hz: "领导建议我把毕业证书和推荐信与个人简历放在一起。",
+                    py: "Lǐngdǎo jiànyì wǒ bǎ bìyè zhèngshū hé tuījiànxìn yǔ gèrén jiǎnlì fàng zài yìqǐ.",
+                    keywords: ["领导", "毕业证书", "推荐信", "个人简历"],
+                    note: "Sử dụng câu chữ '把' kết hợp với liên từ phối hợp '与...放在一起' (để cùng một chỗ)."
+                },
+                {
+                    vi: "Sự cạnh tranh kịch liệt hiện nay khiến một số người chỉ theo đuổi lợi ích kinh tế trước mắt.",
+                    hz: "目前激烈的竞争让一些人只追求眼前的经济利益。",
+                    py: "Mùqián jīliè de jìngzhēng ràng yìxiē rén zhǐ zhuīqiú yǎnqián de jīngjì lìyì.",
+                    keywords: ["目前", "激烈", "经济", "利益"],
+                    note: "'眼前的利益' chỉ lợi ích trước mắt, là một ngữ cố định mang tính phê bình thực tế."
+                },
+                {
+                    vi: "Một khi môi trường tự nhiên bị phá hoại và ô nhiễm, nó sẽ nguy hại nghiêm trọng đến sự sản xuất của nhân loại.",
+                    hz: "自然环境一旦受到破坏和污染，就会严重危害人类的生产。",
+                    py: "Zìrán huánjìng yídàn shòudào pòhuài hé wūrǎn, jiù huì yánzhòng wēihài rénlèi de shēngchǎn.",
+                    keywords: ["自然环境", "一旦", "破坏", "污染", "危害"],
+                    note: "Cấu trúc liên kết điều kiện quyết đoán '一旦...就...' kết hợp bị động thể '受到'."
+                },
+                {
+                    vi: "Sau khi gọi món, chúng tôi cụng ly với nhau để thưởng thức âm thanh rộn rã và hương vị tuyệt hảo.",
+                    hz: "点菜后，我们相互碰一下杯子来享受美妙的响声。",
+                    py: "Diǎn cài hòu, wǒmen xiānghù pèng yíxià bēizi lái xiǎngshòu měimiào de xiǎngshēng.",
+                    keywords: ["点菜", "相互碰一下杯子", "享受", "响声"],
+                    note: "Cụm động từ '相互碰一下杯子' mô tả sinh động cử chỉ giao lưu văn hóa cụng ly của người Á Đông."
+                },
+                {
+                    vi: "Thường xuyên nghe hí khúc cổ truyền rất có ích cho việc làm phong phú cuộc sống và rèn luyện tai nhạy bén.",
+                    hz: "经常听戏曲对充实生活和锻炼耳朵非常有益。",
+                    py: "Jīngcháng tīng xìqu duì chōngshí shēnghuó hé duànliàn ěrduo fēicháng yǒuyì.",
+                    keywords: ["戏曲", "充实", "耳朵", "有益"],
+                    note: "Giới từ '对' dẫn dắt cụm tân ngữ dài, định hướng tác dụng tốt cho đối tượng phía sau."
+                },
+                {
+                    vi: "Hiện nay, người dân Hy Lạp vẫn vô cùng tự hảo về trang phục truyền thống tao nhã của họ.",
+                    hz: "目前，希腊人依然对他们优美的传统服饰感到非常自豪。",
+                    py: "Mùqián, Xīlārén yīrán duì tāmen yōuměi de chuántǒng fúshì gǎndào fēicháng zìháo.",
+                    keywords: ["希腊", "依然", "优美", "服饰"],
+                    note: "'依然' mang nghĩa vẫn như cũ, duy trì tính liên tục và văn nhã hơn so với '还是'."
+                },
+                {
+                    vi: "Nhằm thu thập tài liệu đầy đủ, nhà báo quyết định đi một chuyến về quê thăm họ hàng.",
+                    hz: "为了收集资料，记者决定走一趟家乡去拜访亲戚。",
+                    py: "Wèile shōují zīliào, jìzhě juédìng zǒu yí tàng jiāxiāng qù bàifǎng qīnqi.",
+                    keywords: ["收集资料", "趟", "拜访", "亲戚"],
+                    note: "Lượng từ chuyến đi '趟' kết hợp động từ hành trình '走一趟' chỉ chuyến đi ngắn khứ hồi."
+                },
+                {
+                    vi: "Lãnh đạo tích cực giao tiếp để giúp chàng trai giải quyết tốt vấn đề cá nhân của anh ấy.",
+                    hz: "领导积极沟通，以帮助那个大伙子解决好他的个人问题。",
+                    py: "Lǐngdǎo jījí gōutōng, yǐ bāngzhù nàge dàhuǒzi jiějué hǎo tā de gèrén wèntǐ.",
+                    keywords: ["领导", "沟通", "大伙子", "个人问题"],
+                    note: "Liên từ mục đích '以' mang nghĩa 'để làm gì', liên kết chặt chẽ hai vế hành động chính."
+                }
+            ]
         };
 
         // Main application state management
@@ -1770,7 +1997,7 @@
                 2: "HSK4 Đề Thi 2: Ôn Tập 115 Từ Vựng Chuyên Sâu",
                 3: "HSK4 Đề Thi 3: Ôn Tập 111 Từ Vựng Thực Chiến",
                 4: "HSK4 Đề Thi 4: Ôn Tập 116 Từ Vựng Nâng Cao",
-                5: "HSK4 Đề Thi 5: Đang Cập Nhật"
+                5: "HSK4 Đề Thi 5: Ôn Tập 108 Từ Vựng Bứt Phá"
             };
             document.getElementById('active-exam-title').innerText = examTitles[state.currentExamId];
             document.getElementById('tab-vocab-count-indicator').innerText = `(${currentVocabDb.length})`;
@@ -1840,6 +2067,8 @@
                 showToast(`🎉 Đã tải xong HSK4 Đề Thi 3! Hãy sẵn sàng chinh phục 111 từ vựng mới!`, 'success');
             } else if (examId === 4) {
                 showToast(`🔥 Đã tải xong HSK4 Đề Thi 4! Hãy sẵn sàng chinh phục 116 từ vựng nâng cao!`, 'success');
+            } else if (examId === 5) {
+                showToast(`🚀 Đã tải xong HSK4 Đề Thi 5! Sẵn sàng chinh phục 108 từ vựng bứt phá cùng cô Nana!`, 'success');
             } else {
                 showToast(`🌼 Đề thi ${examId} đang được cập nhật nội dung mới!`, 'info');
             }
